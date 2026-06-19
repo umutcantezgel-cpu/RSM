@@ -37,11 +37,23 @@ export function BrickTransition() {
     return id;
   }, []);
 
+  // Helper to toggle page visibility
+  const setPageVisible = (visible: boolean) => {
+    const mainContent = document.getElementById('main-content');
+    if (mainContent) {
+      // Use opacity 0 and pointer-events-none to completely hide and disable the page
+      mainContent.style.opacity = visible ? '1' : '0';
+      mainContent.style.pointerEvents = visible ? 'auto' : 'none';
+    }
+  };
+
   // Watch for pathname change while in cover/hold phase
   useEffect(() => {
     if ((phase === 'cover' || phase === 'hold') && pathname !== prevPathRef.current) {
       prevPathRef.current = pathname;
-      // New page loaded while covered — hold briefly then reveal
+      // New page loaded while covered — make it visible behind the bricks, then reveal
+      setPageVisible(true);
+      
       addTimeout(() => {
         setPhase('reveal');
         addTimeout(() => {
@@ -51,6 +63,7 @@ export function BrickTransition() {
       }, HOLD_DURATION);
     } else if (phase === 'idle') {
       prevPathRef.current = pathname;
+      setPageVisible(true); // Safety fallback
     }
   }, [pathname, phase, addTimeout]);
 
@@ -59,6 +72,7 @@ export function BrickTransition() {
     if (phase !== 'idle') return;
     pendingHrefRef.current = href;
     setPhase('cover');
+    setPageVisible(false); // Hide the old page IMMEDIATELY
 
     // After all bricks have slid in, switch to hold and navigate
     const totalCoverTime = (COVER_DURATION + BRICK_ROWS * 0.035) * 1000;

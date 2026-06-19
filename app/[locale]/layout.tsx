@@ -28,7 +28,7 @@ export default async function LocaleLayout({
         <IntroAnimation />
         <NextIntlClientProvider messages={messages}>
           <BrickTransition />
-          <div className="flex flex-col min-h-screen">
+          <div id="main-content" className="flex flex-col min-h-screen transition-opacity duration-300">
             <Header />
             <main className="flex-1 pt-24 pb-16">
               {children}
