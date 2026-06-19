@@ -1,0 +1,509 @@
+{
+  "Header": {
+    "brand_logo_symbol": "R",
+    "brand_holding_name": "RT HOLDING",
+    "brand_holding_sub": "GROUP",
+    "home": "Start",
+    "unternehmen": "Unternehmen",
+    "leistungen": "Leistungen",
+    "referenzen": "Referenzen",
+    "karriere": "Karriere",
+    "portal": "Portal"
+  },
+  "Footer": {
+    "brand_logo_symbol": "R",
+    "brand_name": "RSM SYSTEMBAU",
+    "brand_group": "RT HOLDING GROUP",
+    "description": "Generalunternehmer für schlüsselfertige B2B-Bauprojekte im DACH-Raum. Modul-Systembau, technische Gebäudeausrüstung, Brandschutz und Premium-Innenausbau — vertikal integriert und digital gesteuert.",
+    "badges": {
+      "dgnb": "DGNB",
+      "iso": "ISO 9001",
+      "dsgvo": "DSGVO"
+    },
+    "nav_title": "Navigation",
+    "legal_title": "Rechtliches",
+    "legal_impressum": "Impressum",
+    "legal_datenschutz": "Datenschutz",
+    "legal_agb": "AGB",
+    "legal_portal": "Mitarbeiter-Portal",
+    "contact_title": "Kontakt",
+    "address": "Ernst-Leitz-Straße 1–5\n35578 Wetzlar",
+    "phone": "+49 6441 9999 000",
+    "email": "kontakt@rsm-systembau.de",
+    "copyright": "© 2026 RSM Systembau GmbH · RT Holding Group. Alle Rechte vorbehalten.",
+    "claim": "Bauen mit System."
+  },
+  "Home": {
+    "Hero": {
+      "tagline": "Generalunternehmer · Wetzlar",
+      "title": "Wir bauen\nmit System.",
+      "description": "Die RSM Systembau GmbH realisiert als Generalunternehmer der RT Holding schlüsselfertige Bauprojekte im siebenstelligen Volumen. Vier Gewerke, ein Ansprechpartner, eine lückenlose Verantwortung — von der modularen Konstruktion bis zur protokollierten Übergabe.",
+      "cta_services": "Leistungen",
+      "cta_references": "Referenzen",
+      "dgnb_title": "DGNB-konform",
+      "dgnb_desc": "Zirkuläres Bauen & ESG",
+      "location_chip": "Firmensitz · Ernst-Leitz-Straße, Wetzlar"
+    },
+    "heroStats": [
+      { "v": "90+", "l": "Fachkräfte im Verbund" },
+      { "v": "€\u20097 M+", "l": "Volumen pro Auftrag" },
+      { "v": "4", "l": "Gewerke unter einem Dach" },
+      { "v": "100%", "l": "Termin- & Kostengarantie" }
+    ],
+    "Leistungsfelder": {
+      "tag": "01",
+      "title": "Leistungsfelder",
+      "heading": "Vier Gewerke. Eine Verantwortung.",
+      "cta_all_services": "Alle Leistungen"
+    },
+    "services": [
+      {
+        "name": "Generalunternehmer",
+        "short": "Schlüsselfertig",
+        "desc": "Ein Vertrag, ein Ansprechpartner, ein garantierter Preis — null Schnittstellenrisiko."
+      },
+      {
+        "name": "Modul-Systembau",
+        "short": "Just-in-Time",
+        "desc": "Industrielle Vorfertigung verkürzt die Bauzeit um bis zu 50 % bei reproduzierbarer Qualität."
+      },
+      {
+        "name": "TGA & Brandschutz",
+        "short": "Planwerk · KBV",
+        "desc": "Integrale technische Gebäudeausrüstung, kollisionsfrei im BIM-Modell koordiniert."
+      },
+      {
+        "name": "Roh- & Innenausbau",
+        "short": "Team Simon",
+        "desc": "Über 90 eigene Fachkräfte — Spezialisten für großformatige Fliesen und Naturstein."
+      }
+    ],
+    "DerVerbund": {
+      "tag": "02",
+      "title": "Der Verbund",
+      "heading": "Die Symbiose\nder Giganten.",
+      "description": "Hinter jedem Projekt steht ein präzise orchestrierter Unternehmensverbund: die kapitalstarke RT Holding als Fundament, die Team Simon GmbH mit über 90 Fachkräften als handwerkliche Tiefe und die Werkules GmbH als digitale PropTech-Engine. Vertikale Integration als strategischer Vorteil.",
+      "cta_explore": "Unternehmen entdecken",
+      "placeholder_diagram": "[ Platzhalter: Unternehmens-Diagramm ]",
+      "placeholder_label": "3D-BIM Visualisierung EWS"
+    },
+    "bigStats": [
+      { "v": "€\u20092,8 M", "l": "Öffentliches Projektvolumen (Allendorf)" },
+      { "v": "1.200 m²", "l": "Großformatfliesen (EWS Frankfurt)" },
+      { "v": "−50%", "l": "Bauzeit durch Modul-Systembau" },
+      { "v": "24/7", "l": "Projekttransparenz via Werkules" }
+    ],
+    "Referenzen": {
+      "tag": "03",
+      "title": "Referenzen",
+      "heading": "Beweis statt Behauptung.",
+      "cta_all_projects": "Alle Projekte"
+    },
+    "refs": [
+      { "name": "EWS Frankfurt", "cat": "Logistik", "kpi": "Logistik-Masterclass", "meta": "1.200 m² Großformatfliesen" },
+      { "name": "Unterkunft Allendorf", "cat": "Öffentliche Hand", "kpi": "Holzrahmenbau", "meta": "€ 2,8 Mio · termingerecht" },
+      { "name": "Villa Raab", "cat": "Hospitality", "kpi": "Premium-Mosaik", "meta": "Naturstein & Detailtiefe" }
+    ],
+    "CTA": {
+      "heading": "Ihr nächstes Millionenprojekt.",
+      "description": "Übergeben Sie uns Ihre Projektunterlagen — wir prüfen Machbarkeit, Termin und Budget und liefern einen verbindlichen Vorschlag aus einer Hand.",
+      "cta_request": "Projekt anfragen",
+      "cta_learn_more": "Mehr erfahren"
+    }
+  },
+  "Unternehmen": {
+    "PageHead": {
+      "tagline": "Unternehmen · Corporate Nexus",
+      "title": "Die Symbiose der Giganten.",
+      "description": "Hinter jedem RSM-Projekt steht ein präzise orchestrierter Unternehmensverbund. Vier spezialisierte Einheiten greifen ineinander wie die Komponenten eines Tragwerks — kapitalstark gesteuert, handwerklich tief verwurzelt und digital vernetzt. Diese vertikale Integration ist kein Zufall, sondern strategisches Fundament."
+    },
+    "nexus": [
+      {
+        "tag": "Generalunternehmer",
+        "num": "01",
+        "name": "RSM Systembau GmbH",
+        "role": "Die ausführende Kraft",
+        "body": "Als Generalunternehmer ist die RSM Systembau GmbH der zentrale Knotenpunkt jedes Bauvorhabens. Sie übernimmt die schlüsselfertige Realisierung siebenstelliger Projekte und bündelt sämtliche Gewerke in einer einzigen, vertraglich verbindlichen Verantwortung — vom ersten Spatenstich bis zur protokollierten Übergabe.",
+        "stats": [
+          { "v": "SPOC", "l": "Single Point of Contact" },
+          { "v": "100%", "l": "Termin- & Kostengarantie" },
+          { "v": "DIN", "l": "ISO 9001 Prozesse" }
+        ]
+      },
+      {
+        "tag": "Holding",
+        "num": "02",
+        "name": "RT Holding",
+        "role": "Das strategische Fundament",
+        "body": "Die RT Holding bildet die kapital- und steuerungsseitige Dachstruktur des Verbunds. Sie sichert finanzielle Solidität, allokiert Investitionen und verantwortet die strategische Ausrichtung der Beteiligungen. Für Auftraggeber bedeutet das einen bonitätsstarken Partner mit langfristigem Planungshorizont.",
+        "stats": [
+          { "v": "Bonität", "l": "Geprüfte Stabilität" },
+          { "v": "Multi", "l": "Beteiligungsstruktur" },
+          { "v": "Langfrist", "l": "Investitionshorizont" }
+        ]
+      },
+      {
+        "tag": "Ausbau-Power",
+        "num": "03",
+        "name": "Team Simon GmbH",
+        "role": "Die handwerkliche Tiefe",
+        "body": "Mit über 90 Fachkräften liefert die Team Simon GmbH die operative Schlagkraft im Roh- und Innenausbau. Die Spezialisierung auf großformatige Fliesen- und Natursteinarbeiten verleiht dem Verbund eine Ausführungsqualität, die im Generalunternehmer-Markt selten vertikal integriert verfügbar ist.",
+        "stats": [
+          { "v": "90+", "l": "Eigene Fachkräfte" },
+          { "v": "Premium", "l": "Großformat & Mosaik" },
+          { "v": "In-House", "l": "Keine Lücken" }
+        ]
+      },
+      {
+        "tag": "PropTech-Engine",
+        "num": "04",
+        "name": "Werkules GmbH",
+        "role": "Die digitale Intelligenz",
+        "body": "Die Werkules GmbH is die PropTech-Engine des Verbunds. Ihre Softwareplattform digitalisiert Aufmaß, Disposition, Bautagebuch und Abrechnung in Echtzeit und überführt das Handwerk in das Zeitalter datengetriebener Steuerung — Handwerk 4.0 als realer Wettbewerbsvorteil.",
+        "stats": [
+          { "v": "Realtime", "l": "Bautagebuch & Aufmaß" },
+          { "v": "4.0", "l": "Handwerk digital" },
+          { "v": "API", "l": "BIM-Schnittstellen" }
+        ]
+      }
+    ],
+    "Leitprinzipien": {
+      "tag": "Leitprinzipien",
+      "heading": "Worauf wir bauen."
+    },
+    "values": [
+      {
+        "t": "Verbindlichkeit",
+        "d": "Fixe Termine, garantierte Maximalpreise und eine lückenlose Gewährleistung aus einer Hand. Was wir zusagen, halten wir vertraglich."
+      },
+      {
+        "t": "Geschwindigkeit",
+        "d": "Industrielle Vorfertigung und digitale Steuerung verkürzen die Bauzeit drastisch — ohne Kompromiss bei der Ausführungsqualität."
+      },
+      {
+        "t": "Tiefe",
+        "d": "Über 90 eigene Fachkräfte statt anonymer Subunternehmer-Ketten. Verantwortung bleibt im Haus, Qualität bleibt kontrollierbar."
+      }
+    ],
+    "CTA": {
+      "heading": "Lernen Sie den Verbund kennen.",
+      "description": "Vier Unternehmen, eine Philosophie — und ein Ansprechpartner für Ihr Vorhaben.",
+      "cta_contact": "Kontakt aufnehmen"
+    }
+  },
+  "Leistungen": {
+    "PageHead": {
+      "tagline": "Leistungen · In-House Performance",
+      "title": "Vier Gewerke. Eine Verantwortung.",
+      "description": "Wo klassische Bauträger Dutzende Subunternehmer koordinieren, hält RSM die gesamte Wertschöpfung im eigenen Verbund. Das eliminiert Schnittstellenrisiken und macht uns zum verlässlichen Single Point of Contact für siebenstellige Vorhaben."
+    },
+    "services": [
+      {
+        "name": "Generalunternehmer",
+        "short": "Schlüsselfertig",
+        "lead": "Ein Vertrag, ein Ansprechpartner, ein garantierter Preis.",
+        "body": "Als Generalunternehmer übernimmt RSM die vollständige Koordination aller am Bau beteiligten Gewerke. Auftraggeber delegieren das gesamte Schnittstellen-, Termin- und Mängelrisiko an einen einzigen, haftenden Partner. Das eliminiert die kostspielige Reibung klassischer Einzelvergabe und schafft die Planungssicherheit, die institutionelle Investoren bei siebenstelligen Volumina voraussetzen.",
+        "points": [
+          "Garantierter Maximalpreis (GMP) & Fixtermine",
+          "Lückenlose Gewährleistung aus einer Hand",
+          "Reduktion der Schnittstellen von Dutzenden auf eine"
+        ]
+      },
+      {
+        "name": "Modul-Systembau",
+        "short": "Just-in-Time",
+        "lead": "Industrielle Vorfertigung statt wetterabhängiger Baustelle.",
+        "body": "Der modulare Systembau verlagert bis zu 80 % der Wertschöpfung in die witterungsunabhängige Werkhalle. Raummodule werden parallel zur Baufeldvorbereitung gefertigt und just-in-time montiert. Gegenüber konventionellen Verfahren verkürzt dies die Bauzeit drastisch bei gleichbleibend reproduzierbarer Präzisionsqualität.",
+        "points": [
+          "Bis zu 50 % verkürzte Bauzeit",
+          "Reproduzierbare Werkhallen-Qualität",
+          "Rückbaubar & re-konfigurierbar (zirkulär)"
+        ]
+      },
+      {
+        "name": "TGA & Brandschutz",
+        "short": "Planwerk · KBV · SprING",
+        "lead": "Technische Gebäudeausrüstung als integrierte Disziplin.",
+        "body": "Die technische Gebäudeausrüstung entscheidet über Betriebskosten, Sicherheit und Genehmigungsfähigkeit. Über die Partner Planwerk, KBV und SprING integriert RSM Heizung, Lüftung, Sanitär, Elektro sowie den anlagentechnischen Brandschutz bereits in der Entwurfsphase — kollisionsfrei im BIM-Modell koordiniert statt nachträglich improvisiert.",
+        "points": [
+          "Integrale TGA-Planung im BIM-Modell",
+          "Anlagentechnischer Brandschutz (SprING)",
+          "Sachverständige Abnahme & Dokumentation"
+        ]
+      },
+      {
+        "name": "Roh- & Innenausbau",
+        "short": "Team Simon Power",
+        "lead": "Vom tragenden Rohbau bis zur perfekten Oberfläche.",
+        "body": "Mit die Team Simon GmbH und ihren über 90 Fachkräften verfügt der Verbund über eine im Markt seltene vertikale Integration des Ausbaus. Die Kernkompetenz liegt in der großformatigen Fliesen- und Natursteinverlegung — eine Disziplin, die bei Logistikflächen wie bei hochwertiger Hospitality-Architektur kompromisslose Maßhaltigkeit verlangt.",
+        "points": [
+          "Großformat- & Mosaik-Verlegung in Perfektion",
+          "Tragender Rohbau & Komplett-Innenausbau",
+          "Eigene Kolonnen — keine Subunternehmer-Lücken"
+        ]
+      }
+    ],
+    "activeService_placeholder_prefix": "[ Platzhalter:",
+    "activeService_placeholder_suffix": " ]",
+    "DerProzess": {
+      "tag": "Der RSM-Prozess",
+      "heading": "Von der Vision zur protokollierten Übergabe."
+    },
+    "steps": [
+      { "n": "01", "t": "Bedarfsanalyse", "d": "Gemeinsame Klärung von Ziel, Budget und Vergaberahmen — transparent und unverbindlich." },
+      { "n": "02", "t": "Integrale Planung", "d": "Architektur, Statik, TGA und Brandschutz kollisionsfrei im gemeinsamen BIM-Modell." },
+      { "n": "03", "t": "Werkfertigung", "d": "Bis zu 80 % Wertschöpfung witterungsunabhängig in der Halle, parallel zum Baufeld." },
+      { "n": "04", "t": "Montage", "d": "Module werden just-in-time angeliefert und mit minimaler Bauzeit montiert." },
+      { "n": "05", "t": "Übergabe", "d": "Protokollierte, mängelfreie Abnahme inklusive vollständiger digitaler Dokumentation." }
+    ],
+    "Nachhaltigkeit": {
+      "tagline": "Nachhaltigkeit & ESG",
+      "heading": "Bauen, das sich für die Bilanz von morgen rechnet."
+    },
+    "esg": [
+      { "k": "Cradle to Cradle", "t": "Zirkuläres Bauen", "d": "Module werden sortenrein konstruiert und am Ende des Lebenszyklus wiederverwendet. Der Bau wird zum Materialdepot." },
+      { "k": "CO₂-Speicher", "t": "Holzrahmenbau", "d": "Nachwachsende Rohstoffe binden CO₂ über die gesamte Nutzungsdauer und vereinen Ökobilanz mit serieller Vorfertigung." },
+      { "k": "PV-Integration", "t": "Das Dach als Kraftwerk", "d": "Integrierte Photovoltaik macht Gebäude vom Energieverbraucher zum Prosumer — ein messbarer Beitrag zur Amortisation." }
+    ],
+    "CTA": {
+      "heading": "Welches Gewerk braucht Ihr Projekt?",
+      "description": "Oder alle vier — aus einer Hand. Lassen Sie uns über Machbarkeit, Termin und Budget sprechen.",
+      "cta_start": "Anfrage starten"
+    }
+  },
+  "Referenzen": {
+    "PageHead": {
+      "tagline": "Referenzen · Prestige",
+      "title": "Beweis statt Behauptung.",
+      "description": "Ausgewählte Projekte aus Logistik, öffentlicher Hand, Hospitality und Industrie — jedes ein Beleg für die vertikale Tiefe des Verbunds."
+    },
+    "filters": {
+      "Alle": "Alle",
+      "Logistik": "Logistik",
+      "OeffentlicheHand": "Öffentliche Hand",
+      "Hospitality": "Hospitality",
+      "Industrie": "Industrie",
+      "Gewerbe": "Gewerbe"
+    },
+    "chips": [
+      "Alle",
+      "Logistik",
+      "Öffentliche Hand",
+      "Hospitality",
+      "Industrie",
+      "Gewerbe"
+    ],
+    "refs": [
+      {
+        "name": "EWS Frankfurt",
+        "cat": "Logistik",
+        "meta": "1.200 m² Großformatfliesen",
+        "kpi": "Logistik-Masterclass",
+        "body": "Verlegung von 1.200 m² maßhaltiger Großformatfliesen unter laufendem Logistikbetrieb — eine Präzisionsleistung unter Zeitdruck, die Ebenheitstoleranzen im Submillimeterbereich einhielt."
+      },
+      {
+        "name": "Unterkunft Allendorf",
+        "cat": "Öffentliche Hand",
+        "meta": "€ 2,8 Mio · Holzrahmenbau",
+        "kpi": "Öffentlicher Auftraggeber",
+        "body": "Schlüsselfertige Errichtung in nachhaltiger Holzrahmenbauweise. Vergaberechtskonform realisiert, termingerecht übergeben und ein Referenzbeispiel für sozial verantwortliches, serielles Bauen."
+      },
+      {
+        "name": "Villa Raab",
+        "cat": "Hospitality",
+        "meta": "Premium-Mosaikarbeiten",
+        "kpi": "Hospitality-Exzellenz",
+        "body": "Hochwertige Mosaik- und Natursteinarbeiten für ein anspruchsvolles Hospitality-Objekt. Handwerkliche Detailtiefe trifft auf die logistische Disziplin eines Generalunternehmers."
+      },
+      {
+        "name": "Industriepark Mittelhessen",
+        "cat": "Industrie",
+        "meta": "Modulare Produktionshalle",
+        "kpi": "Just-in-Time Montage",
+        "body": "Modular vorgefertigte Produktionshalle, just-in-time montiert bei minimaler Störung des angrenzenden Werkbetriebs. Erweiterbar konzipiert für zukünftige Skalierung."
+      },
+      {
+        "name": "Gewerbecampus Gießen",
+        "cat": "Gewerbe",
+        "meta": "TGA & Brandschutz integral",
+        "kpi": "BIM-koordiniert",
+        "body": "Integrale TGA- und Brandschutzplanung über alle Gewerke, kollisionsfrei im BIM-Modell koordiniert und sachverständig abgenommen."
+      },
+      {
+        "name": "Logistikzentrum RheinMain",
+        "cat": "Logistik",
+        "meta": "Hochregal-Bodenplatte",
+        "kpi": "Submillimeter-Ebenheit",
+        "body": "Großflächige Industriebodenplatte für ein automatisiertes Hochregallager mit höchsten Anforderungen an Ebenheit und Belastbarkeit."
+      }
+    ],
+    "stats": [
+      { "v": "€\u20092,8 M", "l": "Größtes öffentliches Projektvolumen" },
+      { "v": "1.200 m²", "l": "Großformatfliesen in einem Projekt" },
+      { "v": "6+", "l": "Branchen-Sektoren abgedeckt" },
+      { "v": "100%", "l": "Termingerechte Übergaben" }
+    ],
+    "CTA": {
+      "heading": "Wird Ihr Projekt das nächste?",
+      "description": "Erzählen Sie uns davon — wir zeigen Ihnen, wie wir es realisieren würden.",
+      "cta_request": "Projekt anfragen"
+    }
+  },
+  "Karriere": {
+    "job_meta": "{area} · {loc}",
+    "PageHead": {
+      "tagline": "Karriere · Engineering Hub",
+      "title": "Bauen Sie an der Infrastruktur von morgen.",
+      "description": "Wir suchen Ingenieurinnen und Ingenieure, Bauleiter und TGA-Fachplaner, die anspruchsvolle Projekte nicht scheuen, sondern suchen. Bei RSM arbeiten Sie an siebenstelligen Vorhaben — mit digitaler Werkzeugausstattung, kurzen Entscheidungswegen und einem Verbund, der vertikale Tiefe als Stärke begreift."
+    },
+    "HRJobSection": {
+      "tagline": "Offene Positionen",
+      "heading": "Vier Wege, ein Ziel.",
+      "initiative_title": "Initiativbewerbung",
+      "initiative_desc": "Keine passende Position dabei? Überzeugen Sie uns trotzdem.",
+      "initiative_cta": "Profil senden"
+    },
+    "jobs": [
+      {
+        "role": "Bauleiter / Projektleiter (m/w/d)",
+        "area": "Generalunternehmen",
+        "loc": "Wetzlar · Vollzeit",
+        "body": "Sie steuern siebenstellige Bauvorhaben von der Arbeitsvorbereitung bis zur Übergabe, führen Nachunternehmer und verantworten Termine, Kosten und Qualität. Wir erwarten ein abgeschlossenes Studium (B.Eng./M.Eng. Bauingenieurwesen) oder eine vergleichbare Qualifikation sowie Souveränität in VOB und HOAI.",
+        "tags": ["B.Eng / M.Eng", "VOB · HOAI", "Firmenwagen"]
+      },
+      {
+        "role": "TGA-Fachplaner (m/w/d)",
+        "area": "Technische Gebäudeausrüstung",
+        "loc": "Wetzlar · Vollzeit",
+        "body": "Sie planen Heizung, Lüftung, Sanitär und Elektro integral im BIM-Modell und koordinieren den anlagentechnischen Brandschutz mit unseren Partnern Planwerk, KBV und SprING. Erfahrung in der kollisionsfreien Fachmodell-Koordination ist von Vorteil.",
+        "tags": ["BIM", "HLSE", "SprING"]
+      },
+      {
+        "role": "Bauingenieur Tragwerksplanung (m/w/d)",
+        "area": "Engineering",
+        "loc": "Wetzlar · Voll-/Teilzeit",
+        "body": "Sie erstellen prüffähige statische Nachweise für Modul-, Massiv- und Holzrahmenkonstruktionen nach aktuellen Eurocodes und arbeiten eng mit der Werkfertigung zusammen. Eine analytische, lösungsorientierte Arbeitsweise zeichnet Sie aus.",
+        "tags": ["Eurocode", "Statik", "Holzbau"]
+      },
+      {
+        "role": "Polier Innenausbau — Großformat (m/w/d)",
+        "area": "Team Simon GmbH",
+        "loc": "Hessen · Vollzeit",
+        "body": "Sie führen eigene Kolonnen in der großformatigen Fliesen- und Natursteinverlegung und sichern höchste Maßhaltigkeit. Meisterbrief oder langjährige Erfahrung in der Premium-Verlegung vorausgesetzt.",
+        "tags": ["Meister", "Großformat", "Führung"]
+      }
+    ],
+    "FAQSection": {
+      "tagline": "Häufige Fragen",
+      "heading": "Bevor Sie sich bewerben.",
+      "dash": "—"
+    },
+    "faqs": [
+      {
+        "q": "Wie läuft der Bewerbungsprozess ab?",
+        "a": "Nach Eingang Ihrer Unterlagen melden wir uns innerhalb weniger Tage. Es folgen ein fachliches Gespräch und — je nach Position — ein Kennenlernen des Teams vor Ort. Wir halten den Prozess bewusst schlank und transparent."
+      },
+      {
+        "q": "Bieten Sie Weiterbildung und Aufstieg?",
+        "a": "Ja. Der Verbund wächst, und mit ihm die Verantwortungsbereiche. Wir fördern Fortbildungen (z. B. zum geprüften Projektleiter) und besetzen Führungspositionen bevorzugt aus den eigenen Reihen."
+      },
+      {
+        "q": "Arbeiten Sie mit moderner Software?",
+        "a": "Unsere PropTech-Engine Werkules digitalisiert Aufmaß, Bautagebuch und Disposition. Sie arbeiten mit BIM-Modellen und mobilen Endgeräten statt mit Papier — Handwerk 4.0 ist bei uns Alltag."
+      },
+      {
+        "q": "Gibt es einen Firmenwagen?",
+        "a": "Für Bauleiter- und Projektleiterpositionen gehört ein Firmenwagen, auch zur privaten Nutzung, zum Standard. Details klären wir individuell im Gespräch."
+      },
+      {
+        "q": "Kann ich mich initiativ bewerben?",
+        "a": "Unbedingt. Wenn Sie überzeugt sind, dass Sie zu uns passen, auch ohne passende Ausschreibung — senden Sie uns Ihr Profil. Talent schlägt Stellenausschreibung."
+      }
+    ]
+  },
+  "Portal": {
+    "zero_trust_badge": "Zero-Trust Portal",
+    "title": "Sicherer Zugang. Ohne Kompromisse.",
+    "description": "Das RSM-Portal ersetzt unsichere PDF-Verteiler und Mail-Anhänge durch eine vollständig verschlüsselte, auditierbare Plattform. Jeder Zugriff wird verifiziert, jede Sitzung protokolliert — DSGVO-konform by Architecture.",
+    "features": [
+      "Ende-zu-Ende-Verschlüsselung & Mehr-Faktor-Authentifizierung",
+      "Vollständige Zugriffs-Auditierung jeder Sitzung",
+      "Werkules-Integration für Bautagebuch, Aufmaß & Lohn"
+    ],
+    "form_title": "Portal-Anmeldung",
+    "form_subtitle": "RSM Systembau · RT Holding",
+    "label_email": "Unternehmens-E-Mail",
+    "placeholder_email": "vorname.name@rsm-systembau.de",
+    "label_password": "Passwort",
+    "placeholder_password": "••••••••••••",
+    "checkbox_remember": "Angemeldet bleiben",
+    "link_forgot_password": "Passwort vergessen?",
+    "btn_submit": "Sicher anmelden",
+    "security_info": "256-bit TLS · DSGVO-konform · MFA",
+    "error_empty": "Bitte Benutzerkennung und Passwort eingeben.",
+    "error_invalid_email": "Bitte eine gültige Unternehmens-E-Mail verwenden.",
+    "success_message": "Zugang verifiziert — Zero-Trust-Sitzung wird initialisiert …"
+  },
+  "Impressum": {
+    "PageHead": {
+      "tagline": "Rechtliches",
+      "title": "Impressum",
+      "subtitle": "Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz) und § 18 Abs. 2 MStV."
+    },
+    "blocks": {
+      "diensteanbieter": {
+        "label": "Diensteanbieter",
+        "company": "RSM Systembau GmbH",
+        "street": "Ernst-Leitz-Straße 1–5",
+        "city": "35578 Wetzlar",
+        "country": "Deutschland"
+      },
+      "vertreten_durch": {
+        "label": "Vertreten durch",
+        "title": "Geschäftsführer:",
+        "manager_1": "Sascha Reitz",
+        "manager_2": "Mario Simon"
+      },
+      "kontakt": {
+        "label": "Kontakt",
+        "phone_label": "Telefon: ",
+        "phone_value": "+49 6441 9999 000",
+        "fax_label": "Telefax: ",
+        "fax_value": "+49 6441 9999 009",
+        "email_label": "E-Mail: ",
+        "email_value": "kontakt@rsm-systembau.de"
+      },
+      "registereintrag": {
+        "label": "Registereintrag",
+        "title": "Eintragung im Handelsregister",
+        "court_label": "Registergericht: ",
+        "court_value": "Amtsgericht Wetzlar",
+        "number_label": "Registernummer: ",
+        "number_value": "HRB 00000"
+      },
+      "umsatzsteuer_id": {
+        "label": "Umsatzsteuer-ID",
+        "title": "Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG:",
+        "value": "DE 000 000 000"
+      },
+      "aufsicht_kammer": {
+        "label": "Aufsicht & Kammer",
+        "chamber_label": "Zuständige Handwerkskammer:",
+        "chamber_value": "Handwerkskammer Wiesbaden",
+        "profession_label": "Berufsbezeichnung: ",
+        "profession_value": "Bauunternehmen (verliehen in Deutschland)"
+      },
+      "verbraucherstreitbeilegung": {
+        "label": "Verbraucherstreitbeilegung",
+        "text": "Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: ",
+        "link_text": "ec.europa.eu/consumers/odr"
+      }
+    },
+    "disclaimer": {
+      "label": "Haftungs- & Urheberrechtshinweis",
+      "p1": "Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.",
+      "p2": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+    },
+    "note": "Hinweis: Die hier dargestellten Register-, Steuer- und Kontaktdaten sind Platzhalter für die Designvorschau und vor Veröffentlichung durch die verbindlichen Angaben der RSM Systembau GmbH zu ersetzen."
+  }
+}

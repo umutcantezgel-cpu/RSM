@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0}
+  ::selection{background:#2563eb;color:#fff}
+  @keyframes rsmFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-22px)}}
+  @keyframes rsmFloat2{0%,100%{transform:translateY(0) translateX(0)}50%{transform:translateY(18px) translateX(-12px)}}
+  @keyframes rsmRise{from{transform:translateY(30px)}to{transform:translateY(0)}}
+  @keyframes rsmSpin{to{transform:rotate(360deg)}}
+  [data-reveal]{animation:rsmRise .9s cubic-bezier(.16,1,.3,1) both;animation-timeline:view();animation-range:entry 0% cover 22%}
+  .rsm-scroll::-webkit-scrollbar{height:8px}
+  .rsm-scroll::-webkit-scrollbar-thumb{background:rgba(59,130,246,.3);border-radius:999px}
+  @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important}}
+</style>
+</helmet>
+<div style="font-family:'Inter',system-ui,sans-serif;color:#475569;background:radial-gradient(70% 55% at 12% -5%,#d4eafd 0%,transparent 55%),radial-gradient(65% 50% at 100% 4%,#e7e2ff 0%,transparent 52%),radial-gradient(70% 65% at 50% 108%,#e0f2fe 0%,transparent 60%),#eef2f7;min-height:100vh;overflow-x:hidden;position:relative">
+
+  <div style="position:absolute;top:8%;left:-160px;width:520px;height:520px;border-radius:999px;background:radial-gradient(circle,#bae6fd 0%,transparent 70%);filter:blur(20px);opacity:.55;animation:rsmFloat 13s ease-in-out infinite;pointer-events:none"></div>
+  <div style="position:absolute;top:42%;right:-200px;width:560px;height:560px;border-radius:999px;background:radial-gradient(circle,#ddd6fe 0%,transparent 70%);filter:blur(20px);opacity:.5;animation:rsmFloat2 17s ease-in-out infinite;pointer-events:none"></div>
+
+  <!-- ANNOUNCEMENT -->
+  <div style="position:relative;z-index:40;display:flex;justify-content:center;padding:10px 16px">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:7px 18px;border-radius:999px;background:rgba(255,255,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.7);box-shadow:0 8px 24px -14px rgba(30,58,138,.25);font-size:13px;color:#1e3a5f">
+      <span style="width:8px;height:8px;border-radius:999px;background:#0ea5e9;box-shadow:0 0 0 4px rgba(14,165,233,.18)"></span>
+      <span style="font-weight:600">Enterprise Nexus 2025</span>
+      <span style="color:#94a3b8">·</span>
+      <span style="color:#64748b">Generalunternehmer für 7-stellige Bauprojekte im DACH-Raum</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header style="position:sticky;top:0;z-index:50;padding:0 16px;margin-top:6px">
+    <nav style="{{ navStyle }}">
+      <a href="#top" style="display:flex;align-items:center;gap:13px;text-decoration:none;flex-shrink:0">
+        <span style="display:grid;place-items:center;width:46px;height:46px;border-radius:16px;background:linear-gradient(140deg,#2563eb,#0ea5e9);box-shadow:0 10px 22px -8px rgba(37,99,235,.6);color:#fff;font-family:'Outfit';font-weight:800;font-size:19px;letter-spacing:-.04em">R</span>
+        <span style="display:flex;flex-direction:column;line-height:1.05">
+          <span style="font-family:'Outfit';font-weight:700;font-size:19px;color:#0f2540;letter-spacing:-.02em">RSM Systembau</span>
+          <span style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#3b82f6">RT Holding Group</span>
+        </span>
+      </a>
+      <div style="display:flex;align-items:center;gap:4px" class="rsm-navlinks">
+        <sc-for list="{{ navLinks }}" as="lnk" hint-placeholder-count="5">
+          <a href="{{ lnk.href }}" style="padding:9px 15px;border-radius:999px;text-decoration:none;color:#33445c;font-size:14.5px;font-weight:600;transition:all .25s" style-hover="background:rgba(219,234,254,.8);color:#1d4ed8">{{ lnk.name }}</a>
+        </sc-for>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
+        <a href="#portal" style="display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14.5px;color:#fff;background:linear-gradient(135deg,#2563eb,#0ea5e9);box-shadow:0 12px 26px -10px rgba(37,99,235,.65);transition:transform .25s" style-hover="transform:translateY(-2px)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Mitarbeiter-Portal
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" style="position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:0 22px">
+
+    <!-- HERO -->
+    <section style="padding:74px 0 40px;display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center">
+      <div style="animation:rsmRise 1s cubic-bezier(.16,1,.3,1) both">
+        <span style="{{ eyebrow }}">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+          Schlüsselfertiges Bauen · Single Point of Contact
+        </span>
+        <h1 style="font-family:'Outfit';font-weight:800;font-size:clamp(2.6rem,4.6vw,4.3rem);line-height:1.04;letter-spacing:-.035em;color:#0c1f38;margin:22px 0 0">
+          Wir bauen Strukturen,<br>auf denen <span style="font-family:'Newsreader';font-style:italic;font-weight:500;background:linear-gradient(120deg,#2563eb,#0ea5e9);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.01em">Generationen</span> Bestand haben.
+        </h1>
+        <p style="max-width:34rem;font-size:18.5px;line-height:1.75;color:#52617a;margin:26px 0 0">
+          Die RSM Systembau GmbH bündelt als Generalunternehmer der RT&nbsp;Holding die gesamte Wertschöpfungskette des Bauens — von der modularen Systemkonstruktion über TGA und Brandschutz bis zum hochwertigen Innenausbau. Ein Ansprechpartner, eine Verantwortung, kompromisslose Termin- und Kostensicherheit.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:34px">
+          <a href="#leistungen" style="display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px;color:#fff;background:linear-gradient(135deg,#1d4ed8,#0ea5e9);box-shadow:0 18px 38px -14px rgba(37,99,235,.7);transition:transform .25s" style-hover="transform:translateY(-3px)">
+            Leistungsspektrum entdecken
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#referenzen" style="display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px;color:#1d4ed8;background:rgba(255,255,255,.6);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.85);box-shadow:0 10px 26px -16px rgba(30,58,138,.4);transition:all .25s" style-hover="background:rgba(255,255,255,.92)">
+            Referenzprojekte ansehen
+          </a>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:26px;margin-top:40px">
+          <div><div style="font-family:'Outfit';font-weight:800;font-size:30px;color:#0f2540;letter-spacing:-.02em">90+</div><div style="font-size:13px;color:#7585a0;font-weight:500">Fachkräfte im Verbund</div></div>
+          <div style="width:1px;background:rgba(148,163,184,.4)"></div>
+          <div><div style="font-family:'Outfit';font-weight:800;font-size:30px;color:#0f2540;letter-spacing:-.02em">€&#8201;7&#8202;M+</div><div style="font-size:13px;color:#7585a0;font-weight:500">Projektvolumen pro Auftrag</div></div>
+          <div style="width:1px;background:rgba(148,163,184,.4)"></div>
+          <div><div style="font-family:'Outfit';font-weight:800;font-size:30px;color:#0f2540;letter-spacing:-.02em">4</div><div style="font-size:13px;color:#7585a0;font-weight:500">Gewerke unter einem Dach</div></div>
+        </div>
+      </div>
+
+      <div style="position:relative;animation:rsmRise 1.1s .15s cubic-bezier(.16,1,.3,1) both">
+        <div style="position:relative;aspect-ratio:4/4.4;border-radius:40px;overflow:hidden;background:radial-gradient(120% 120% at 0% 0%,#dbeafe 0%,transparent 52%),radial-gradient(120% 120% at 100% 8%,#cffafe 0%,transparent 55%),radial-gradient(110% 110% at 60% 100%,#ede9fe 0%,transparent 58%),linear-gradient(150deg,#f0f7ff,#eef2ff);border:1px solid rgba(255,255,255,.85);box-shadow:0 40px 80px -34px rgba(30,58,138,.4);display:grid;place-items:center;text-align:center;padding:30px">
+          <svg width="74" height="74" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" style="opacity:.8"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01"/><path d="M9 12v.01"/><path d="M9 15v.01"/><path d="M9 18v.01"/></svg>
+          <p style="margin-top:18px;font-size:14px;font-weight:600;color:#3b6aa8;letter-spacing:.01em;max-width:18rem">[ PLATZHALTER: 3D-BIM Visualisierung · Modulares Logistikzentrum EWS Frankfurt ]</p>
+        </div>
+        <div style="position:absolute;left:-26px;bottom:42px;display:flex;align-items:center;gap:13px;padding:15px 18px;border-radius:22px;background:rgba(255,255,255,.7);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.85);box-shadow:0 22px 44px -22px rgba(30,58,138,.4);animation:rsmFloat 9s ease-in-out infinite">
+          <span style="display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#dbeafe;color:#1d4ed8"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <div><div style="font-family:'Outfit';font-weight:700;font-size:15px;color:#0f2540">DGNB-konform</div><div style="font-size:12px;color:#7585a0">Zirkuläres Bauen &amp; ESG</div></div>
+        </div>
+        <div style="position:absolute;right:-18px;top:34px;display:flex;align-items:center;gap:12px;padding:13px 17px;border-radius:20px;background:rgba(255,255,255,.7);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.85);box-shadow:0 22px 44px -22px rgba(30,58,138,.4);animation:rsmFloat2 11s ease-in-out infinite">
+          <span style="display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:#cffafe;color:#0e7490"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 2v2"/><path d="M15 2v2"/><path d="M9 20v2"/><path d="M15 20v2"/><path d="M2 9h2"/><path d="M2 15h2"/><path d="M20 9h2"/><path d="M20 15h2"/></svg></span>
+          <div><div style="font-family:'Outfit';font-weight:700;font-size:15px;color:#0f2540">Werkules&nbsp;OS</div><div style="font-size:12px;color:#7585a0">PropTech-Steuerung</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section data-reveal style="margin-top:24px;padding:26px 30px;border-radius:32px;background:rgba(255,255,255,.55);backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);border:1px solid rgba(255,255,255,.8);box-shadow:0 24px 54px -30px rgba(30,58,138,.34);display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <span style="display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#dbeafe;color:#1d4ed8;flex-shrink:0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <div><div style="font-family:'Outfit';font-weight:700;font-size:15.5px;color:#0f2540">Bonitätsstark</div><div style="font-size:12.5px;color:#7585a0">Im RT-Holding-Verbund</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;border-left:1px solid rgba(148,163,184,.32);padding-left:18px">
+        <span style="display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#cffafe;color:#0e7490;flex-shrink:0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+        <div><div style="font-family:'Outfit';font-weight:700;font-size:15.5px;color:#0f2540">Termingarantie</div><div style="font-size:12.5px;color:#7585a0">Fixe Übergabe &amp; GMP</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;border-left:1px solid rgba(148,163,184,.32);padding-left:18px">
+        <span style="display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#dbeafe;color:#1d4ed8;flex-shrink:0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22a8 8 0 0 1 8-8 8 8 0 0 1 8 8"/><circle cx="10" cy="8" r="5"/><path d="M22 22a8 8 0 0 0-8-8"/></svg></span>
+        <div><div style="font-family:'Outfit';font-weight:700;font-size:15.5px;color:#0f2540">90+ Fachkräfte</div><div style="font-size:12.5px;color:#7585a0">Vertikal integriert</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;border-left:1px solid rgba(148,163,184,.32);padding-left:18px">
+        <span style="display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#ede9fe;color:#6d28d9;flex-shrink:0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></span>
+        <div><div style="font-family:'Outfit';font-weight:700;font-size:15.5px;color:#0f2540">PropTech 4.0</div><div style="font-size:12.5px;color:#7585a0">Werkules-Steuerung</div></div>
+      </div>
+    </section>
+
+    <!-- ============ CORPORATE NEXUS ============ -->
+    <section id="nexus" style="padding:96px 0 24px;scroll-margin-top:110px">
+      <div data-reveal style="max-width:42rem">
+        <span style="{{ eyebrow }}">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/></svg>
+          Corporate Nexus
+        </span>
+        <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(2rem,3.4vw,3.1rem);line-height:1.08;letter-spacing:-.03em;color:#0c1f38;margin:20px 0 0">
+          Die Symbiose der Giganten
+        </h2>
+        <p style="font-size:18px;line-height:1.78;color:#52617a;margin:20px 0 0;max-width:40rem">
+          Hinter jedem RSM-Projekt steht ein präzise orchestrierter Unternehmensverbund. Vier spezialisierte Einheiten greifen ineinander wie die Zahnräder eines Präzisionswerks — kapitalstark gesteuert, handwerklich tief verwurzelt und digital vernetzt. Diese vertikale Integration ist kein Zufall, sondern strategisches Fundament.
+        </p>
+      </div>
+
+      <div data-reveal style="margin-top:42px;display:grid;grid-template-columns:.92fr 1.08fr;gap:26px;align-items:start">
+        <div style="display:flex;flex-direction:column;gap:13px">
+          <sc-for list="{{ nexus }}" as="n" hint-placeholder-count="4">
+            <div onClick="{{ n.onClick }}" style="{{ n.tabStyle }}">
+              <div style="{{ n.tagStyle }}">{{ n.tag }}</div>
+              <div style="{{ n.nameStyle }}">{{ n.name }}</div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="padding:38px;border-radius:34px;background:rgba(255,255,255,.6);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border:1px solid rgba(255,255,255,.82);box-shadow:0 34px 70px -34px rgba(30,58,138,.4);position:relative;overflow:hidden">
+          <div style="position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:999px;background:radial-gradient(circle,#dbeafe 0%,transparent 70%);opacity:.7"></div>
+          <div style="position:relative">
+            <div style="font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#3b82f6">{{ activeNexus.role }}</div>
+            <h3 style="font-family:'Outfit';font-weight:800;font-size:30px;letter-spacing:-.025em;color:#0c1f38;margin:8px 0 0">{{ activeNexus.name }}</h3>
+            <p style="font-size:16.5px;line-height:1.8;color:#52617a;margin:18px 0 0;max-width:38rem">{{ activeNexus.body }}</p>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px">
+              <sc-for list="{{ activeNexus.stats }}" as="st" hint-placeholder-count="3">
+                <div style="padding:16px;border-radius:18px;background:rgba(240,247,255,.7);border:1px solid rgba(219,234,254,.9)">
+                  <div style="font-family:'Outfit';font-weight:800;font-size:20px;color:#1d4ed8;letter-spacing:-.02em">{{ st.v }}</div>
+                  <div style="font-size:12px;color:#64748b;margin-top:3px;line-height:1.35">{{ st.l }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IN-HOUSE PERFORMANCE ============ -->
+    <section id="leistungen" style="padding:96px 0 24px;scroll-margin-top:110px">
+      <div data-reveal style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap">
+        <div style="max-width:42rem">
+          <span style="{{ eyebrow }}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4.1 12 6"/><path d="m5.1 8-2.9-.8"/><path d="m6 12-1.9 2"/><path d="M7.2 2.2 8 5.1"/><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"/></svg>
+            In-House Performance
+          </span>
+          <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(2rem,3.4vw,3.1rem);line-height:1.08;letter-spacing:-.03em;color:#0c1f38;margin:20px 0 0">Vier Gewerke. Eine Verantwortung.</h2>
+          <p style="font-size:18px;line-height:1.78;color:#52617a;margin:18px 0 0;max-width:40rem">Wo klassische Bauträger Dutzende Subunternehmer koordinieren, hält RSM die gesamte Wertschöpfung im eigenen Verbund. Das eliminiert Schnittstellenrisiken und macht uns zum verlässlichen Single Point of Contact.</p>
+        </div>
+      </div>
+
+      <div data-reveal style="margin-top:40px;display:grid;grid-template-columns:.78fr 1.22fr;gap:26px;align-items:start">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+            <button onClick="{{ s.onClick }}" style="{{ s.btnStyle }}">
+              <span style="{{ s.iconWrapStyle }}">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+              </span>
+              <span>
+                <span style="{{ s.labelStyle }}">{{ s.name }}</span><br>
+                <span style="{{ s.shortStyle }}">{{ s.short }}</span>
+              </span>
+            </button>
+          </sc-for>
+        </div>
+
+        <div style="padding:42px;border-radius:34px;background:rgba(255,255,255,.6);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border:1px solid rgba(255,255,255,.82);box-shadow:0 34px 70px -34px rgba(30,58,138,.4);position:relative;overflow:hidden;min-height:420px">
+          <div style="position:absolute;bottom:-80px;left:-50px;width:260px;height:260px;border-radius:999px;background:radial-gradient(circle,#cffafe 0%,transparent 70%);opacity:.6"></div>
+          <div style="position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:start">
+            <div>
+              <h3 style="font-family:'Outfit';font-weight:800;font-size:28px;letter-spacing:-.025em;color:#0c1f38;margin:0">{{ activeService.name }}</h3>
+              <p style="font-family:'Newsreader';font-style:italic;font-size:20px;line-height:1.5;color:#1d4ed8;margin:12px 0 0">{{ activeService.lead }}</p>
+              <p style="font-size:16px;line-height:1.82;color:#52617a;margin:20px 0 0">{{ activeService.body }}</p>
+              <div style="display:flex;flex-direction:column;gap:12px;margin-top:26px">
+                <sc-for list="{{ activeService.points }}" as="p" hint-placeholder-count="3">
+                  <div style="display:flex;align-items:flex-start;gap:12px">
+                    <span style="display:grid;place-items:center;width:26px;height:26px;flex-shrink:0;border-radius:999px;background:#dbeafe;color:#1d4ed8;margin-top:1px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                    <span style="font-size:15px;line-height:1.5;color:#3a4a63;font-weight:500">{{ p }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+            <div style="aspect-ratio:3/4.2;border-radius:26px;background:radial-gradient(120% 120% at 0% 0%,#dbeafe 0%,transparent 55%),radial-gradient(120% 120% at 100% 100%,#cffafe 0%,transparent 55%),linear-gradient(150deg,#eef4ff,#f5f3ff);border:1px solid rgba(255,255,255,.9);display:grid;place-items:center;text-align:center;padding:20px">
+              <div>
+                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="opacity:.8;margin-bottom:12px"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+                <p style="font-size:12.5px;font-weight:600;color:#3b6aa8;line-height:1.5">[ PLATZHALTER:<br>{{ activeService.name }} ]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Method timeline -->
+      <div data-reveal style="margin-top:64px;padding:48px;border-radius:36px;background:linear-gradient(135deg,#0c2447,#123a66);position:relative;overflow:hidden;box-shadow:0 40px 80px -40px rgba(12,36,71,.7)">
+        <div style="position:absolute;top:-120px;right:-80px;width:380px;height:380px;border-radius:999px;background:radial-gradient(circle,rgba(56,189,248,.35) 0%,transparent 70%)"></div>
+        <div style="position:relative">
+          <span style="display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#bae6fd;font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;backdrop-filter:blur(8px)">Der RSM-Prozess</span>
+          <h3 style="font-family:'Outfit';font-weight:800;font-size:clamp(1.7rem,2.6vw,2.4rem);letter-spacing:-.025em;color:#fff;margin:18px 0 6px">Von der Vision zur protokollierten Übergabe</h3>
+          <p style="color:#9fc0e6;font-size:16px;max-width:42rem;line-height:1.7">Ein durchgängig digital gesteuerter Ablauf — jeder Schritt in Werkules dokumentiert, jeder Meilenstein verbindlich.</p>
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:38px">
+            <sc-for list="{{ processSteps }}" as="ps" hint-placeholder-count="5">
+              <div style="position:relative">
+                <div style="display:grid;place-items:center;width:54px;height:54px;border-radius:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#7dd3fc;font-family:'Outfit';font-weight:800;font-size:18px;backdrop-filter:blur(8px)">{{ ps.n }}</div>
+                <div style="font-family:'Outfit';font-weight:700;font-size:16px;color:#fff;margin-top:16px">{{ ps.t }}</div>
+                <p style="font-size:13px;line-height:1.55;color:#94b5da;margin-top:7px">{{ ps.d }}</p>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NACHHALTIGKEIT / ESG ============ -->
+    <section id="esg" style="padding:96px 0 24px;scroll-margin-top:110px">
+      <div data-reveal style="max-width:42rem">
+        <span style="{{ eyebrow }}">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          Nachhaltigkeit &amp; ESG
+        </span>
+        <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(2rem,3.4vw,3.1rem);line-height:1.08;letter-spacing:-.03em;color:#0c1f38;margin:20px 0 0">Bauen, das sich rechnet — heute und für die Bilanz von morgen.</h2>
+        <p style="font-size:18px;line-height:1.78;color:#52617a;margin:18px 0 0;max-width:40rem">Nachhaltigkeit ist bei RSM keine Marketing-Fassade, sondern konstruktive Grundlage. Zirkuläre Bauweisen, nachwachsende Rohstoffe und integrierte Energieerzeugung liefern bilanzfähige ESG-Kennzahlen — und senken zugleich die Lebenszykluskosten Ihrer Immobilie.</p>
+      </div>
+
+      <div data-reveal style="margin-top:42px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px">
+        <sc-for list="{{ esg }}" as="e" hint-placeholder-count="3">
+          <div style="padding:34px 30px;border-radius:30px;background:rgba(255,255,255,.6);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);border:1px solid rgba(255,255,255,.82);box-shadow:0 26px 56px -32px rgba(30,58,138,.36);position:relative;overflow:hidden" style-hover="transform:translateY(-6px)">
+            <div style="position:absolute;top:-50px;right:-50px;width:170px;height:170px;border-radius:999px;background:radial-gradient(circle,#d1fae5 0%,transparent 70%);opacity:.65"></div>
+            <span style="position:relative;display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(209,250,229,.7);border:1px solid rgba(167,243,208,.8);color:#047857;font-size:12px;font-weight:700;letter-spacing:.03em">{{ e.k }}</span>
+            <h3 style="position:relative;font-family:'Outfit';font-weight:700;font-size:21px;letter-spacing:-.02em;color:#0c1f38;margin:18px 0 0">{{ e.t }}</h3>
+            <p style="position:relative;font-size:15px;line-height:1.75;color:#52617a;margin:12px 0 0">{{ e.d }}</p>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- PV highlight band -->
+      <div data-reveal style="margin-top:24px;padding:46px;border-radius:34px;background:linear-gradient(135deg,#ecfeff,#eff6ff);border:1px solid rgba(255,255,255,.85);box-shadow:0 30px 64px -36px rgba(30,58,138,.32);display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;position:relative;overflow:hidden">
+        <div style="position:absolute;top:-90px;left:30%;width:300px;height:300px;border-radius:999px;background:radial-gradient(circle,#fef9c3 0%,transparent 70%);opacity:.55"></div>
+        <div style="position:relative">
+          <span style="display:inline-flex;align-items:center;gap:8px;color:#b45309;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg> Das Dach als Kraftwerk</span>
+          <h3 style="font-family:'Outfit';font-weight:800;font-size:clamp(1.6rem,2.4vw,2.2rem);letter-spacing:-.025em;color:#0c1f38;margin:14px 0 0">Vom Energieverbraucher<br>zum Prosumer.</h3>
+          <p style="font-size:16px;line-height:1.8;color:#52617a;margin:16px 0 0;max-width:32rem">Integrierte Photovoltaik verwandelt jede ungenutzte Dachfläche in eine Erzeugungsanlage. In Verbindung mit der hervorragenden Dämmwirkung des Holzrahmenbaus entstehen Gebäude, die einen messbaren Beitrag zur eigenen Amortisation leisten.</p>
+          <div style="display:flex;gap:30px;margin-top:26px">
+            <div><div style="font-family:'Outfit';font-weight:800;font-size:30px;color:#0e7490;letter-spacing:-.02em">100%</div><div style="font-size:13px;color:#7585a0">Dachflächen-Aktivierung</div></div>
+            <div><div style="font-family:'Outfit';font-weight:800;font-size:30px;color:#0e7490;letter-spacing:-.02em">CO₂-</div><div style="font-size:13px;color:#7585a0">negativ bilanzierbar</div></div>
+          </div>
+        </div>
+        <div style="position:relative;aspect-ratio:4/3;border-radius:26px;background:radial-gradient(120% 120% at 0% 0%,#fef9c3 0%,transparent 50%),radial-gradient(120% 120% at 100% 100%,#cffafe 0%,transparent 55%),linear-gradient(150deg,#f0fdfa,#eff6ff);border:1px solid rgba(255,255,255,.9);display:grid;place-items:center;text-align:center;padding:20px">
+          <div>
+            <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="opacity:.8;margin-bottom:12px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><path d="M2 14h20"/><path d="M7 4v16"/><path d="M12 4v16"/><path d="M17 4v16"/></svg>
+            <p style="font-size:12.5px;font-weight:600;color:#0e7490;line-height:1.5">[ PLATZHALTER: PV-Dachvisualisierung &amp; Energiefluss-Diagramm ]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROPTECH / WERKULES ============ -->
+    <section id="proptech" style="padding:72px 0 24px;scroll-margin-top:110px">
+      <div data-reveal style="padding:50px;border-radius:38px;background:linear-gradient(135deg,#0c1f38,#1e3a8a 55%,#0e7490);position:relative;overflow:hidden;box-shadow:0 44px 90px -44px rgba(12,31,56,.7)">
+        <div style="position:absolute;inset:0;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.25) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.25) 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(120% 90% at 80% 0%,#000 30%,transparent 75%)"></div>
+        <div style="position:absolute;top:-100px;right:-60px;width:360px;height:360px;border-radius:999px;background:radial-gradient(circle,rgba(56,189,248,.4) 0%,transparent 70%);animation:rsmFloat 14s ease-in-out infinite"></div>
+        <div style="position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center">
+          <div>
+            <span style="display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#7dd3fc;font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;backdrop-filter:blur(8px)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M20 15h2"/><path d="M2 9h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg> Werkules GmbH · PropTech-Engine</span>
+            <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(2rem,3.2vw,3rem);line-height:1.08;letter-spacing:-.03em;color:#fff;margin:20px 0 0">Handwerk 4.0.<br>Datengetrieben gesteuert.</h2>
+            <p style="font-size:17px;line-height:1.8;color:#bcd4f0;margin:18px 0 0;max-width:34rem">Die Werkules-Plattform ist das digitale Nervensystem des Verbunds. Aufmaß, Disposition, Bautagebuch und Abrechnung verschmelzen in einem Echtzeit-Datenmodell. Was im klassischen Bau auf Zetteln, in Mails und in Köpfen verteilt liegt, wird hier zur steuerbaren, auditierbaren Single Source of Truth.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+              <span style="padding:9px 17px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#dbeafe;font-size:13.5px;font-weight:600;backdrop-filter:blur(8px)">Echtzeit-Bautagebuch</span>
+              <span style="padding:9px 17px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#dbeafe;font-size:13.5px;font-weight:600;backdrop-filter:blur(8px)">Digitales Aufmaß</span>
+              <span style="padding:9px 17px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#dbeafe;font-size:13.5px;font-weight:600;backdrop-filter:blur(8px)">BIM-Schnittstellen</span>
+              <span style="padding:9px 17px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#dbeafe;font-size:13.5px;font-weight:600;backdrop-filter:blur(8px)">Automatisierte Abrechnung</span>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div style="padding:24px;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)">
+              <div style="font-family:'Outfit';font-weight:800;font-size:34px;color:#7dd3fc;letter-spacing:-.03em">−40%</div>
+              <div style="font-size:13.5px;color:#bcd4f0;margin-top:5px;line-height:1.5">administrativer Aufwand pro Projekt</div>
+            </div>
+            <div style="padding:24px;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);margin-top:24px">
+              <div style="font-family:'Outfit';font-weight:800;font-size:34px;color:#7dd3fc;letter-spacing:-.03em">24/7</div>
+              <div style="font-size:13.5px;color:#bcd4f0;margin-top:5px;line-height:1.5">Projekttransparenz für Auftraggeber</div>
+            </div>
+            <div style="padding:24px;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)">
+              <div style="font-family:'Outfit';font-weight:800;font-size:34px;color:#7dd3fc;letter-spacing:-.03em">1×</div>
+              <div style="font-size:13.5px;color:#bcd4f0;margin-top:5px;line-height:1.5">Single Source of Truth statt Datensilos</div>
+            </div>
+            <div style="padding:24px;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);margin-top:24px">
+              <div style="font-family:'Outfit';font-weight:800;font-size:34px;color:#7dd3fc;letter-spacing:-.03em">100%</div>
+              <div style="font-size:13.5px;color:#bcd4f0;margin-top:5px;line-height:1.5">auditierbare Leistungsnachweise</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REFERENZEN ============ -->
+    <section id="referenzen" style="padding:96px 0 24px;scroll-margin-top:110px">
+      <div data-reveal style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap">
+        <div style="max-width:42rem">
+          <span style="{{ eyebrow }}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg>
+            Prestige Referenzen
+          </span>
+          <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(2rem,3.4vw,3.1rem);line-height:1.08;letter-spacing:-.03em;color:#0c1f38;margin:20px 0 0">Beweis statt Behauptung.</h2>
+        </div>
+        <p style="font-size:16px;line-height:1.7;color:#52617a;max-width:24rem">Ausgewählte Projekte aus Logistik, öffentlicher Hand und Hospitality — jedes ein Beleg für die vertikale Tiefe des Verbunds.</p>
+      </div>
+
+      <div data-reveal style="display:flex;flex-wrap:wrap;gap:11px;margin-top:34px">
+        <sc-for list="{{ filterChips }}" as="c" hint-placeholder-count="6">
+          <button onClick="{{ c.onClick }}" style="{{ c.chipStyle }}">{{ c.name }}</button>
+        </sc-for>
+      </div>
+
+      <div data-reveal style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px">
+        <sc-for list="{{ visibleRefs }}" as="r" hint-placeholder-count="6">
+          <div style="border-radius:30px;overflow:hidden;background:rgba(255,255,255,.6);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border:1px solid rgba(255,255,255,.82);box-shadow:0 24px 54px -32px rgba(30,58,138,.34);transition:transform .3s" style-hover="transform:translateY(-6px)">
+            <div style="aspect-ratio:4/2.7;background:radial-gradient(120% 120% at 0% 0%,#dbeafe 0%,transparent 55%),radial-gradient(120% 120% at 100% 100%,#cffafe 0%,transparent 55%),linear-gradient(150deg,#eef4ff,#f5f3ff);display:grid;place-items:center;text-align:center;padding:18px;position:relative">
+              <span style="position:absolute;top:14px;left:14px;padding:6px 13px;border-radius:999px;background:rgba(255,255,255,.78);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.85);color:#1d4ed8;font-size:11.5px;font-weight:700;letter-spacing:.03em">{{ r.cat }}</span>
+              <div>
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="opacity:.75;margin-bottom:9px"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                <p style="font-size:11.5px;font-weight:600;color:#3b6aa8;line-height:1.45">[ PLATZHALTER: {{ r.name }} ]</p>
+              </div>
+            </div>
+            <div style="padding:26px 24px">
+              <div style="font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#0ea5e9">{{ r.kpi }}</div>
+              <h3 style="font-family:'Outfit';font-weight:700;font-size:20px;letter-spacing:-.02em;color:#0c1f38;margin:6px 0 0">{{ r.name }}</h3>
+              <div style="font-size:13px;color:#7585a0;margin-top:4px;font-weight:500">{{ r.meta }}</div>
+              <p style="font-size:14.5px;line-height:1.72;color:#52617a;margin:14px 0 0">{{ r.body }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- STATS BAND -->
+    <section data-reveal style="padding:18px 0 24px">
+      <div style="padding:48px 40px;border-radius:36px;background:rgba(255,255,255,.55);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);border:1px solid rgba(255,255,255,.82);box-shadow:0 30px 64px -36px rgba(30,58,138,.34);display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center">
+        <div><div style="font-family:'Outfit';font-weight:800;font-size:clamp(2.2rem,3vw,3rem);background:linear-gradient(120deg,#2563eb,#0ea5e9);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.03em">€&#8201;2,8 M</div><div style="font-size:13.5px;color:#7585a0;margin-top:6px;font-weight:500">Öffentliches Projektvolumen<br>(Allendorf)</div></div>
+        <div style="border-left:1px solid rgba(148,163,184,.3)"><div style="font-family:'Outfit';font-weight:800;font-size:clamp(2.2rem,3vw,3rem);background:linear-gradient(120deg,#2563eb,#0ea5e9);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.03em">1.200 m²</div><div style="font-size:13.5px;color:#7585a0;margin-top:6px;font-weight:500">Großformatfliesen<br>(EWS Frankfurt)</div></div>
+        <div style="border-left:1px solid rgba(148,163,184,.3)"><div style="font-family:'Outfit';font-weight:800;font-size:clamp(2.2rem,3vw,3rem);background:linear-gradient(120deg,#2563eb,#0ea5e9);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.03em">90+</div><div style="font-size:13.5px;color:#7585a0;margin-top:6px;font-weight:500">Fachkräfte<br>(Team Simon)</div></div>
+        <div style="border-left:1px solid rgba(148,163,184,.3)"><div style="font-family:'Outfit';font-weight:800;font-size:clamp(2.2rem,3vw,3rem);background:linear-gradient(120deg,#2563eb,#0ea5e9);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.03em">−50%</div><div style="font-size:13.5px;color:#7585a0;margin-top:6px;font-weight:500">Bauzeit durch<br>Modul-Systembau</div></div>
+      </div>
+    </section>
+
+    <!-- ============ KARRIERE ============ -->
+    <section id="karriere" style="padding:96px 0 24px;scroll-margin-top:110px">
+      <div data-reveal style="display:grid;grid-template-columns:.82fr 1.18fr;gap:44px;align-items:start">
+        <div style="position:sticky;top:120px">
+          <span style="{{ eyebrow }}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Careers Hub
+          </span>
+          <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(2rem,3.2vw,2.9rem);line-height:1.1;letter-spacing:-.03em;color:#0c1f38;margin:20px 0 0">Bauen Sie mit an der Infrastruktur von morgen.</h2>
+          <p style="font-size:16.5px;line-height:1.8;color:#52617a;margin:18px 0 0">Wir suchen Ingenieurinnen und Ingenieure, Bauleiter und TGA-Fachplaner, die anspruchsvolle Projekte nicht scheuen, sondern suchen. Bei RSM arbeiten Sie an 7-stelligen Vorhaben — mit digitaler Werkzeugausstattung, kurzen Entscheidungswegen und einem Verbund, der vertikale Tiefe als Stärke begreift.</p>
+          <div style="margin-top:26px;padding:24px;border-radius:24px;background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.82);backdrop-filter:blur(16px);box-shadow:0 22px 46px -30px rgba(30,58,138,.3)">
+            <div style="font-family:'Outfit';font-weight:700;font-size:16px;color:#0c1f38">Initiativbewerbung</div>
+            <p style="font-size:14px;line-height:1.65;color:#52617a;margin:8px 0 14px">Keine passende Position dabei? Überzeugen Sie uns trotzdem.</p>
+            <a href="#portal" style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px;color:#fff;background:linear-gradient(135deg,#2563eb,#0ea5e9);box-shadow:0 14px 28px -12px rgba(37,99,235,.6)">Profil senden <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <sc-for list="{{ careers }}" as="c" hint-placeholder-count="4">
+            <div style="{{ c.cardStyle }}">
+              <button onClick="{{ c.onClick }}" style="cursor:pointer;width:100%;text-align:left;display:flex;align-items:center;gap:18px;padding:24px 26px;background:transparent;border:none">
+                <span style="display:grid;place-items:center;width:50px;height:50px;flex-shrink:0;border-radius:16px;background:#dbeafe;color:#1d4ed8"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-3a2 2 0 0 1-2-2V2"/><path d="M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z"/><path d="M3 7v14a2 2 0 0 0 2 2h12"/></svg></span>
+                <span style="flex:1">
+                  <span style="font-family:'Outfit';font-weight:700;font-size:18px;color:#0c1f38;display:block">{{ c.role }}</span>
+                  <span style="font-size:13.5px;color:#7585a0;font-weight:500">{{ c.area }} · {{ c.loc }}</span>
+                </span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="{{ c.chevStyle }}"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <sc-if value="{{ c.open }}" hint-placeholder-val="{{ true }}">
+                <div style="padding:0 26px 26px 94px">
+                  <p style="font-size:15px;line-height:1.78;color:#52617a;margin:0">{{ c.body }}</p>
+                  <div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:16px">
+                    <sc-for list="{{ c.tags }}" as="t" hint-placeholder-count="3">
+                      <span style="padding:6px 14px;border-radius:999px;background:rgba(224,242,254,.7);border:1px solid rgba(186,230,253,.8);color:#0369a1;font-size:12.5px;font-weight:600">{{ t }}</span>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ + TESTIMONIALS ============ -->
+    <section style="padding:80px 0 24px">
+      <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:start">
+        <div data-reveal>
+          <span style="{{ eyebrow }}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="10"/></svg>
+            Häufige Fragen
+          </span>
+          <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(1.8rem,2.8vw,2.6rem);line-height:1.12;letter-spacing:-.03em;color:#0c1f38;margin:18px 0 28px">Klarheit, bevor das erste Fundament gegossen wird.</h2>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+              <div style="border-radius:22px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 14px 34px -26px rgba(30,58,138,.3);overflow:hidden">
+                <button onClick="{{ f.onClick }}" style="cursor:pointer;width:100%;text-align:left;display:flex;align-items:center;gap:14px;padding:20px 22px;background:transparent;border:none">
+                  <span style="flex:1;font-family:'Outfit';font-weight:600;font-size:16px;color:#102845;line-height:1.4">{{ f.q }}</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="{{ f.chevStyle }}"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </button>
+                <sc-if value="{{ f.open }}" hint-placeholder-val="{{ true }}">
+                  <p style="padding:0 22px 22px;font-size:14.5px;line-height:1.78;color:#52617a;margin:0">{{ f.a }}</p>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div data-reveal style="position:sticky;top:120px;display:flex;flex-direction:column;gap:18px">
+          <span style="{{ eyebrow }}">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+            Stimmen aus dem Markt
+          </span>
+          <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+            <div style="padding:28px;border-radius:26px;background:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 22px 48px -30px rgba(30,58,138,.32)">
+              <p style="font-family:'Newsreader';font-size:18px;line-height:1.6;color:#1f3354;margin:0">“{{ t.quote }}”</p>
+              <div style="display:flex;align-items:center;gap:13px;margin-top:18px">
+                <span style="display:grid;place-items:center;width:44px;height:44px;border-radius:999px;background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff;font-family:'Outfit';font-weight:700;font-size:14px">{{ t.ini }}</span>
+                <div><div style="font-family:'Outfit';font-weight:700;font-size:14.5px;color:#0c1f38">{{ t.name }}</div><div style="font-size:12.5px;color:#7585a0">{{ t.role }}</div></div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EMPLOYEE PORTAL ============ -->
+    <section id="portal" style="padding:80px 0 24px;scroll-margin-top:110px">
+      <div data-reveal style="border-radius:40px;background:linear-gradient(135deg,#0a1c34,#102a52 60%,#0d3b52);position:relative;overflow:hidden;box-shadow:0 46px 96px -46px rgba(10,28,52,.8)">
+        <div style="position:absolute;inset:0;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.22) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.22) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(120% 100% at 20% 0%,#000 25%,transparent 70%)"></div>
+        <div style="position:absolute;bottom:-120px;left:-60px;width:380px;height:380px;border-radius:999px;background:radial-gradient(circle,rgba(56,189,248,.35) 0%,transparent 70%);animation:rsmFloat2 16s ease-in-out infinite"></div>
+        <div style="position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;padding:54px">
+          <div>
+            <span style="display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#7dd3fc;font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;backdrop-filter:blur(8px)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1Z"/></svg>
+              Zero-Trust Mitarbeiter-Portal
+            </span>
+            <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(2rem,3vw,2.8rem);line-height:1.1;letter-spacing:-.03em;color:#fff;margin:20px 0 0">Sicherer Zugang. Ohne Kompromisse.</h2>
+            <p style="font-size:16.5px;line-height:1.8;color:#bcd4f0;margin:18px 0 0;max-width:32rem">Das RSM-Portal ersetzt unsichere PDF-Verteiler und Mail-Anhänge durch eine vollständig verschlüsselte, auditierbare Plattform. Jeder Zugriff wird verifiziert, jede Sitzung protokolliert — DSGVO-konform by Architecture.</p>
+            <div style="display:flex;flex-direction:column;gap:13px;margin-top:26px">
+              <div style="display:flex;align-items:center;gap:12px;color:#cfe2f7;font-size:14.5px"><span style="display:grid;place-items:center;width:26px;height:26px;border-radius:999px;background:rgba(125,211,252,.16);color:#7dd3fc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Ende-zu-Ende-Verschlüsselung &amp; MFA</div>
+              <div style="display:flex;align-items:center;gap:12px;color:#cfe2f7;font-size:14.5px"><span style="display:grid;place-items:center;width:26px;height:26px;border-radius:999px;background:rgba(125,211,252,.16);color:#7dd3fc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Vollständige Zugriffs-Auditierung</div>
+              <div style="display:flex;align-items:center;gap:12px;color:#cfe2f7;font-size:14.5px"><span style="display:grid;place-items:center;width:26px;height:26px;border-radius:999px;background:rgba(125,211,252,.16);color:#7dd3fc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Werkules-Integration für Bautagebuch &amp; Lohn</div>
+            </div>
+          </div>
+
+          <div style="padding:34px;border-radius:30px;background:rgba(255,255,255,.1);backdrop-filter:blur(26px) saturate(150%);-webkit-backdrop-filter:blur(26px) saturate(150%);border:1px solid rgba(255,255,255,.22);box-shadow:0 30px 64px -30px rgba(0,0,0,.5)">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px">
+              <span style="display:grid;place-items:center;width:46px;height:46px;border-radius:15px;background:linear-gradient(140deg,#2563eb,#0ea5e9);color:#fff"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+              <div><div style="font-family:'Outfit';font-weight:700;font-size:17px;color:#fff">Portal-Anmeldung</div><div style="font-size:12.5px;color:#9fc0e6">RSM Systembau · RT Holding Group</div></div>
+            </div>
+            <form onSubmit="{{ onLogin }}">
+              <label style="display:block;font-size:13px;font-weight:600;color:#bcd4f0;margin-bottom:7px">Unternehmens-E-Mail</label>
+              <input type="email" value="{{ login.user }}" onInput="{{ onField('user') }}" placeholder="vorname.name@rsm-systembau.de" style="width:100%;padding:13px 16px;border-radius:15px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:14.5px;outline:none;font-family:'Inter'" />
+              <label style="display:block;font-size:13px;font-weight:600;color:#bcd4f0;margin:16px 0 7px">Passwort</label>
+              <input type="password" value="{{ login.pass }}" onInput="{{ onField('pass') }}" placeholder="••••••••••••" style="width:100%;padding:13px 16px;border-radius:15px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);color:#fff;font-size:14.5px;outline:none;font-family:'Inter'" />
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:14px;font-size:13px">
+                <label style="display:flex;align-items:center;gap:7px;color:#bcd4f0;cursor:pointer"><input type="checkbox" style="accent-color:#0ea5e9" /> Angemeldet bleiben</label>
+                <a href="#portal" style="color:#7dd3fc;text-decoration:none;font-weight:600">Passwort vergessen?</a>
+              </div>
+              <button type="submit" style="cursor:pointer;width:100%;margin-top:20px;padding:15px;border:none;border-radius:16px;font-family:'Outfit';font-weight:700;font-size:15px;color:#fff;background:linear-gradient(135deg,#2563eb,#0ea5e9);box-shadow:0 18px 36px -14px rgba(37,99,235,.7);display:flex;align-items:center;justify-content:center;gap:9px" style-hover="transform:translateY(-2px)">
+                Sicher anmelden
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+              <sc-if value="{{ loginMsg }}" hint-placeholder-val="{{ null }}">
+                <div style="{{ loginMsg.style }}">{{ loginMsg.t }}</div>
+              </sc-if>
+              <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:18px;color:#7e9dc4;font-size:12px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> 256-bit TLS · DSGVO-konform · Zero-Leak Jamstack</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section data-reveal style="padding:80px 0 96px">
+      <div style="text-align:center;padding:64px 40px;border-radius:40px;background:rgba(255,255,255,.55);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border:1px solid rgba(255,255,255,.82);box-shadow:0 40px 84px -42px rgba(30,58,138,.4);position:relative;overflow:hidden">
+        <div style="position:absolute;top:-90px;left:50%;transform:translateX(-50%);width:520px;height:340px;border-radius:999px;background:radial-gradient(circle,#cfe6ff 0%,transparent 70%);opacity:.7"></div>
+        <div style="position:relative">
+          <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(2rem,3.6vw,3.2rem);line-height:1.08;letter-spacing:-.03em;color:#0c1f38;margin:0;max-width:34rem;margin-inline:auto">Ein Partner für Ihr nächstes <span style="font-family:'Newsreader';font-style:italic;font-weight:500;color:#1d4ed8">Millionenprojekt</span>.</h2>
+          <p style="font-size:18px;line-height:1.75;color:#52617a;margin:20px auto 0;max-width:34rem">Übergeben Sie uns Ihre Projektunterlagen. Wir prüfen Machbarkeit, Termin und Budget — und liefern Ihnen einen verbindlichen Vorschlag aus einer Hand.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:32px">
+            <a href="#portal" style="display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16px;color:#fff;background:linear-gradient(135deg,#1d4ed8,#0ea5e9);box-shadow:0 20px 40px -16px rgba(37,99,235,.7);transition:transform .25s" style-hover="transform:translateY(-3px)">Projekt anfragen <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+            <a href="tel:+4906419999000" style="display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;text-decoration:none;font-weight:700;font-size:16px;color:#1d4ed8;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.9);box-shadow:0 12px 28px -16px rgba(30,58,138,.4)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Direkt anrufen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="position:relative;z-index:10;margin-top:40px;background:linear-gradient(135deg,#0a1c34,#0f2a4d);color:#9fb6d4">
+    <div style="position:absolute;top:-100px;right:8%;width:420px;height:420px;border-radius:999px;background:radial-gradient(circle,rgba(56,189,248,.16) 0%,transparent 70%);pointer-events:none"></div>
+    <div style="position:relative;max-width:1280px;margin:0 auto;padding:72px 22px 36px">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px">
+        <div>
+          <div style="display:flex;align-items:center;gap:13px">
+            <span style="display:grid;place-items:center;width:46px;height:46px;border-radius:16px;background:linear-gradient(140deg,#2563eb,#0ea5e9);color:#fff;font-family:'Outfit';font-weight:800;font-size:19px">R</span>
+            <span style="display:flex;flex-direction:column;line-height:1.05"><span style="font-family:'Outfit';font-weight:700;font-size:19px;color:#fff">RSM Systembau</span><span style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#7dd3fc">RT Holding Group</span></span>
+          </div>
+          <p style="font-size:14.5px;line-height:1.75;color:#8fa8c8;margin:20px 0 0;max-width:24rem">Generalunternehmer für schlüsselfertige B2B-Bauprojekte. Modul-Systembau, TGA, Brandschutz und Premium-Innenausbau — vertikal integriert, digital gesteuert, nachhaltig konzipiert.</p>
+          <div style="display:flex;gap:10px;margin-top:22px">
+            <span style="padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:12px;color:#bcd4f0">DGNB</span>
+            <span style="padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:12px;color:#bcd4f0">ISO 9001</span>
+            <span style="padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:12px;color:#bcd4f0">DSGVO-konform</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Outfit';font-weight:700;font-size:14px;color:#fff;letter-spacing:.02em;margin-bottom:16px">Unternehmen</div>
+          <div style="display:flex;flex-direction:column;gap:11px;font-size:14px">
+            <a href="#nexus" style="color:#9fb6d4;text-decoration:none" style-hover="color:#7dd3fc">Corporate Nexus</a>
+            <a href="#nexus" style="color:#9fb6d4;text-decoration:none" style-hover="color:#7dd3fc">RT Holding</a>
+            <a href="#proptech" style="color:#9fb6d4;text-decoration:none" style-hover="color:#7dd3fc">Werkules PropTech</a>
+            <a href="#esg" style="color:#9fb6d4;text-decoration:none" style-hover="color:#7dd3fc">Nachhaltigkeit &amp; ESG</a>
+            <a href="#karriere" style="color:#9fb6d4;text-decoration:none" style-hover="color:#7dd3fc">Karriere</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Outfit';font-weight:700;font-size:14px;color:#fff;letter-spacing:.02em;margin-bottom:16px">Leistungen</div>
+          <div style="display:flex;flex-direction:column;gap:11px;font-size:14px">
+            <a href="#leistungen" style="color:#9fb6d4;text-decoration:none" style-hover="color:#7dd3fc">Generalunternehmer</a>
+            <a href="#leistungen" style="color:#9fb6d4;text-decoration:none" style-hover="color:#7dd3fc">Modul-Systembau</a>
+            <a href="#leistungen" style="color:#9fb6d4;text-decoration:none" style-hover="color:#7dd3fc">TGA &amp; Brandschutz</a>
+            <a href="#leistungen" style="color:#9fb6d4;text-decoration:none" style-hover="color:#7dd3fc">Roh- &amp; Innenausbau</a>
+            <a href="#referenzen" style="color:#9fb6d4;text-decoration:none" style-hover="color:#7dd3fc">Referenzen</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Outfit';font-weight:700;font-size:14px;color:#fff;letter-spacing:.02em;margin-bottom:16px">Kontakt</div>
+          <div style="display:flex;flex-direction:column;gap:11px;font-size:14px;color:#9fb6d4">
+            <div style="display:flex;align-items:flex-start;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px;flex-shrink:0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Ernst-Leitz-Straße 1–5<br>35578 Gießen</div>
+            <div style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +49 641 9999 000</div>
+            <div style="display:flex;align-items:center;gap:9px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> kontakt@rsm-systembau.de</div>
+            <div style="font-size:13px;color:#7e9dc4;margin-top:4px">Geschäftsführer: Sascha Reitz, Mario Simon</div>
+          </div>
+        </div>
+      </div>
+      <div style="height:1px;background:rgba(255,255,255,.1);margin:44px 0 24px"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:13px;color:#7e9dc4">
+        <div>© 2025 RSM Systembau GmbH · RT Holding Group. Alle Rechte vorbehalten.</div>
+        <div style="display:flex;gap:22px"><a href="#" style="color:#7e9dc4;text-decoration:none" style-hover="color:#7dd3fc">Impressum</a><a href="#" style="color:#7e9dc4;text-decoration:none" style-hover="color:#7dd3fc">Datenschutz</a><a href="#" style="color:#7e9dc4;text-decoration:none" style-hover="color:#7dd3fc">AGB</a></div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = {
+    scrolled: false,
+    svc: 0,
+    nexus: 0,
+    faq: 0,
+    career: null,
+    filter: 'Alle',
+    login: { user: '', pass: '' },
+    loginMsg: null,
+  };
+
+  componentDidMount() {
+    this._onScroll = () => {
+      const s = window.scrollY > 28;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+  }
+
+  renderVals() {
+    const S = this.state;
+
+    const navStyleBase = "max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 14px 12px 20px;border-radius:999px;transition:all .35s cubic-bezier(.16,1,.3,1);";
+    const navStyle = navStyleBase + (S.scrolled
+      ? "background:rgba(255,255,255,.72);backdrop-filter:blur(22px) saturate(150%);-webkit-backdrop-filter:blur(22px) saturate(150%);border:1px solid rgba(255,255,255,.85);box-shadow:0 18px 40px -22px rgba(30,58,138,.42);"
+      : "background:rgba(255,255,255,.42);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.6);box-shadow:0 10px 30px -24px rgba(30,58,138,.3);");
+
+    const eyebrow = "display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border-radius:999px;background:rgba(224,242,254,.7);backdrop-filter:blur(8px);border:1px solid rgba(186,230,253,.85);color:#0369a1;font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase";
+
+    const navLinks = [
+      { name: 'Unternehmen', href: '#nexus' },
+      { name: 'Leistungen', href: '#leistungen' },
+      { name: 'Nachhaltigkeit', href: '#esg' },
+      { name: 'Referenzen', href: '#referenzen' },
+      { name: 'Karriere', href: '#karriere' },
+    ];
+
+    // ---- Corporate Nexus tabs ----
+    const nexusRaw = [
+      {
+        key: 'RSM', tag: 'Generalunternehmer', name: 'RSM Systembau GmbH',
+        role: 'Die ausführende Kraft',
+        body: 'Als Generalunternehmer ist die RSM Systembau GmbH der zentrale Knotenpunkt jedes Bauvorhabens. Sie übernimmt die schlüsselfertige Realisierung 7-stelliger Projekte und bündelt sämtliche Gewerke in einer einzigen, vertraglich verbindlichen Verantwortung — vom ersten Spatenstich bis zur protokollierten Übergabe.',
+        stats: [{v:'SPOC',l:'Single Point of Contact'},{v:'100%',l:'Termin- & Kostengarantie'},{v:'DIN',l:'EN ISO 9001 Prozesse'}],
+      },
+      {
+        key: 'RT', tag: 'Holding', name: 'RT Holding',
+        role: 'Das strategische Fundament',
+        body: 'Die RT Holding bildet die kapital- und steuerungsseitige Dachstruktur des Verbunds. Sie sichert finanzielle Solidität, allokiert Investitionen und verantwortet die strategische Ausrichtung der Beteiligungen. Für Auftraggeber bedeutet das: ein bonitätsstarker Partner mit langfristigem Planungshorizont.',
+        stats: [{v:'Bonität',l:'Geprüfte Stabilität'},{v:'Multi',l:'Beteiligungsstruktur'},{v:'Langfrist',l:'Investitionshorizont'}],
+      },
+      {
+        key: 'SIMON', tag: 'Ausbau-Power', name: 'Team Simon GmbH',
+        role: 'Die handwerkliche Tiefe',
+        body: 'Mit über 90 Fachkräften liefert die Team Simon GmbH die operative Schlagkraft im Roh- und Innenausbau. Die Spezialisierung auf großformatige Fliesen- und Natursteinarbeiten verleiht dem Verbund eine Ausführungsqualität, die im Generalunternehmer-Markt selten vertikal integriert verfügbar ist.',
+        stats: [{v:'90+',l:'Eigene Fachkräfte'},{v:'Premium',l:'Großformat & Mosaik'},{v:'In-House',l:'Keine Subunternehmer-Lücken'}],
+      },
+      {
+        key: 'WERK', tag: 'PropTech-Engine', name: 'Werkules GmbH',
+        role: 'Die digitale Intelligenz',
+        body: 'Die Werkules GmbH ist die PropTech-Engine des Verbunds. Ihre Softwareplattform digitalisiert Aufmaß, Disposition, Bautagebuch und Abrechnung in Echtzeit und überführt das Handwerk in das Zeitalter datengetriebener Steuerung — Handwerk 4.0 als realer Wettbewerbsvorteil.',
+        stats: [{v:'Realtime',l:'Bautagebuch & Aufmaß'},{v:'4.0',l:'Handwerk digitalisiert'},{v:'API',l:'BIM-Schnittstellen'}],
+      },
+    ];
+    const nexus = nexusRaw.map((n, i) => {
+      const active = i === S.nexus;
+      return {
+        ...n, active, $i: i,
+        onClick: () => this.setState({ nexus: i }),
+        tabStyle: "cursor:pointer;text-align:left;padding:18px 20px;border-radius:22px;border:1px solid " + (active ? "rgba(37,99,235,.35)" : "rgba(255,255,255,.7)") + ";background:" + (active ? "rgba(255,255,255,.85)" : "rgba(255,255,255,.45)") + ";box-shadow:" + (active ? "0 16px 34px -20px rgba(37,99,235,.5)" : "none") + ";backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:all .3s",
+        tagStyle: "font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:" + (active ? "#1d4ed8" : "#7c8aa3"),
+        nameStyle: "font-family:'Outfit';font-weight:700;font-size:17px;margin-top:3px;color:" + (active ? "#0f2540" : "#46556e"),
+      };
+    });
+    const activeNexus = nexus[S.nexus];
+
+    // ---- In-House Performance (service tabs) ----
+    const servicesRaw = [
+      {
+        name: 'Generalunternehmer', short: 'Schlüsselfertig',
+        icon: 'gu',
+        lead: 'Ein Vertrag, ein Ansprechpartner, ein garantierter Preis.',
+        body: 'Als Generalunternehmer übernimmt RSM die vollständige Koordination aller am Bau beteiligten Gewerke. Auftraggeber delegieren das gesamte Schnittstellen-, Termin- und Mängelrisiko an einen einzigen, haftenden Partner. Das eliminiert die kostspielige Reibung klassischer Einzelvergabe und schafft die Planungssicherheit, die institutionelle Investoren und öffentliche Auftraggeber bei 7-stelligen Volumina zwingend voraussetzen.',
+        points: ['Garantierter Maximalpreis (GMP) & Fixtermine', 'Lückenlose Gewährleistung aus einer Hand', 'Reduktion der Schnittstellen von Dutzenden auf eine'],
+      },
+      {
+        name: 'Modul-Systembau', short: 'Just-in-Time',
+        icon: 'mod',
+        lead: 'Industrielle Vorfertigung statt wetterabhängiger Baustelle.',
+        body: 'Der modulare Systembau verlagert bis zu 80 % der Wertschöpfung in die witterungsunabhängige Werkhalle. Raummodule werden parallel zur Baufeldvorbereitung gefertigt und just-in-time montiert. Gegenüber konventionellen Verfahren — und im direkten Wettbewerb zu Anbietern wie Kleusberg oder Haltec — verkürzt dies die Bauzeit drastisch bei gleichbleibend reproduzierbarer Präzisionsqualität.',
+        points: ['Bis zu 50 % verkürzte Bauzeit', 'Reproduzierbare Werkhallen-Qualität', 'Rückbaubar & re-konfigurierbar (zirkulär)'],
+      },
+      {
+        name: 'TGA & Brandschutz', short: 'Planwerk · KBV · SprING',
+        icon: 'tga',
+        lead: 'Technische Gebäudeausrüstung als integrierte Disziplin.',
+        body: 'Die technische Gebäudeausrüstung entscheidet über Betriebskosten, Sicherheit und Genehmigungsfähigkeit. Über die Partner Planwerk, KBV und SprING integriert RSM Heizung, Lüftung, Sanitär, Elektro sowie den anlagentechnischen Brandschutz bereits in der Entwurfsphase — kollisionsfrei im BIM-Modell koordiniert, statt nachträglich auf der Baustelle improvisiert.',
+        points: ['Integrale TGA-Planung im BIM-Modell', 'Anlagentechnischer Brandschutz (SprING)', 'Sachverständige Abnahme & Dokumentation'],
+      },
+      {
+        name: 'Roh- & Innenausbau', short: 'Team Simon Power',
+        icon: 'aus',
+        lead: 'Vom tragenden Rohbau bis zur perfekten Oberfläche.',
+        body: 'Mit der Team Simon GmbH und ihren über 90 Fachkräften verfügt der Verbund über eine im Markt seltene vertikale Integration des Ausbaus. Die Kernkompetenz liegt in der großformatigen Fliesen- und Natursteinverlegung — eine Disziplin, die bei Logistikflächen ebenso wie bei hochwertiger Hospitality-Architektur kompromisslose Maßhaltigkeit verlangt.',
+        points: ['Großformat- & Mosaik-Verlegung in Perfektion', 'Tragender Rohbau & Komplett-Innenausbau', 'Eigene Kolonnen — keine Subunternehmer-Lücken'],
+      },
+    ];
+    const services = servicesRaw.map((s, i) => {
+      const active = i === S.svc;
+      return {
+        ...s, active, $i: i,
+        onClick: () => this.setState({ svc: i }),
+        btnStyle: "cursor:pointer;display:flex;align-items:center;gap:13px;padding:15px 17px;border-radius:20px;border:1px solid " + (active ? "rgba(37,99,235,.4)" : "rgba(255,255,255,.7)") + ";background:" + (active ? "linear-gradient(135deg,rgba(219,234,254,.9),rgba(255,255,255,.85))" : "rgba(255,255,255,.45)") + ";box-shadow:" + (active ? "0 16px 32px -20px rgba(37,99,235,.45)" : "none") + ";backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:all .3s;width:100%;text-align:left",
+        iconWrapStyle: "display:grid;place-items:center;width:44px;height:44px;flex-shrink:0;border-radius:14px;background:" + (active ? "linear-gradient(135deg,#2563eb,#0ea5e9)" : "rgba(219,234,254,.8)") + ";color:" + (active ? "#fff" : "#1d4ed8"),
+        labelStyle: "font-family:'Outfit';font-weight:700;font-size:15.5px;color:" + (active ? "#0f2540" : "#46556e"),
+        shortStyle: "font-size:12px;color:" + (active ? "#3b82f6" : "#8a98b0") + ";font-weight:500",
+      };
+    });
+    const activeService = services[S.svc];
+
+    const processSteps = [
+      { n: '01', t: 'Bedarfsanalyse', d: 'Gemeinsame Klärung von Ziel, Budget und Vergaberahmen — transparent und unverbindlich.' },
+      { n: '02', t: 'Integrale Planung', d: 'Architektur, Statik, TGA und Brandschutz kollisionsfrei im gemeinsamen BIM-Modell.' },
+      { n: '03', t: 'Werkfertigung', d: 'Bis zu 80 % Wertschöpfung witterungsunabhängig in der Halle, parallel zum Baufeld.' },
+      { n: '04', t: 'Just-in-Time Montage', d: 'Module werden termingenau angeliefert und mit minimaler Bauzeit montiert.' },
+      { n: '05', t: 'Übergabe', d: 'Protokollierte, mängelfreie Abnahme inkl. vollständiger digitaler Dokumentation.' },
+    ];
+
+    // ---- ESG pillars ----
+    const esg = [
+      { t: 'Zirkuläres Bauen', d: 'Module werden so konstruiert, dass sie am Ende ihres Lebenszyklus sortenrein rückgebaut und wiederverwendet werden. Der Bau wird vom Endverbraucher zum Materialdepot — Cradle-to-Cradle als bilanzfähige ESG-Kennzahl.', k: 'Cradle to Cradle' },
+      { t: 'Holzrahmenbau', d: 'Nachwachsende Rohstoffe binden CO₂ über die gesamte Nutzungsdauer im Gebäude. Der Holzrahmenbau vereint ökologische Bilanz, hervorragende Bauphysik und die Geschwindigkeit der seriellen Vorfertigung.', k: 'CO₂-Speicher' },
+      { t: 'Das Dach als Kraftwerk', d: 'Integrierte Photovoltaik transformiert ungenutzte Dachflächen in Erzeugungsanlagen. Gebäude werden vom Energieverbraucher zum Prosumer und liefern einen messbaren Beitrag zur Amortisation und Autarkie.', k: 'PV-Integration' },
+    ];
+
+    // ---- References (filterable) ----
+    const refsRaw = [
+      { name: 'EWS Frankfurt', cat: 'Logistik', meta: '1.200 m² Großformatfliesen', kpi: 'Logistik-Masterclass', body: 'Verlegung von 1.200 m² maßhaltiger Großformatfliesen unter laufendem Logistikbetrieb — eine Präzisionsleistung unter Zeitdruck, die Ebenheitstoleranzen im Submillimeterbereich einhielt.' },
+      { name: 'Flüchtlingsunterkunft Allendorf', cat: 'Öffentliche Hand', meta: '€ 2,8 Mio · Holzrahmenbau', kpi: 'Öffentlicher Auftraggeber', body: 'Schlüsselfertige Errichtung in nachhaltiger Holzrahmenbauweise. Vergaberechtskonform realisiert, termingerecht übergeben und ein Referenzbeispiel für sozial verantwortliches, serielles Bauen.' },
+      { name: 'Villa Raab', cat: 'Hospitality', meta: 'Premium-Mosaikarbeiten', kpi: 'Hospitality-Exzellenz', body: 'Hochwertige Mosaik- und Natursteinarbeiten für ein anspruchsvolles Hospitality-Objekt. Handwerkliche Detailtiefe trifft auf die logistische Disziplin eines Generalunternehmers.' },
+      { name: 'Industriepark Mittelhessen', cat: 'Industrie', meta: 'Modulare Produktionshalle', kpi: 'Just-in-Time Montage', body: 'Modular vorgefertigte Produktionshalle, just-in-time montiert bei minimaler Störung des angrenzenden Werkbetriebs. Erweiterbar konzipiert für zukünftige Skalierung.' },
+      { name: 'Gewerbecampus Gießen', cat: 'Gewerbe', meta: 'TGA & Brandschutz integral', kpi: 'BIM-koordiniert', body: 'Integrale TGA- und Brandschutzplanung über alle Gewerke, kollisionsfrei im BIM-Modell koordiniert und sachverständig abgenommen.' },
+      { name: 'Logistikzentrum RheinMain', cat: 'Logistik', meta: 'Hochregal-Bodenplatte', kpi: 'Submillimeter-Ebenheit', body: 'Großflächige Industriebodenplatte für ein automatisiertes Hochregallager mit höchsten Anforderungen an Ebenheit und Belastbarkeit.' },
+    ];
+    const filters = ['Alle', 'Logistik', 'Öffentliche Hand', 'Hospitality', 'Industrie', 'Gewerbe'];
+    const filterChips = filters.map(f => {
+      const active = f === S.filter;
+      return {
+        name: f, active,
+        onClick: () => this.setState({ filter: f }),
+        chipStyle: "cursor:pointer;padding:10px 19px;border-radius:999px;font-size:13.5px;font-weight:600;border:1px solid " + (active ? "transparent" : "rgba(255,255,255,.8)") + ";background:" + (active ? "linear-gradient(135deg,#2563eb,#0ea5e9)" : "rgba(255,255,255,.5)") + ";color:" + (active ? "#fff" : "#46556e") + ";box-shadow:" + (active ? "0 12px 26px -14px rgba(37,99,235,.6)" : "none") + ";backdrop-filter:blur(12px);transition:all .25s",
+      };
+    });
+    const visibleRefs = refsRaw.filter(r => S.filter === 'Alle' || r.cat === S.filter);
+
+    // ---- Careers (accordion) ----
+    const careersRaw = [
+      { role: 'Bauleiter / Projektleiter (m/w/d)', area: 'Generalunternehmen', loc: 'Gießen · Vollzeit', body: 'Sie steuern 7-stellige Bauvorhaben von der Arbeitsvorbereitung bis zur Übergabe, führen Nachunternehmer und verantworten Termine, Kosten und Qualität. Wir erwarten ein abgeschlossenes Studium (B.Eng./M.Eng. Bauingenieurwesen) oder eine vergleichbare Qualifikation sowie Souveränität in VOB und HOAI.', tags: ['B.Eng / M.Eng', 'VOB · HOAI', 'Firmenwagen'] },
+      { role: 'TGA-Fachplaner (m/w/d)', area: 'Technische Gebäudeausrüstung', loc: 'Gießen · Vollzeit', body: 'Sie planen Heizung, Lüftung, Sanitär und Elektro integral im BIM-Modell und koordinieren den anlagentechnischen Brandschutz mit unseren Partnern Planwerk, KBV und SprING. Erfahrung in der kollisionsfreien Fachmodell-Koordination ist von Vorteil.', tags: ['BIM', 'HLSE', 'SprING'] },
+      { role: 'Bauingenieur Tragwerksplanung (m/w/d)', area: 'Engineering', loc: 'Gießen · Voll-/Teilzeit', body: 'Sie erstellen prüffähige statische Nachweise für Modul-, Massiv- und Holzrahmenkonstruktionen nach aktuellen Eurocodes und arbeiten eng mit der Werkfertigung zusammen. Eine analytische, lösungsorientierte Arbeitsweise zeichnet Sie aus.', tags: ['Eurocode', 'Statik', 'Holzbau'] },
+      { role: 'Polier Innenausbau — Großformat (m/w/d)', area: 'Team Simon GmbH', loc: 'Hessen · Vollzeit', body: 'Sie führen eigene Kolonnen in der großformatigen Fliesen- und Natursteinverlegung und sichern höchste Maßhaltigkeit. Meisterbrief oder langjährige Erfahrung in der Premium-Verlegung vorausgesetzt.', tags: ['Meister', 'Großformat', 'Führung'] },
+    ];
+    const careers = careersRaw.map((c, i) => {
+      const open = i === S.career;
+      return {
+        ...c, open, $i: i,
+        onClick: () => this.setState({ career: open ? null : i }),
+        chevStyle: "transition:transform .35s;transform:rotate(" + (open ? "180deg" : "0deg") + ");flex-shrink:0;color:#3b82f6",
+        cardStyle: "border-radius:26px;border:1px solid " + (open ? "rgba(37,99,235,.32)" : "rgba(255,255,255,.75)") + ";background:rgba(255,255,255," + (open ? ".78" : ".5") + ");backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:" + (open ? "0 22px 46px -26px rgba(37,99,235,.4)" : "0 10px 28px -22px rgba(30,58,138,.3)") + ";overflow:hidden;transition:all .3s",
+      };
+    });
+
+    // ---- FAQ ----
+    const faqsRaw = [
+      { q: 'Was bedeutet „Single Point of Contact" konkret für mein Projekt?', a: 'Sie schließen einen einzigen Vertrag mit der RSM Systembau GmbH. Sämtliche Gewerke, Termine, Kosten und Gewährleistungsansprüche laufen über uns. Sie müssen keine Dutzend Einzelverträge koordinieren und tragen kein Schnittstellenrisiko — diese Verantwortung übernehmen wir vollständig und haftbar.' },
+      { q: 'Wie unterscheidet sich der Modul-Systembau von konventionellem Bauen?', a: 'Bis zu 80 % der Wertschöpfung entstehen witterungsunabhängig in der Werkhalle, parallel zur Baufeldvorbereitung. Das verkürzt die Bauzeit erheblich, erhöht die Reproduzierbarkeit der Qualität und ermöglicht durch sortenreine Konstruktion einen zirkulären Rückbau.' },
+      { q: 'Welche Rolle spielt die Werkules-Software in der Projektabwicklung?', a: 'Werkules digitalisiert Aufmaß, Disposition, Bautagebuch und Abrechnung in Echtzeit. Auftraggeber erhalten dadurch transparente, datengetriebene Einblicke in den Projektfortschritt — ein PropTech-Vorsprung, der klassische Bauunternehmen nicht bieten.' },
+      { q: 'Sind Ihre Bauweisen ESG- und DGNB-konform?', a: 'Ja. Zirkuläres Bauen, Holzrahmenkonstruktionen und integrierte Photovoltaik sind feste Bestandteile unseres Leistungsversprechens und liefern bilanzfähige Nachhaltigkeitskennzahlen für Ihre ESG-Berichterstattung.' },
+      { q: 'Übernehmen Sie auch öffentliche, vergaberechtlich gebundene Projekte?', a: 'Selbstverständlich. Die Flüchtlingsunterkunft Allendorf (€ 2,8 Mio., Holzrahmenbau) belegt unsere Erfahrung in der vergaberechtskonformen Abwicklung öffentlicher Aufträge.' },
+    ];
+    const faqs = faqsRaw.map((f, i) => {
+      const open = i === S.faq;
+      return {
+        ...f, open, $i: i,
+        onClick: () => this.setState({ faq: open ? null : i }),
+        chevStyle: "transition:transform .35s;transform:rotate(" + (open ? "45deg" : "0deg") + ");flex-shrink:0;color:#3b82f6",
+      };
+    });
+
+    // ---- Testimonials ----
+    const testimonials = [
+      { quote: 'RSM hat unser Logistikzentrum unter laufendem Betrieb fertiggestellt — termingenau und in einer Oberflächenqualität, die wir so nicht für möglich gehalten hätten. Ein Ansprechpartner, null Reibungsverluste.', name: 'Dr.-Ing. M. Brandt', role: 'Head of Real Estate, Logistik-Konzern', ini: 'MB' },
+      { quote: 'Die digitale Transparenz über die Werkules-Plattform ist im Bauwesen ihresgleichen. Wir sahen den Fortschritt in Echtzeit — das schafft ein Vertrauen, das in unserer Branche selten ist.', name: 'S. Reitz', role: 'Bauherrenvertretung, Gewerbeimmobilie', ini: 'SR' },
+      { quote: 'Vom Holzrahmenbau bis zur PV-Anlage: ein durchdachtes, nachhaltiges Gesamtkonzept, das unsere ESG-Ziele messbar unterstützt hat.', name: 'Prof. K. Vogt', role: 'Öffentlicher Auftraggeber', ini: 'KV' },
+    ];
+
+    // ---- Login ----
+    const onField = (k) => (e) => this.setState({ login: { ...S.login, [k]: e.target.value }, loginMsg: null });
+    const onLogin = (e) => {
+      if (e && e.preventDefault) e.preventDefault();
+      const { user, pass } = S.login;
+      if (!user || !pass) { this.setState({ loginMsg: { ok: false, t: 'Bitte Benutzerkennung und Passwort eingeben.' } }); return; }
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(user)) { this.setState({ loginMsg: { ok: false, t: 'Bitte eine gültige Unternehmens-E-Mail verwenden.' } }); return; }
+      this.setState({ loginMsg: { ok: true, t: 'Zugang verifiziert — Zero-Trust-Sitzung wird initialisiert …' } });
+    };
+
+    const msgBase = "margin-top:16px;padding:13px 16px;border-radius:14px;font-size:13.5px;font-weight:500;line-height:1.5;display:flex;align-items:center;gap:9px;";
+    const loginMsg = S.loginMsg ? {
+      ...S.loginMsg,
+      style: msgBase + (S.loginMsg.ok
+        ? "background:rgba(16,185,129,.16);border:1px solid rgba(52,211,153,.4);color:#a7f3d0;"
+        : "background:rgba(244,63,94,.14);border:1px solid rgba(251,113,133,.4);color:#fecdd3;"),
+    } : null;
+
+    return {
+      navStyle, eyebrow, navLinks,
+      nexus, activeNexus,
+      services, activeService,
+      esg, processSteps,
+      filterChips, visibleRefs,
+      careers, faqs, testimonials,
+      login: S.login, loginMsg, onField, onLogin,
+    };
+  }
+}
+</script>
+</body>
+</html>

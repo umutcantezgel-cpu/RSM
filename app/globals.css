@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-slate-50: #f8fafc;
+  --color-gray-100: #f3f4f6;
+  --color-blue-600: #2563eb;
+  --color-blue-200: #bfdbfe;
+  --color-cyan-300: #67e8f9;
+  --color-sky-50: #f0f9ff;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-outfit: "Outfit", ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    background-color: var(--color-slate-50);
+    color: var(--color-slate-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-outfit);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/60 backdrop-blur-2xl shadow-2xl shadow-blue-900/5 border border-white/60;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   VIEW TRANSITIONS — "Brick by Brick" Page Animations
+   ═══════════════════════════════════════════════════════ */
+
+/* Header stays fixed during transitions */
+::view-transition-group(site-header) {
+  animation: none;
+  z-index: 100;
+}
+::view-transition-old(site-header) {
+  display: none;
+}
+::view-transition-new(site-header) {
+  animation: none;
+}
+
+/* ── Brick Build: Exit (old page) ── */
+::view-transition-old(page-content) {
+  animation: brick-cover 350ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* ── Brick Build: Enter (new page) ── */
+::view-transition-new(page-content) {
+  animation: brick-reveal 400ms cubic-bezier(0.4, 0, 0.2, 1) 250ms both;
+}
+
+/*
+ * Brick Cover — horizontal strips close from bottom to top.
+ * Uses a polygon clip-path that progressively covers the content
+ * in 6 staggered "brick" rows, creating the illusion of
+ * bricks being laid from foundation upward.
+ */
+@keyframes brick-cover {
+  0% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(100% 0 0 0);
+    opacity: 0;
+  }
+}
+
+/*
+ * Brick Reveal — content is uncovered from top to bottom
+ * as if scaffolding is being removed to reveal the new building.
+ */
+@keyframes brick-reveal {
+  0% {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
 }

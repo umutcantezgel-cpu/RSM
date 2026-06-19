@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RSM Systembau - Hallen-Konfigurator</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f3f0f2",
+                    "surface": "#fcf8fa",
+                    "surface-container": "#f0edef",
+                    "outline-variant": "#c6c6cd",
+                    "secondary": "#a73a00",
+                    "on-background": "#1b1b1d",
+                    "surface-container-low": "#f6f3f5",
+                    "surface-variant": "#e4e2e4",
+                    "primary": "#000000",
+                    "inverse-surface": "#303032",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#bec6e0",
+                    "secondary-fixed-dim": "#ffb599",
+                    "on-secondary-container": "#571a00",
+                    "surface-tint": "#565e74",
+                    "tertiary-fixed": "#d3e4fe",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#370e00",
+                    "safety-orange": "#EA580C",
+                    "on-primary-container": "#7c839b",
+                    "on-primary-fixed": "#131b2e",
+                    "industrial-navy": "#0F172A",
+                    "primary-container": "#131b2e",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "surface-container-highest": "#e4e2e4",
+                    "secondary-container": "#fd651e",
+                    "secondary-fixed": "#ffdbce",
+                    "surface-dim": "#dcd9db",
+                    "primary-fixed": "#dae2fd",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "primary-fixed-dim": "#bec6e0",
+                    "surface-container-high": "#eae7e9",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "on-secondary-fixed-variant": "#7f2b00",
+                    "architectural-white": "#F8FAFC",
+                    "background": "#fcf8fa",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "bim-gray": "#64748B",
+                    "on-tertiary-container": "#75859d",
+                    "surface-bright": "#fcf8fa",
+                    "on-surface": "#1b1b1d",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#0b1c30",
+                    "tertiary": "#000000",
+                    "on-surface-variant": "#45464d",
+                    "outline": "#76777d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "base-unit": "8px",
+                    "section-padding": "128px"
+            },
+            "fontFamily": {
+                    "nav-caps": [
+                            "Space Grotesk"
+                    ],
+                    "headline-lg": [
+                            "Space Grotesk"
+                    ],
+                    "display-lg": [
+                            "Space Grotesk"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Space Grotesk"
+                    ],
+                    "technical-data": [
+                            "JetBrains Mono"
+                    ],
+                    "label-sm": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "nav-caps": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg": [
+                            "72px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "technical-data": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Custom scrollbar for technical app feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: theme('colors.surface-container-low');
+        }
+        ::-webkit-scrollbar-thumb {
+            background: theme('colors.outline-variant');
+            border-radius: 0; /* Brutalist sharp edges */
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.outline');
+        }
+        
+        /* Range slider styling */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 0;
+            background: theme('colors.safety-orange');
+            cursor: pointer;
+            margin-top: -6px;
+            border: 1px solid theme('colors.industrial-navy');
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: theme('colors.outline-variant');
+            border: 1px solid theme('colors.surface-container-highest');
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface overflow-hidden h-screen w-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar (JSON Controlled) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-16 bg-industrial-navy border-b border-on-tertiary-fixed-variant">
+<div class="flex items-center gap-8">
+<span class="text-body-lg font-nav-caps font-bold tracking-widest text-architectural-white uppercase">HALLEN-KONFIGURATOR</span>
+<nav class="hidden md:flex gap-6">
+<!-- Navigation links from JSON -->
+<a class="text-architectural-white opacity-80 hover:opacity-100 hover:text-safety-orange transition-colors duration-200 font-nav-caps text-nav-caps" href="#">PROJEKTE</a>
+<a class="text-architectural-white opacity-80 hover:opacity-100 hover:text-safety-orange transition-colors duration-200 font-nav-caps text-nav-caps" href="#">KOMPONENTEN</a>
+<a class="text-architectural-white opacity-80 hover:opacity-100 hover:text-safety-orange transition-colors duration-200 font-nav-caps text-nav-caps" href="#">MATERIALIEN</a>
+<a class="text-architectural-white opacity-80 hover:opacity-100 hover:text-safety-orange transition-colors duration-200 font-nav-caps text-nav-caps" href="#">SYSTEME</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<button class="text-architectural-white opacity-80 hover:text-safety-orange transition-colors duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+</button>
+<button class="text-architectural-white opacity-80 hover:text-safety-orange transition-colors duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+</button>
+</div>
+<button class="bg-safety-orange text-architectural-white px-6 py-2 font-nav-caps text-nav-caps hover:bg-secondary-container transition-colors duration-200 uppercase">
+                ANGEBOT ANFORDERN
+            </button>
+</div>
+</header>
+<!-- Main Application Canvas -->
+<main class="flex-1 flex mt-16 h-[calc(100vh-64px)] w-full relative">
+<!-- SideNavBar (JSON Controlled) -->
+<aside class="docked left-0 h-full w-80 fixed bg-surface-container-lowest border-r border-outline-variant flex flex-col pt-8 pb-4 z-40">
+<div class="px-6 mb-8">
+<h2 class="font-nav-caps text-industrial-navy text-nav-caps mb-1">KONFIGURATION</h2>
+<p class="font-technical-data text-technical-data text-on-surface-variant text-xs">V01.2024-PRIME</p>
+</div>
+<nav class="flex flex-col flex-1">
+<!-- Active Tab -->
+<a class="flex items-center gap-4 px-6 py-4 border-l-4 border-safety-orange bg-surface-container text-industrial-navy font-bold translate-x-1 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">square_foot</span>
+<span class="font-nav-caps text-nav-caps">DIMENSIONEN</span>
+</a>
+<!-- Inactive Tabs -->
+<a class="flex items-center gap-4 px-6 py-4 border-l-4 border-transparent text-on-surface-variant hover:bg-surface-container-low hover:border-l-4 hover:border-bim-gray transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">architecture</span>
+<span class="font-nav-caps text-nav-caps">DACHSYSTEME</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 border-l-4 border-transparent text-on-surface-variant hover:bg-surface-container-low hover:border-l-4 hover:border-bim-gray transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">layers</span>
+<span class="font-nav-caps text-nav-caps">FASSADEN</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 border-l-4 border-transparent text-on-surface-variant hover:bg-surface-container-low hover:border-l-4 hover:border-bim-gray transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">factory</span>
+<span class="font-nav-caps text-nav-caps">AUSSTATTUNG</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 border-l-4 border-transparent text-on-surface-variant hover:bg-surface-container-low hover:border-l-4 hover:border-bim-gray transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">description</span>
+<span class="font-nav-caps text-nav-caps">ZUSAMMENFASSUNG</span>
+</a>
+</nav>
+<div class="px-6 mt-auto pt-4 border-t border-outline-variant">
+<button class="w-full border border-industrial-navy text-industrial-navy px-4 py-3 font-nav-caps text-nav-caps hover:bg-industrial-navy hover:text-architectural-white transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-sm">save</span>
+                    SPEICHERN
+                </button>
+</div>
+</aside>
+<!-- Viewport & Configuration Container -->
+<div class="flex-1 flex ml-80 h-full relative">
+<!-- 3D Visualization Viewport (Canvas Area) -->
+<div class="flex-1 bg-surface-variant relative overflow-hidden group">
+<!-- Background structural image placeholder -->
+<div class="absolute inset-0 bg-cover bg-center w-full h-full opacity-60 mix-blend-multiply" data-alt="A highly detailed, technical blueprint-style 3D render of an industrial warehouse structure. The image features a wireframe aesthetic overlaid on a solid gray background, simulating a professional CAD environment. Lighting is flat and clinical, emphasizing the structural steel beams and geometric proportions. Colors are strictly monochromatic with subtle accents of blueprint blue and safety orange on structural joints. The overall mood is precise, engineered, and industrial." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4Cj5u4wsplOJq3yHn82_l7U9wqiWBS_P80HR168jMRdVZ2N65LIGtSrGkRAzed9Maxyr44OOQrSka_Ip50bIbZbKHPQfl9oWTd3GH0uM8POb0QEBzQaFhi4tuXaJ-BAfXcTynCO0gX3LpTqf9yGpDu33xzABaUezK0c94xCP1NfbWL7iPfJ1p9PD1LJupyol9BEjji8bQDTdHfOYYiYwiTdcFzNLfByUxsxLHJj3NPxlfy7MkHx83-oS1xHr2nZ5likVKLhFCDfUQ')"></div>
+<!-- Grid Overlay for Technical Feel -->
+<div class="absolute inset-0 bg-[linear-gradient(rgba(100,116,139,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(100,116,139,0.1)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+<!-- Technical Data Overlay (Floating) -->
+<div class="absolute bottom-gutter left-gutter bg-industrial-navy/95 border border-bim-gray text-architectural-white p-6 shadow-2xl backdrop-blur-md min-w-[320px]">
+<div class="flex items-center gap-2 mb-4 border-b border-on-tertiary-fixed-variant pb-2">
+<span class="material-symbols-outlined text-safety-orange text-sm">analytics</span>
+<h3 class="font-nav-caps text-nav-caps text-safety-orange">LIVE METRIKEN</h3>
+</div>
+<div class="flex flex-col gap-4 font-technical-data text-technical-data">
+<div class="flex justify-between items-end border-b border-on-tertiary-fixed-variant border-opacity-50 pb-1">
+<span class="text-bim-gray text-xs">GESAMTFLÄCHE</span>
+<span class="text-lg">1,250.00 m²</span>
+</div>
+<div class="flex justify-between items-end border-b border-on-tertiary-fixed-variant border-opacity-50 pb-1">
+<span class="text-bim-gray text-xs">VOLUMEN</span>
+<span class="text-lg">8,750.00 m³</span>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-bim-gray text-xs">EST. MATERIALGEWICHT</span>
+<span class="text-lg text-safety-orange">42.8 t</span>
+</div>
+</div>
+</div>
+<!-- Viewport Controls -->
+<div class="absolute top-gutter right-gutter flex flex-col gap-2">
+<button class="bg-surface-container-lowest border border-outline-variant p-2 text-industrial-navy hover:bg-surface-container transition-colors shadow-sm" title="Zoom In">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant p-2 text-industrial-navy hover:bg-surface-container transition-colors shadow-sm" title="Zoom Out">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant p-2 text-industrial-navy hover:bg-surface-container transition-colors shadow-sm mt-4" title="Reset View">
+<span class="material-symbols-outlined">360</span>
+</button>
+</div>
+</div>
+<!-- Configuration Panel (Right Side) -->
+<div class="w-[400px] bg-surface-container-lowest border-l border-outline-variant flex flex-col h-full overflow-y-auto">
+<div class="p-8 border-b border-outline-variant bg-surface-container-lowest sticky top-0 z-10">
+<h1 class="font-headline-md text-headline-md text-industrial-navy mb-2">DIMENSIONEN</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Definieren Sie die grundlegenden strukturellen Abmessungen des Gebäudes.</p>
+</div>
+<div class="p-8 flex flex-col gap-10">
+<!-- LÄNGE Input Block -->
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<label class="font-nav-caps text-nav-caps text-industrial-navy">LÄNGE (L)</label>
+<div class="flex items-center border border-outline-variant bg-surface px-3 py-1">
+<input class="w-16 bg-transparent border-none text-right font-technical-data text-technical-data focus:ring-0 p-0 text-industrial-navy" type="number" value="50.0"/>
+<span class="font-technical-data text-technical-data text-bim-gray ml-2">m</span>
+</div>
+</div>
+<input max="200" min="10" step="0.5" type="range" value="50"/>
+<div class="flex justify-between font-technical-data text-label-sm text-bim-gray">
+<span>Min: 10m</span>
+<span>Max: 200m</span>
+</div>
+</div>
+<!-- BREITE Input Block -->
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<label class="font-nav-caps text-nav-caps text-industrial-navy">BREITE (B)</label>
+<div class="flex items-center border border-outline-variant bg-surface px-3 py-1">
+<input class="w-16 bg-transparent border-none text-right font-technical-data text-technical-data focus:ring-0 p-0 text-industrial-navy" type="number" value="25.0"/>
+<span class="font-technical-data text-technical-data text-bim-gray ml-2">m</span>
+</div>
+</div>
+<input max="80" min="10" step="0.5" type="range" value="25"/>
+<div class="flex justify-between font-technical-data text-label-sm text-bim-gray">
+<span>Min: 10m</span>
+<span>Max: 80m</span>
+</div>
+</div>
+<!-- TRAUFHÖHE Input Block -->
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<label class="font-nav-caps text-nav-caps text-industrial-navy">TRAUFHÖHE (H)</label>
+<div class="flex items-center border border-outline-variant bg-surface px-3 py-1">
+<input class="w-16 bg-transparent border-none text-right font-technical-data text-technical-data focus:ring-0 p-0 text-industrial-navy" type="number" value="6.5"/>
+<span class="font-technical-data text-technical-data text-bim-gray ml-2">m</span>
+</div>
+</div>
+<input max="25" min="4" step="0.1" type="range" value="6.5"/>
+<div class="flex justify-between font-technical-data text-label-sm text-bim-gray">
+<span>Min: 4m</span>
+<span>Max: 25m</span>
+</div>
+</div>
+<!-- Structural Constraints Warning/Info -->
+<div class="mt-4 border border-outline-variant p-4 bg-surface-container-low flex gap-3">
+<span class="material-symbols-outlined text-industrial-navy">info</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">
+                            Die gewählten Dimensionen erfordern eine Fachwerkkonstruktion für das Dachsystem. Weitere statische Prüfungen werden im Schritt 'Zusammenfassung' durchgeführt.
+                        </p>
+</div>
+</div>
+<!-- Bottom Sticky Action (Next Step) -->
+<div class="mt-auto border-t border-outline-variant p-6 bg-surface-container-lowest sticky bottom-0 z-10 flex justify-end">
+<button class="bg-industrial-navy text-architectural-white px-8 py-4 font-nav-caps text-nav-caps hover:bg-on-tertiary-fixed transition-colors flex items-center gap-3">
+                        WEITER ZU DACHSYSTEME
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

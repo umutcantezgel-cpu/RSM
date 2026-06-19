@@ -1,0 +1,64 @@
+{
+  "Impressum": {
+    "PageHead": {
+      "tagline": "Rechtliches",
+      "title": "Impressum",
+      "subtitle": "Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz) und § 18 Abs. 2 MStV."
+    },
+    "blocks": {
+      "diensteanbieter": {
+        "label": "Diensteanbieter",
+        "company": "RSM Systembau GmbH",
+        "street": "Ernst-Leitz-Straße 1–5",
+        "city": "35578 Wetzlar",
+        "country": "Deutschland"
+      },
+      "vertreten_durch": {
+        "label": "Vertreten durch",
+        "title": "Geschäftsführer:",
+        "manager_1": "Sascha Reitz",
+        "manager_2": "Mario Simon"
+      },
+      "kontakt": {
+        "label": "Kontakt",
+        "phone_label": "Telefon: ",
+        "phone_value": "+49 6441 9999 000",
+        "fax_label": "Telefax: ",
+        "fax_value": "+49 6441 9999 009",
+        "email_label": "E-Mail: ",
+        "email_value": "kontakt@rsm-systembau.de"
+      },
+      "registereintrag": {
+        "label": "Registereintrag",
+        "title": "Eintragung im Handelsregister",
+        "court_label": "Registergericht: ",
+        "court_value": "Amtsgericht Wetzlar",
+        "number_label": "Registernummer: ",
+        "number_value": "HRB 00000"
+      },
+      "umsatzsteuer_id": {
+        "label": "Umsatzsteuer-ID",
+        "title": "Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG:",
+        "value": "DE 000 000 000"
+      },
+      "aufsicht_kammer": {
+        "label": "Aufsicht & Kammer",
+        "chamber_label": "Zuständige Handwerkskammer:",
+        "chamber_value": "Handwerkskammer Wiesbaden",
+        "profession_label": "Berufsbezeichnung: ",
+        "profession_value": "Bauunternehmen (verliehen in Deutschland)"
+      },
+      "verbraucherstreitbeilegung": {
+        "label": "Verbraucherstreitbeilegung",
+        "text": "Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: ",
+        "link_text": "ec.europa.eu/consumers/odr"
+      }
+    },
+    "disclaimer": {
+      "label": "Haftungs- & Urheberrechtshinweis",
+      "p1": "Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.",
+      "p2": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+    },
+    "note": "Hinweis: Die hier dargestellten Register-, Steuer- und Kontaktdaten sind Platzhalter für die Designvorschau und vor Veröffentlichung durch die verbindlichen Angaben der RSM Systembau GmbH zu ersetzen."
+  }
+}

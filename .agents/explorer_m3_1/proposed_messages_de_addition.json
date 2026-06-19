@@ -1,0 +1,72 @@
+{
+  "Karriere": {
+    "PageHead": {
+      "tagline": "Karriere · Engineering Hub",
+      "title": "Bauen Sie an der Infrastruktur von morgen.",
+      "description": "Wir suchen Ingenieurinnen und Ingenieure, Bauleiter und TGA-Fachplaner, die anspruchsvolle Projekte nicht scheuen, sondern suchen. Bei RSM arbeiten Sie an siebenstelligen Vorhaben — mit digitaler Werkzeugausstattung, kurzen Entscheidungswegen und einem Verbund, der vertikale Tiefe als Stärke begreift."
+    },
+    "HRJobSection": {
+      "tagline": "Offene Positionen",
+      "heading": "Vier Wege, ein Ziel.",
+      "initiative_title": "Initiativbewerbung",
+      "initiative_desc": "Keine passende Position dabei? Überzeugen Sie uns trotzdem.",
+      "initiative_cta": "Profil senden"
+    },
+    "jobs": [
+      {
+        "role": "Bauleiter / Projektleiter (m/w/d)",
+        "area": "Generalunternehmen",
+        "loc": "Wetzlar · Vollzeit",
+        "body": "Sie steuern siebenstellige Bauvorhaben von der Arbeitsvorbereitung bis zur Übergabe, führen Nachunternehmer und verantworten Termine, Kosten und Qualität. Wir erwarten ein abgeschlossenes Studium (B.Eng./M.Eng. Bauingenieurwesen) oder eine vergleichbare Qualifikation sowie Souveränität in VOB und HOAI.",
+        "tags": ["B.Eng / M.Eng", "VOB · HOAI", "Firmenwagen"]
+      },
+      {
+        "role": "TGA-Fachplaner (m/w/d)",
+        "area": "Technische Gebäudeausrüstung",
+        "loc": "Wetzlar · Vollzeit",
+        "body": "Sie planen Heizung, Lüftung, Sanitär und Elektro integral im BIM-Modell und koordinieren den anlagentechnischen Brandschutz mit unseren Partnern Planwerk, KBV und SprING. Erfahrung in der kollisionsfreien Fachmodell-Koordination ist von Vorteil.",
+        "tags": ["BIM", "HLSE", "SprING"]
+      },
+      {
+        "role": "Bauingenieur Tragwerksplanung (m/w/d)",
+        "area": "Engineering",
+        "loc": "Wetzlar · Voll-/Teilzeit",
+        "body": "Sie erstellen prüffähige statische Nachweise für Modul-, Massiv- und Holzrahmenkonstruktionen nach aktuellen Eurocodes und arbeiten eng mit der Werkfertigung zusammen. Eine analytische, lösungsorientierte Arbeitsweise zeichnet Sie aus.",
+        "tags": ["Eurocode", "Statik", "Holzbau"]
+      },
+      {
+        "role": "Polier Innenausbau — Großformat (m/w/d)",
+        "area": "Team Simon GmbH",
+        "loc": "Hessen · Vollzeit",
+        "body": "Sie führen eigene Kolonnen in der großformatigen Fliesen- und Natursteinverlegung und sichern höchste Maßhaltigkeit. Meisterbrief oder langjährige Erfahrung in der Premium-Verlegung vorausgesetzt.",
+        "tags": ["Meister", "Großformat", "Führung"]
+      }
+    ],
+    "FAQSection": {
+      "tagline": "Häufige Fragen",
+      "heading": "Bevor Sie sich bewerben."
+    },
+    "faqs": [
+      {
+        "q": "Wie läuft der Bewerbungsprozess ab?",
+        "a": "Nach Eingang Ihrer Unterlagen melden wir uns innerhalb weniger Tage. Es folgen ein fachliches Gespräch und — je nach Position — ein Kennenlernen des Teams vor Ort. Wir halten den Prozess bewusst schlank und transparent."
+      },
+      {
+        "q": "Bieten Sie Weiterbildung und Aufstieg?",
+        "a": "Ja. Der Verbund wächst, und mit ihm die Verantwortungsbereiche. Wir fördern Fortbildungen (z. B. zum geprüften Projektleiter) und besetzen Führungspositionen bevorzugt aus den eigenen Reihen."
+      },
+      {
+        "q": "Arbeiten Sie mit moderner Software?",
+        "a": "Unsere PropTech-Engine Werkules digitalisiert Aufmaß, Bautagebuch und Disposition. Sie arbeiten mit BIM-Modellen und mobilen Endgeräten statt mit Papier — Handwerk 4.0 ist bei uns Alltag."
+      },
+      {
+        "q": "Gibt es einen Firmenwagen?",
+        "a": "Für Bauleiter- und Projektleiterpositionen gehört ein Firmenwagen, auch zur privaten Nutzung, zum Standard. Details klären wir individuell im Gespräch."
+      },
+      {
+        "q": "Kann ich mich initiativ bewerben?",
+        "a": "Unbedingt. Wenn Sie überzeugt sind, dass Sie zu uns passen, auch ohne passende Ausschreibung — senden Sie uns Ihr Profil. Talent schlägt Stellenausschreibung."
+      }
+    ]
+  }
+}

@@ -12,7 +12,20 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Reference/Design folders
+    "RSM Systembau Design-Relaunch/**",
+    "Wieder verwerten für RSM agents/**",
+    "Wieder verwerten für RSM agents/**",
+    ".agents/**",
+    "agents/**",
   ]),
+  {
+    files: ["app/**/*.tsx", "components/**/*.tsx"],
+    ignores: ["**/__tests__/**"],
+    rules: {
+      "react/jsx-no-literals": "error"
+    }
+  }
 ]);
 
 export default eslintConfig;

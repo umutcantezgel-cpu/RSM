@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EWS Frankfurt - Case Study</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error-container": "#93000a",
+                      "surface-variant": "#e4e2e4",
+                      "on-tertiary": "#ffffff",
+                      "surface-container": "#f0edef",
+                      "architectural-white": "#F8FAFC",
+                      "primary": "#000000",
+                      "secondary-fixed-dim": "#ffb599",
+                      "on-secondary-container": "#571a00",
+                      "background": "#fcf8fa",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-surface": "#1b1b1d",
+                      "surface-container-high": "#eae7e9",
+                      "secondary": "#a73a00",
+                      "outline-variant": "#c6c6cd",
+                      "bim-gray": "#64748B",
+                      "tertiary-fixed-dim": "#b7c8e1",
+                      "on-primary-fixed": "#131b2e",
+                      "on-primary-container": "#7c839b",
+                      "surface-tint": "#565e74",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "industrial-navy": "#0F172A",
+                      "on-primary": "#ffffff",
+                      "surface": "#fcf8fa",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#0b1c30",
+                      "tertiary": "#000000",
+                      "on-secondary-fixed": "#370e00",
+                      "on-secondary-fixed-variant": "#7f2b00",
+                      "secondary-container": "#fd651e",
+                      "safety-orange": "#EA580C",
+                      "on-surface-variant": "#45464d",
+                      "primary-fixed": "#dae2fd",
+                      "surface-container-low": "#f6f3f5",
+                      "outline": "#76777d",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed": "#d3e4fe",
+                      "inverse-primary": "#bec6e0",
+                      "on-tertiary-container": "#75859d",
+                      "inverse-surface": "#303032",
+                      "secondary-fixed": "#ffdbce",
+                      "inverse-on-surface": "#f3f0f2",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#fcf8fa",
+                      "surface-dim": "#dcd9db",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-container": "#0b1c30",
+                      "on-tertiary-fixed-variant": "#38485d",
+                      "primary-container": "#131b2e",
+                      "on-background": "#1b1b1d",
+                      "surface-container-highest": "#e4e2e4"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "base-unit": "8px",
+                      "margin-mobile": "20px",
+                      "section-padding": "128px"
+              },
+              "fontFamily": {
+                      "technical-data": [
+                              "JetBrains Mono"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ],
+                      "nav-caps": [
+                              "Space Grotesk"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ],
+                      "display-lg": [
+                              "Space Grotesk"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "technical-data": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "nav-caps": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            background-color: #F8FAFC; /* architectural-white */
+            color: #0F172A; /* industrial-navy */
+        }
+        ::selection {
+            background-color: #EA580C; /* safety-orange */
+            color: white;
+        }
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image:
+                linear-gradient(to right, rgba(100, 116, 139, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(100, 116, 139, 0.05) 1px, transparent 1px);
+        }
+      </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="bg-industrial-navy fixed top-0 w-full z-50 border-b border-on-surface-variant transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop w-full max-w-[1440px] mx-auto">
+<div class="font-nav-caps text-nav-caps text-white tracking-widest uppercase">
+                PROJECT:ALFA-7
+            </div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-nav-caps text-nav-caps text-white hover:text-safety-orange transition-colors uppercase" href="#">SPECIFICATIONS</a>
+<a class="font-nav-caps text-nav-caps text-white hover:text-safety-orange transition-colors uppercase" href="#">LOGISTICS</a>
+<a class="font-nav-caps text-nav-caps text-white hover:text-safety-orange transition-colors uppercase" href="#">PRECISION</a>
+<a class="font-nav-caps text-nav-caps text-safety-orange border-b-2 border-safety-orange pb-2 uppercase" href="#">GALLERY</a>
+<a class="font-nav-caps text-nav-caps text-white hover:text-safety-orange transition-colors uppercase" href="#">LEGAL</a>
+</div>
+<button class="hidden md:flex items-center px-6 py-2 bg-safety-orange text-white font-nav-caps text-nav-caps transition-colors hover:bg-white hover:text-industrial-navy uppercase">
+                ENQUIRE
+            </button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-white hover:text-safety-orange">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow pt-16">
+<!-- Hero Section -->
+<section class="relative w-full h-[819px] min-h-[600px] flex items-end pb-margin-desktop px-margin-mobile md:px-margin-desktop grid-bg bg-architectural-white border-b border-industrial-navy">
+<div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center opacity-80 mix-blend-multiply filter grayscale contrast-125" data-alt="A striking digital visualization of a massive, clean industrial hall in a bright, modern light-mode aesthetic. The space features a rigorous architectural grid of structural pillars and highly reflective, flawlessly laid large-format porcelain stoneware floors. The lighting is high-key, casting sharp, precise shadows that emphasize the vast 1,200sqm scale. The palette relies on pristine architectural whites, deep industrial navy structural elements, and subtle, glowing safety orange accents hinting at logistical machinery. The mood is highly technical, authoritative, and strictly aligned to engineering precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCN_2b4JWrgXhsh3pp0G5IAaVe1RBb3ta96lTFZrGZOxbnwmoLw6EsYv1PkGYdXxhuLFwSSjpzl63fe4f_m8S8Wd8yej1sm5uh8ljCiQpT70Lm2oCZIx8xsfCMj-0jxn4rwbHoTLFOe9E-DuhgrZ8o47MmPrrBbq8lhqmQ_XmPVbq9rS1ftQ4WWT2X3Pvc3bfRjHTSr974o0kDbLz5jluJFxKSi9KP2iPjcDloBDsPVEOXm-vkGok72TzauubTXw9YPLp4eUVIWbDVo')"></div>
+<!-- Gradient overlay to ensure text readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-architectural-white via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-end gap-gutter">
+<div class="max-w-4xl">
+<div class="inline-block px-3 py-1 border border-industrial-navy bg-white font-technical-data text-technical-data mb-6 uppercase tracking-wider text-industrial-navy">
+                        Case Study 04 / EWS
+                    </div>
+<h1 class="font-display-lg text-display-lg text-industrial-navy uppercase mb-4 break-words">
+                        EWS FRANKFURT: INDUSTRIAL MASTERCLASS
+                    </h1>
+<h2 class="font-headline-md text-headline-md text-bim-gray">
+                        1,200sqm Tiling &amp; Logistics Excellence in the Heart of Germany
+                    </h2>
+</div>
+</div>
+</section>
+<!-- Vitals & Project Data -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-section-padding border-b border-industrial-navy">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Data Column -->
+<div class="md:col-span-4 flex flex-col space-y-6">
+<h3 class="font-headline-md text-headline-md text-industrial-navy border-b border-industrial-navy pb-4 uppercase">Project Vitals</h3>
+<ul class="font-technical-data text-technical-data space-y-4 text-industrial-navy uppercase flex flex-col">
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span class="text-bim-gray">LOCATION</span>
+<span class="text-right">FRANKFURT AM MAIN</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span class="text-bim-gray">SCALE</span>
+<span class="text-right">1,200 SQM</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span class="text-bim-gray">BUDGET</span>
+<span class="text-right">7-FIGURE ENTERPRISE</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span class="text-bim-gray">SCOPE</span>
+<span class="text-right">LARGE-FORMAT TILING,<br/>LOGISTICS HUB</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant pb-2">
+<span class="text-bim-gray">STATUS</span>
+<span class="text-safety-orange">COMPLETED 2023</span>
+</li>
+</ul>
+</div>
+<!-- Abstract Column -->
+<div class="md:col-span-8 md:pl-gutter flex flex-col justify-center">
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+                        The EWS Frankfurt facility required a foundational surface capable of withstanding extreme mechanical loads while maintaining absolute dimensional stability for automated logistics equipment. This project highlights our capacity to execute massive-scale, high-precision flooring systems under strict enterprise timelines.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-section-padding grid-bg">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Section 1: Challenge -->
+<div class="md:col-span-12 mb-margin-desktop">
+<div class="border border-industrial-navy bg-white p-margin-mobile md:p-margin-desktop relative">
+<div class="absolute top-0 right-0 bg-industrial-navy text-white font-technical-data text-technical-data px-4 py-2 uppercase">01 / Challenge</div>
+<h3 class="font-headline-lg text-headline-lg text-industrial-navy mb-6 uppercase max-w-2xl">Engineering high-durability surfaces</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Heavy logistics machinery imposes relentless stress on floor surfaces. The primary challenge was engineering a sub-floor and tiling system that could endure constant point-loading from heavy-duty forklifts and automated guided vehicles (AGVs) without compromising structural integrity or levelness over a 1,200sqm expanse.
+                            </p>
+<div class="h-64 border border-industrial-navy">
+<div class="w-full h-full bg-cover bg-center filter grayscale" data-alt="A striking digital architectural photograph focusing on the heavy industrial context. The shot captures a massive logistics bay characterized by deep architectural shadows and high-key white light piercing through skylights. The aesthetic is modern, brutalist, and light-mode. The focus is on the raw concrete sub-floor undergoing preparation, with safety orange laser levels projecting rigorous structural grids across the vast, empty space. The mood is tense with anticipation of heavy engineering." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7K7smgL5mo6WNAwO1JfWe6WdSAi5niAO53RbV8q9hiPzkbOKniF3TeUEku8GQymTUqOO0dtIlQwlL28VKCU7tVUm2fbdsVXm2YIIXhcniiGW4tat8_pEGmVjoMu2ink6-1iZ9xbsH5WKqkUm2BZ5FAni0h8P0znQmkn-iZr3G7ywzQrwv9Z6q1hFznV36BJNiq9sW4ajT4ghUu1qGNjhuDcXEKtQ2eBNRHMBebSDGmy9slmU3bZJsZP0X964UKAT9M9Im79E4WZdQ')"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Technical Solution (Bento style) -->
+<div class="md:col-span-7 flex flex-col border border-industrial-navy bg-white relative">
+<div class="absolute top-0 right-0 bg-safety-orange text-white font-technical-data text-technical-data px-4 py-2 uppercase">02 / Solution</div>
+<div class="p-margin-mobile md:p-margin-desktop flex-grow">
+<h3 class="font-headline-md text-headline-md text-industrial-navy mb-6 uppercase">Large-Format Porcelain Stoneware</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            To meet the stringent load requirements, we specified industrial-grade, large-format porcelain stoneware. The critical path involved high-precision jointing using advanced epoxy grouts to create a near-seamless, monolith-like surface that minimizes vibration for sensitive logistics equipment.
+                        </p>
+<div class="grid grid-cols-2 gap-4 font-technical-data text-technical-data text-industrial-navy">
+<div class="border border-outline-variant p-4">
+<span class="block text-bim-gray mb-1">MATERIAL STRENGTH</span>
+<span>&gt; 50 N/mm²</span>
+</div>
+<div class="border border-outline-variant p-4">
+<span class="block text-bim-gray mb-1">JOINT TOLERANCE</span>
+<span>± 0.5 mm</span>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 h-full min-h-[400px] border border-industrial-navy">
+<div class="w-full h-full bg-cover bg-center filter grayscale" data-alt="An extreme close-up digital photograph of high-precision industrial tiling in a stark, modern light-mode setting. The image highlights the intersection of four large-format porcelain stoneware tiles. The grout lines are flawlessly sharp, filled with a specialized structural epoxy. The color palette is dominated by architectural off-whites and cool industrial greys, with a single, sharp beam of white light catching the subtle matte texture of the heavy-duty surface. The image exudes a sense of absolute control and engineering exactitude." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7Dv4AGvippJ3p_zBnjiHdpJi-0ZaUHUCujkI-JwBHWjVNob4o5xvVQfD1QPSf_QZDh7xnhVyOT5wmX045DbKQo2R5cUZ67RfCT_BnDS7CPA_VZtSjmhaMD11l3tbFR2r3qKnIhN5Qk2rNJ1-OPCNj9JAZrPn--S2aSPE7xLqqZrTlFrxMvkfmPAh7d2WNLXLf0BNAxajMc6EO7xZ875v7zegOg1ybsaNMGkPIXYOl0L_mKNF6wXjmbEwDiFQHfgyWcS9cQKFwBniE')"></div>
+</div>
+<!-- Section 3: PropTech Integration -->
+<div class="md:col-span-12 mt-margin-desktop">
+<div class="border border-industrial-navy bg-industrial-navy text-white p-margin-mobile md:p-margin-desktop relative">
+<div class="absolute top-0 right-0 bg-white text-industrial-navy font-technical-data text-technical-data px-4 py-2 uppercase">03 / Integration</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-white mb-6 uppercase">PropTech Driven Execution</h3>
+<p class="font-body-md text-body-md text-bim-gray mb-8">
+                                    The sheer scale dictated a digital-first approach. We implemented a fully integrated Building Information Modeling (BIM) workflow. This allowed for exact material quantification, automated clash detection in sub-floor heating elements, and orchestration of Just-in-Time material deliveries, eliminating site congestion.
+                                </p>
+<button class="px-6 py-3 border border-safety-orange text-safety-orange font-nav-caps text-nav-caps transition-colors hover:bg-safety-orange hover:text-white uppercase">
+                                    VIEW DATA PROTOCOL
+                                </button>
+</div>
+<div class="h-64 border border-outline-variant relative overflow-hidden bg-white/5">
+<!-- Decorative tech element -->
+<div class="absolute inset-0 opacity-20 grid-bg"></div>
+<div class="absolute inset-0 flex items-center justify-center font-technical-data text-technical-data text-safety-orange">
+                                    [ BIM_MODEL_RENDER_PLACEHOLDER ]
+                                 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Summary -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-section-padding border-t border-industrial-navy">
+<div class="flex justify-between items-end mb-margin-mobile border-b border-industrial-navy pb-4">
+<h3 class="font-headline-md text-headline-md text-industrial-navy uppercase">Visual Documentation</h3>
+<a class="font-nav-caps text-nav-caps text-safety-orange hover:text-industrial-navy transition-colors uppercase flex items-center gap-2" href="#">
+                    FULL GALLERY <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-gutter">
+<div class="aspect-square border border-industrial-navy relative group overflow-hidden bg-architectural-white">
+<div class="w-full h-full bg-cover bg-center filter grayscale transition-transform duration-500 group-hover:scale-105" data-alt="A striking architectural photograph capturing a long, deep perspective of a completed industrial logistics corridor. The space is flooded with bright, cold white light from overhead luminaires, reflecting off the vast expanse of flawlessly laid large-format porcelain tiles. The walls are stark architectural white, contrasting with the dark industrial navy structural columns receding into the distance. A subtle safety orange safety line is painted precisely along the floor edge. The mood is sterile, massive, and perfectly ordered." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDgZ_mr2CMtWqT_uRIv3ovdcxptbx0oWirzTsP6UfyKRgrb0iwwlSepZT9nCJ3Y8dDsK3gcPbvnZDMDHEAGV4SE15ewjj7GpSSHlfgB6YehAq4zqNyBOpe77ivGZhEgwCGf8o3YRqcGGZM-rmLHjjV5K83Z6gbN6e0RxnWZfJZ1XeajQRFRBvwPOQZzUDVcH4XsN_67iz-KKNp1Ti1AydO6Sl5w1wfcKrVMmzNyZhiOoYSXXzzuCl5vTNHjBW4S5pK3aCcPRvG2pS4')"></div>
+</div>
+<div class="aspect-square border border-industrial-navy relative group overflow-hidden bg-architectural-white hidden sm:block">
+<div class="w-full h-full bg-cover bg-center filter grayscale transition-transform duration-500 group-hover:scale-105" data-alt="A modern, highly detailed macro photograph of industrial materials. The image features a stack of heavy-duty, large-format porcelain tiles resting on an industrial pallet. The lighting is high-key and directional, emphasizing the raw, structural texture of the tile edges against a pristine white background. The color palette is minimal, strictly utilizing architectural off-whites, stark greys, and deep shadows, conveying a sense of dense, unyielding materiality before installation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBq_up6uL5wJLFbBvi0zikGc_9PRBaX7cluuMhkDSCiel2CXG6nTeatrTfJUVFdgg8eGXbA41uFi6TbumbeeYK4pK7IDPUZGHVszIRatDM7x-qnDZqTGnOUYY4vULNh6iX13zubPUOh2ZYTuqrHQHX4XmjnuTEePRKnxtM302uMM-EWE2vXEpVeX6hB4Bp3GxyLAMktK0O2nRgvwhZzH0Hx82ppX9RDc-LbNUMOemhFmTNhih4dbgdLbNip-95Bo2xm9ubWrrbED7rA')"></div>
+</div>
+<div class="aspect-square border border-industrial-navy relative group overflow-hidden bg-architectural-white hidden md:block">
+<div class="w-full h-full bg-cover bg-center filter grayscale transition-transform duration-500 group-hover:scale-105" data-alt="A striking architectural photograph of the exterior facade of a massive industrial logistics hub. The image is taken from a low angle against a stark, blown-out white sky, typical of a bright, light-mode aesthetic. The building features rigorous geometry with alternating panels of matte architectural white and deep industrial navy cladding. A massive, heavy-duty safety orange loading bay door provides a singular point of intense color. The composition emphasizes structural monumentalism and engineering authority." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCrbllzWqH5jkY6Xu-YxDgKv5Z7Ks6Lqn46XilvbZ38UCG9a7uXy0BdpQUMkAeyfUc6wvqSHcZk9s-11JaELOpOVck5NdM32Z5Me9FwX3a_WF8_JAp0y4dVqVTqIFJVSHIgsIJc1vURgd3EjlgMWy9ZPyLKOaqZhWWqgpXPHoyHjKdFwGRim0Nt4sboXRWDi7PZa9a52WJnPe7Q1wzgWlApvRSiQO8tCet71SGCDrNggOKquCRPWXB8YQbRBDOElJFKKG1YTlszh8N')"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-industrial-navy w-full py-section-padding border-t border-industrial-navy">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop w-full max-w-[1440px] mx-auto">
+<div class="md:col-span-1 mb-margin-mobile md:mb-0">
+<div class="font-headline-md text-headline-md text-white tracking-widest uppercase mb-4">
+                    PROJECT:ALFA-7
+                </div>
+<p class="font-technical-data text-technical-data text-white opacity-80 hover:opacity-100 uppercase">
+                    ©2024 INDUSTRIAL PRECISION GROUP. ALL RIGHTS RESERVED. COORDINATES: 40.7128° N, 74.0060° W.
+                </p>
+</div>
+<div class="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-gutter font-technical-data text-technical-data">
+<a class="text-bim-gray hover:text-white transition-colors opacity-80 hover:opacity-100 uppercase" href="#">PRIVACY PROTOCOL</a>
+<a class="text-bim-gray hover:text-white transition-colors opacity-80 hover:opacity-100 uppercase" href="#">TERMS OF SERVICE</a>
+<a class="text-bim-gray hover:text-white transition-colors opacity-80 hover:opacity-100 uppercase" href="#">LIABILITY DISCLOSURE</a>
+<a class="text-bim-gray hover:text-white transition-colors opacity-80 hover:opacity-100 uppercase" href="#">ENGINEERING STANDARDS</a>
+</div>
+</div>
+</footer>
+</body></html>

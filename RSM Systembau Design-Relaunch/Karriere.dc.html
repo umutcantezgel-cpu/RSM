@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  @font-face{font-family:'Inter';src:url('fonts/inter-variable-latin.woff2') format('woff2');font-weight:100 900;font-display:swap}
+  @font-face{font-family:'Inter';src:url('fonts/inter-variable-latin-ext.woff2') format('woff2');font-weight:100 900;font-display:swap;unicode-range:U+0100-024F,U+1E00-1EFF}
+  @font-face{font-family:'Outfit';src:url('fonts/outfit-variable-latin.woff2') format('woff2');font-weight:100 900;font-display:swap}
+  *{box-sizing:border-box}
+  body{margin:0}
+  ::selection{background:#3f73a3;color:#fff}
+  html{scroll-behavior:smooth}
+  @keyframes rsmRise{from{transform:translateY(26px);opacity:.001}to{transform:translateY(0);opacity:1}}
+  [data-r]{animation:rsmRise .8s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 20%}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</helmet>
+<div style="font-family:'Inter',sans-serif;background:#fafafa;color:#52525b;min-height:100vh">
+  <header style="position:sticky;top:0;z-index:50;background:rgba(250,250,250,.82);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid #e4e4e7">
+    <dc-import name="Nav" active="karriere" hint-size="100%,78px"></dc-import>
+  </header>
+
+  <main>
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,84px) clamp(16px,4vw,40px) 48px">
+      <div data-r style="max-width:46rem">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px"><span style="width:34px;height:1.5px;background:#3f73a3"></span><span style="font-family:'Outfit';font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#3f73a3">Karriere · Engineering Hub</span></div>
+        <h1 style="font-family:'Outfit';font-weight:900;font-size:clamp(2.3rem,4.4vw,3.8rem);line-height:1.04;letter-spacing:-.04em;text-transform:uppercase;color:#18181b;margin:0">Bauen Sie an der Infrastruktur von morgen.</h1>
+        <p style="font-size:18px;line-height:1.75;color:#52525b;margin:26px 0 0;max-width:42rem">Wir suchen Ingenieurinnen und Ingenieure, Bauleiter und TGA-Fachplaner, die anspruchsvolle Projekte nicht scheuen, sondern suchen. Bei RSM arbeiten Sie an siebenstelligen Vorhaben — mit digitaler Werkzeugausstattung, kurzen Entscheidungswegen und einem Verbund, der vertikale Tiefe als Stärke begreift.</p>
+      </div>
+    </section>
+
+    <section style="background:#fff;border-top:1px solid #e4e4e7;border-bottom:1px solid #e4e4e7">
+      <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(16px,4vw,40px);display:grid;grid-template-columns:.78fr 1.22fr;gap:48px;align-items:start">
+        <div style="position:sticky;top:110px">
+          <div style="font-family:'Outfit';font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#3f73a3;margin-bottom:16px">Offene Positionen</div>
+          <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(1.6rem,2.4vw,2.1rem);line-height:1.1;letter-spacing:-.025em;color:#18181b;margin:0">Vier Wege, ein Ziel.</h2>
+          <div style="margin-top:26px;border:1px solid #e4e4e7;border-radius:24px;background:#fafafa;padding:26px">
+            <div style="font-family:'Outfit';font-weight:700;font-size:16px;color:#18181b">Initiativbewerbung</div>
+            <p style="font-size:14px;line-height:1.65;color:#52525b;margin:8px 0 16px">Keine passende Position dabei? Überzeugen Sie uns trotzdem.</p>
+            <a href="Portal.dc.html" style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:16px;text-decoration:none;font-family:'Outfit';font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#fafafa;background:#18181b">Profil senden<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <sc-for list="{{ jobs }}" as="j" hint-placeholder-count="4">
+            <div style="{{ j.cardStyle }}">
+              <button onClick="{{ j.onClick }}" style="cursor:pointer;width:100%;text-align:left;display:flex;align-items:center;gap:16px;padding:22px 24px;background:transparent;border:none">
+                <span style="font-family:'Outfit';font-weight:800;font-size:13px;color:#3f73a3;flex-shrink:0">{{ j.num }}</span>
+                <span style="flex:1">
+                  <span style="font-family:'Outfit';font-weight:700;font-size:17px;color:#18181b;display:block">{{ j.role }}</span>
+                  <span style="font-size:13px;color:#71717a">{{ j.area }} · {{ j.loc }}</span>
+                </span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="{{ j.chevStyle }}"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <sc-if value="{{ j.open }}" hint-placeholder-val="{{ true }}">
+                <div style="padding:0 24px 24px 53px">
+                  <p style="font-size:14.5px;line-height:1.75;color:#52525b;margin:0">{{ j.body }}</p>
+                  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px">
+                    <sc-for list="{{ j.tags }}" as="t" hint-placeholder-count="3">
+                      <span style="padding:6px 13px;border-radius:9999px;background:#eef4fb;border:1px solid #d3e2f1;color:#3f73a3;font-size:12px;font-weight:600">{{ t }}</span>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(16px,4vw,40px) clamp(64px,8vw,110px)">
+      <div data-r style="margin-bottom:40px;max-width:40rem">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px"><span style="font-family:'Outfit';font-size:12px;font-weight:700;color:#a1a1aa;letter-spacing:.1em">—</span><span style="width:24px;height:1px;background:#d4d4d8"></span><span style="font-family:'Outfit';font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#3f73a3">Häufige Fragen</span></div>
+        <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.08;letter-spacing:-.03em;color:#18181b;margin:0">Bevor Sie sich bewerben.</h2>
+      </div>
+      <div data-r style="display:flex;flex-direction:column;gap:11px;max-width:52rem">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+          <div style="border:1px solid #e4e4e7;border-radius:16px;background:#fff;overflow:hidden">
+            <button onClick="{{ f.onClick }}" style="cursor:pointer;width:100%;text-align:left;display:flex;align-items:center;gap:14px;padding:19px 22px;background:transparent;border:none">
+              <span style="flex:1;font-family:'Outfit';font-weight:600;font-size:16px;color:#18181b;line-height:1.4">{{ f.q }}</span>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#3f73a3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="{{ f.chevStyle }}"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </button>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ true }}">
+              <p style="padding:0 22px 22px;font-size:14.5px;line-height:1.75;color:#52525b;margin:0">{{ f.a }}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </main>
+
+  <dc-import name="Footer" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { job: 0, faq: null };
+  renderVals() {
+    const S = this.state;
+    const jobsRaw = [
+      { role: 'Bauleiter / Projektleiter (m/w/d)', area: 'Generalunternehmen', loc: 'Wetzlar · Vollzeit', body: 'Sie steuern siebenstellige Bauvorhaben von der Arbeitsvorbereitung bis zur Übergabe, führen Nachunternehmer und verantworten Termine, Kosten und Qualität. Wir erwarten ein abgeschlossenes Studium (B.Eng./M.Eng. Bauingenieurwesen) oder eine vergleichbare Qualifikation sowie Souveränität in VOB und HOAI.', tags: ['B.Eng / M.Eng', 'VOB · HOAI', 'Firmenwagen'] },
+      { role: 'TGA-Fachplaner (m/w/d)', area: 'Technische Gebäudeausrüstung', loc: 'Wetzlar · Vollzeit', body: 'Sie planen Heizung, Lüftung, Sanitär und Elektro integral im BIM-Modell und koordinieren den anlagentechnischen Brandschutz mit unseren Partnern Planwerk, KBV und SprING. Erfahrung in der kollisionsfreien Fachmodell-Koordination ist von Vorteil.', tags: ['BIM', 'HLSE', 'SprING'] },
+      { role: 'Bauingenieur Tragwerksplanung (m/w/d)', area: 'Engineering', loc: 'Wetzlar · Voll-/Teilzeit', body: 'Sie erstellen prüffähige statische Nachweise für Modul-, Massiv- und Holzrahmenkonstruktionen nach aktuellen Eurocodes und arbeiten eng mit der Werkfertigung zusammen. Eine analytische, lösungsorientierte Arbeitsweise zeichnet Sie aus.', tags: ['Eurocode', 'Statik', 'Holzbau'] },
+      { role: 'Polier Innenausbau — Großformat (m/w/d)', area: 'Team Simon GmbH', loc: 'Hessen · Vollzeit', body: 'Sie führen eigene Kolonnen in der großformatigen Fliesen- und Natursteinverlegung und sichern höchste Maßhaltigkeit. Meisterbrief oder langjährige Erfahrung in der Premium-Verlegung vorausgesetzt.', tags: ['Meister', 'Großformat', 'Führung'] },
+    ];
+    const jobs = jobsRaw.map((j, i) => {
+      const open = i === S.job;
+      return { ...j, num: '0' + (i + 1), open,
+        onClick: () => this.setState({ job: open ? null : i }),
+        chevStyle: "transition:transform .3s;transform:rotate(" + (open ? '180deg' : '0deg') + ");flex-shrink:0;color:#3f73a3",
+        cardStyle: "border:1px solid " + (open ? '#3f73a3' : '#e4e4e7') + ";border-radius:20px;background:" + (open ? '#fff' : '#fafafa') + ";overflow:hidden;transition:all .25s" };
+    });
+    const faqsRaw = [
+      { q: 'Wie läuft der Bewerbungsprozess ab?', a: 'Nach Eingang Ihrer Unterlagen melden wir uns innerhalb weniger Tage. Es folgen ein fachliches Gespräch und — je nach Position — ein Kennenlernen des Teams vor Ort. Wir halten den Prozess bewusst schlank und transparent.' },
+      { q: 'Bieten Sie Weiterbildung und Aufstieg?', a: 'Ja. Der Verbund wächst, und mit ihm die Verantwortungsbereiche. Wir fördern Fortbildungen (z. B. zum geprüften Projektleiter) und besetzen Führungspositionen bevorzugt aus den eigenen Reihen.' },
+      { q: 'Arbeiten Sie mit moderner Software?', a: 'Unsere PropTech-Engine Werkules digitalisiert Aufmaß, Bautagebuch und Disposition. Sie arbeiten mit BIM-Modellen und mobilen Endgeräten statt mit Papier — Handwerk 4.0 ist bei uns Alltag.' },
+      { q: 'Gibt es einen Firmenwagen?', a: 'Für Bauleiter- und Projektleiterpositionen gehört ein Firmenwagen, auch zur privaten Nutzung, zum Standard. Details klären wir individuell im Gespräch.' },
+      { q: 'Kann ich mich initiativ bewerben?', a: 'Unbedingt. Wenn Sie überzeugt sind, dass Sie zu uns passen, auch ohne passende Ausschreibung — senden Sie uns Ihr Profil. Talent schlägt Stellenausschreibung.' },
+    ];
+    const faqs = faqsRaw.map((f, i) => {
+      const open = i === S.faq;
+      return { ...f, open,
+        onClick: () => this.setState({ faq: open ? null : i }),
+        chevStyle: "transition:transform .3s;transform:rotate(" + (open ? '45deg' : '0deg') + ");flex-shrink:0" };
+    });
+    return { jobs, faqs };
+  }
+}
+</script>
+</body>
+</html>

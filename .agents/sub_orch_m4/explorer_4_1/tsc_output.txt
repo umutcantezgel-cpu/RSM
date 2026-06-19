@@ -1,0 +1,95 @@
+components/ui/__tests__/verify_all.tsx(71,41): error TS2554: Expected 1 arguments, but got 2.
+components/ui/__tests__/verify_all.tsx(107,41): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ direction: any; delay: number | undefined; className: string | undefined; }' is not assignable to parameter of type 'Attributes & RevealProps'.
+      Property 'children' is missing in type '{ direction: any; delay: number | undefined; className: string | undefined; }' but required in type 'RevealProps'.
+components/ui/__tests__/verify_all.tsx(135,33): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ direction: "up"; }' is not assignable to parameter of type 'Attributes & RevealProps'.
+      Property 'children' is missing in type '{ direction: "up"; }' but required in type 'RevealProps'.
+components/ui/__tests__/verify_all.tsx(141,33): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ direction: "left"; }' is not assignable to parameter of type 'Attributes & RevealProps'.
+      Property 'children' is missing in type '{ direction: "left"; }' but required in type 'RevealProps'.
+components/ui/__tests__/verify_all.tsx(147,33): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ direction: "right"; }' is not assignable to parameter of type 'Attributes & RevealProps'.
+      Property 'children' is missing in type '{ direction: "right"; }' but required in type 'RevealProps'.
+components/ui/__tests__/verify_all.tsx(153,33): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ direction: "down"; }' is not assignable to parameter of type 'Attributes & RevealProps'.
+      Property 'children' is missing in type '{ direction: "down"; }' but required in type 'RevealProps'.
+components/ui/__tests__/verify_all.tsx(159,33): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ direction: "none"; }' is not assignable to parameter of type 'Attributes & RevealProps'.
+      Property 'children' is missing in type '{ direction: "none"; }' but required in type 'RevealProps'.
+components/ui/__tests__/verify_all.tsx(168,33): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ direction: "up"; }' is not assignable to parameter of type 'Attributes & RevealProps'.
+      Property 'children' is missing in type '{ direction: "up"; }' but required in type 'RevealProps'.
+components/ui/__tests__/verify_all.tsx(174,33): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ direction: "left"; }' is not assignable to parameter of type 'Attributes & RevealProps'.
+      Property 'children' is missing in type '{ direction: "left"; }' but required in type 'RevealProps'.
+components/ui/__tests__/verify_all.tsx(188,33): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ direction: "up"; className: string; }' is not assignable to parameter of type 'Attributes & RevealProps'.
+      Property 'children' is missing in type '{ direction: "up"; className: string; }' but required in type 'RevealProps'.
+components/ui/__tests__/verify_all.tsx(195,33): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ direction: "up"; className: string; }' is not assignable to parameter of type 'Attributes & RevealProps'.
+      Property 'children' is missing in type '{ direction: "up"; className: string; }' but required in type 'RevealProps'.
+components/ui/__tests__/verify_all.tsx(203,33): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ direction: "up"; className: string; }' is not assignable to parameter of type 'Attributes & RevealProps'.
+      Property 'children' is missing in type '{ direction: "up"; className: string; }' but required in type 'RevealProps'.
+components/ui/__tests__/verify_all.tsx(242,51): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+components/ui/__tests__/verify_all.tsx(254,51): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+components/ui/__tests__/verify_forms_accordions.tsx(159,41): error TS2554: Expected 1 arguments, but got 2.
+components/ui/__tests__/verify_forms_accordions.tsx(172,51): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+components/ui/__tests__/verify_forms_accordions.tsx(226,10): error TS2367: This comparison appears to be unintentional because the types 'false' and 'true' have no overlap.
+components/ui/__tests__/verify_forms_accordions.tsx(264,41): error TS2554: Expected 1 arguments, but got 2.
+components/ui/__tests__/verify_forms_accordions.tsx(277,49): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+components/ui/__tests__/verify_forms_accordions.tsx(288,10): error TS2367: This comparison appears to be unintentional because the types 'false' and 'true' have no overlap.
+components/ui/__tests__/verify_forms_accordions.tsx(292,49): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+components/ui/__tests__/verify_forms_accordions.tsx(323,41): error TS2554: Expected 1 arguments, but got 2.
+components/ui/__tests__/verify_forms_accordions.tsx(343,10): error TS2367: This comparison appears to be unintentional because the types 'false' and 'true' have no overlap.
+components/ui/__tests__/verify_forms_accordions.tsx(367,49): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+components/ui/__tests__/verify_forms_accordions.tsx(373,49): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+components/ui/__tests__/verify_portal_and_karriere.tsx(314,51): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+components/ui/__tests__/verify_portal_and_karriere.tsx(415,51): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+components/ui/__tests__/verify_portal_and_karriere.tsx(423,51): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+components/ui/__tests__/verify_portal_and_karriere.tsx(432,51): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ locale: string; messages: { Header: { brand_logo_symbol: string; brand_holding_name: string; brand_holding_sub: string; home: string; unternehmen: string; leistungen: string; referenzen: string; karriere: string; portal: string; }; ... 7 more ...; Impressum: { ...; }; }; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Holding Structure - RSM Systembau GmbH</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#fd651e",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#fcf8fa",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#131b2e",
+                        "industrial-navy": "#0F172A",
+                        "tertiary-container": "#0b1c30",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#000000",
+                        "surface-container-high": "#eae7e9",
+                        "secondary-fixed-dim": "#ffb599",
+                        "tertiary-fixed": "#d3e4fe",
+                        "surface": "#fcf8fa",
+                        "on-secondary-fixed": "#370e00",
+                        "inverse-surface": "#303032",
+                        "on-primary-fixed": "#131b2e",
+                        "safety-orange": "#EA580C",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-secondary-container": "#571a00",
+                        "inverse-primary": "#bec6e0",
+                        "outline": "#76777d",
+                        "on-primary-container": "#7c839b",
+                        "primary-fixed-dim": "#bec6e0",
+                        "bim-gray": "#64748B",
+                        "outline-variant": "#c6c6cd",
+                        "on-surface": "#1b1b1d",
+                        "surface-dim": "#dcd9db",
+                        "on-background": "#1b1b1d",
+                        "architectural-white": "#F8FAFC",
+                        "surface-tint": "#565e74",
+                        "secondary": "#a73a00",
+                        "primary-fixed": "#dae2fd",
+                        "primary": "#000000",
+                        "on-tertiary-container": "#75859d",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "inverse-on-surface": "#f3f0f2",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#45464d",
+                        "surface-container": "#f0edef",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e4e2e4",
+                        "on-secondary-fixed-variant": "#7f2b00",
+                        "background": "#fcf8fa",
+                        "surface-container-low": "#f6f3f5",
+                        "secondary-fixed": "#ffdbce",
+                        "surface-container-highest": "#e4e2e4",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "on-tertiary-fixed": "#0b1c30"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base-unit": "8px",
+                        "section-padding": "128px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "technical-data": ["JetBrains Mono"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "nav-caps": ["Space Grotesk"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "technical-data": ["14px", { "lineHeight": "1.5", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "nav-caps": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-architectural-white text-industrial-navy antialiased selection:bg-safety-orange selection:text-architectural-white min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-industrial-navy border-b border-bim-gray/20">
+<div class="flex justify-between items-center h-16 px-margin-desktop w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-headline-md text-headline-md text-architectural-white uppercase tracking-tighter hover:text-safety-orange transition-colors duration-200" href="/">RSM Systembau GmbH</a>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-nav-caps text-nav-caps text-architectural-white opacity-80 hover:text-safety-orange transition-colors duration-200" href="#">Projects</a>
+<a class="font-nav-caps text-nav-caps text-architectural-white opacity-80 hover:text-safety-orange transition-colors duration-200" href="#">Growth</a>
+<a class="font-nav-caps text-nav-caps text-architectural-white opacity-80 hover:text-safety-orange transition-colors duration-200" href="#">Workflow</a>
+<a class="font-nav-caps text-nav-caps text-safety-orange border-b-2 border-safety-orange pb-1 opacity-70 transition-opacity" href="#">Team</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block font-nav-caps text-nav-caps bg-safety-orange text-architectural-white px-6 py-2 hover:bg-safety-orange/90 transition-colors uppercase tracking-wider">Contact</button>
+<button class="md:hidden text-architectural-white">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[819px] flex items-end pb-section-padding px-margin-desktop bg-industrial-navy overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
+<div class="bg-cover bg-center w-full h-full grayscale" data-alt="A highly detailed, stark, high-contrast photograph of a massive modern industrial complex in deep slate grays and muted blues. The architecture is brutalist yet refined, featuring precise geometric lines, steel beams, and concrete structures. High-key dramatic lighting casts sharp shadows, emphasizing engineering precision and structural integrity. The aesthetic is corporate modernism meets technical brutalism, projecting authority and financial solidity. The overall mood is serious, powerful, and technologically advanced." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTJuJRER1EFdp9pWV52xuGYAmgj5LAobfYSMYNyLP0soh5pTtm2az1LNk5nIHSvT2C1vLlynsC9ND8D3Bgo88__J88jVVQoN2qCRJZYwHxggPdE3psU8A_XIksp-7a2CZ43v2WU-V7fm942_dXYirV7_sVFUN8kKOi4_RXxTm37A86ps9irZ2YGsyrv2Fe8X_Vov1xkMll8KEErOZpzrzA_rgPx6cI8S3CvxBz_84nc9qdZPKe0wOZKdvpRDNbUdUZkVfDnKvX8ZDU')"></div>
+</div>
+<div class="relative z-10 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-4 mb-6">
+<div class="h-px w-16 bg-safety-orange"></div>
+<span class="font-technical-data text-technical-data text-safety-orange uppercase tracking-widest">Holding Structure</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-architectural-white mb-6 max-w-4xl">SYMBIOSE DER<br/>GIGANTEN.</h1>
+<p class="font-body-lg text-body-lg text-architectural-white/80 max-w-2xl border-l border-safety-orange pl-6">
+                    A strategic alliance of engineering precision, financial stability, and digital innovation. Establishing the framework for 7-figure industrial projects.
+                </p>
+</div>
+</section>
+<!-- Holding Matrix Section -->
+<section class="py-section-padding px-margin-desktop bg-architectural-white">
+<div class="max-w-[1440px] mx-auto">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-industrial-navy mb-4">THE STRATEGIC MATRIX</h2>
+<p class="font-body-lg text-body-lg text-industrial-navy/70 max-w-2xl">A networked ecosystem designed for maximum efficiency, specialized expertise, and absolute risk mitigation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-base-unit">
+<!-- RT Holding -->
+<div class="md:col-span-12 border border-industrial-navy/10 bg-white p-8 relative overflow-hidden group hover:border-industrial-navy/30 transition-colors">
+<div class="absolute top-0 right-0 p-4 opacity-10 font-display-lg text-display-lg leading-none">01</div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div>
+<span class="inline-block px-3 py-1 bg-industrial-navy text-architectural-white font-technical-data text-technical-data text-[10px] mb-4 uppercase">The Umbrella</span>
+<h3 class="font-headline-md text-headline-md text-industrial-navy mb-2">RT Holding</h3>
+<p class="font-body-md text-body-md text-industrial-navy/70 max-w-xl">The financial and strategic anchor, providing capitalization, risk management, and overarching corporate governance for the entire subsidiary network.</p>
+</div>
+<div class="font-technical-data text-technical-data text-industrial-navy/60 text-right space-y-1">
+<div class="flex justify-between md:justify-end gap-8 border-b border-industrial-navy/10 pb-1"><span>ASSETS</span><span class="text-industrial-navy">TIER 1</span></div>
+<div class="flex justify-between md:justify-end gap-8 border-b border-industrial-navy/10 pb-1"><span>FOCUS</span><span class="text-industrial-navy">CAPITAL</span></div>
+</div>
+</div>
+</div>
+<!-- Bento Grid for Subsidiaries -->
+<!-- RSM Systembau -->
+<div class="md:col-span-6 lg:col-span-4 border border-industrial-navy/10 bg-white p-8 flex flex-col justify-between hover:border-safety-orange transition-colors">
+<div>
+<span class="inline-block px-3 py-1 border border-safety-orange text-safety-orange font-technical-data text-technical-data text-[10px] mb-6 uppercase">General Contractor</span>
+<span class="material-symbols-outlined block text-safety-orange text-4xl mb-4" data-icon="domain">domain</span>
+<h3 class="font-headline-md text-headline-md text-industrial-navy mb-4">RSM Systembau</h3>
+<p class="font-body-md text-body-md text-industrial-navy/70 mb-8">The industrial backbone. Executing complex, large-scale commercial and industrial construction with uncompromising engineering standards.</p>
+</div>
+<div class="bg-architectural-white border border-industrial-navy/5 p-4 font-technical-data text-technical-data text-sm space-y-2">
+<div class="flex justify-between"><span class="text-industrial-navy/50">ROLE</span><span class="text-industrial-navy">EXECUTION</span></div>
+<div class="flex justify-between"><span class="text-industrial-navy/50">SCALE</span><span class="text-industrial-navy">7-FIGURE</span></div>
+</div>
+</div>
+<!-- Team Simon -->
+<div class="md:col-span-6 lg:col-span-4 border border-industrial-navy/10 bg-white p-8 flex flex-col justify-between hover:border-safety-orange transition-colors">
+<div>
+<span class="inline-block px-3 py-1 border border-bim-gray text-bim-gray font-technical-data text-technical-data text-[10px] mb-6 uppercase">Specialized Trades</span>
+<span class="material-symbols-outlined block text-bim-gray text-4xl mb-4" data-icon="architecture">architecture</span>
+<h3 class="font-headline-md text-headline-md text-industrial-navy mb-4">Team Simon</h3>
+<p class="font-body-md text-body-md text-industrial-navy/70 mb-8">Shell and interior finishing specialists. Industry leaders in large-format tiling, delivering precise aesthetics for premium technical environments.</p>
+</div>
+<div class="bg-architectural-white border border-industrial-navy/5 p-4 font-technical-data text-technical-data text-sm space-y-2">
+<div class="flex justify-between"><span class="text-industrial-navy/50">HEADCOUNT</span><span class="text-industrial-navy">90+ STAFF</span></div>
+<div class="flex justify-between"><span class="text-industrial-navy/50">SPECIALTY</span><span class="text-industrial-navy">INTERIORS</span></div>
+</div>
+</div>
+<!-- Werkules -->
+<div class="md:col-span-12 lg:col-span-4 border border-industrial-navy/10 bg-industrial-navy text-architectural-white p-8 flex flex-col justify-between hover:border-safety-orange transition-colors">
+<div>
+<span class="inline-block px-3 py-1 bg-safety-orange text-architectural-white font-technical-data text-technical-data text-[10px] mb-6 uppercase">PropTech Engine</span>
+<span class="material-symbols-outlined block text-safety-orange text-4xl mb-4" data-icon="memory">memory</span>
+<h3 class="font-headline-md text-headline-md text-architectural-white mb-4">Werkules</h3>
+<p class="font-body-md text-body-md text-architectural-white/70 mb-8">Driving 'Handwerk 4.0'. The digital nervous system integrating data across all entities, ensuring seamless BIM workflows and real-time project transparency.</p>
+</div>
+<div class="bg-white/5 border border-white/10 p-4 font-technical-data text-technical-data text-sm space-y-2">
+<div class="flex justify-between"><span class="text-white/50">TECH</span><span class="text-safety-orange">BIM LVL 3</span></div>
+<div class="flex justify-between"><span class="text-white/50">IMPACT</span><span class="text-architectural-white">DATA SYNC</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-industrial-navy border-t border-bim-gray/30 pt-section-padding pb-8 px-margin-desktop">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter mb-16">
+<div class="col-span-1 md:col-span-2">
+<span class="font-headline-lg text-headline-lg text-architectural-white block mb-6">RSM Systembau GmbH</span>
+<p class="font-body-md text-body-md text-architectural-white/60 max-w-sm">Engineering Excellence. Establishing the standard for industrial premium construction and digital integration.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-technical-data text-technical-data text-safety-orange mb-6 uppercase tracking-widest">Navigation</h4>
+<div class="flex flex-col space-y-3">
+<a class="font-label-sm text-label-sm text-architectural-white/60 hover:text-safety-orange transition-colors" href="#">Projects</a>
+<a class="font-label-sm text-label-sm text-architectural-white/60 hover:text-safety-orange transition-colors" href="#">Growth</a>
+<a class="font-label-sm text-label-sm text-architectural-white/60 hover:text-safety-orange transition-colors" href="#">Workflow</a>
+<a class="font-label-sm text-label-sm text-safety-orange hover:text-safety-orange transition-colors focus:ring-1 focus:ring-safety-orange" href="#">Team</a>
+</div>
+</div>
+<div class="col-span-1">
+<h4 class="font-technical-data text-technical-data text-safety-orange mb-6 uppercase tracking-widest">Legal</h4>
+<div class="flex flex-col space-y-3">
+<a class="font-label-sm text-label-sm text-architectural-white/60 hover:text-safety-orange transition-colors" href="#">Legal Notice</a>
+<a class="font-label-sm text-label-sm text-architectural-white/60 hover:text-safety-orange transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-architectural-white/60 hover:text-safety-orange transition-colors" href="#">Compliance</a>
+<a class="font-label-sm text-label-sm text-architectural-white/60 hover:text-safety-orange transition-colors" href="#">Corporate Structure</a>
+<a class="font-label-sm text-label-sm text-architectural-white/60 hover:text-safety-orange transition-colors" href="#">Investor Relations</a>
+<a class="font-label-sm text-label-sm text-architectural-white/60 hover:text-safety-orange transition-colors" href="#">Sustainability</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+<span class="font-body-md text-body-md text-architectural-white/40">© 2024 RSM Systembau GmbH. All rights reserved. Engineering Excellence.</span>
+<div class="flex gap-4 mt-4 md:mt-0">
+<!-- Social links could go here -->
+</div>
+</div>
+</footer>
+</body></html>

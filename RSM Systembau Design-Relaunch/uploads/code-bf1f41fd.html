@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TGA Specialists Recruitment | RSM Systembau</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-high": "#eae7e9",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#7f2b00",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#c6c6cd",
+                        "secondary-container": "#fd651e",
+                        "on-error-container": "#93000a",
+                        "primary": "#000000",
+                        "secondary-fixed-dim": "#ffb599",
+                        "surface": "#fcf8fa",
+                        "surface-variant": "#e4e2e4",
+                        "tertiary": "#000000",
+                        "inverse-primary": "#bec6e0",
+                        "on-primary-container": "#7c839b",
+                        "on-secondary-fixed": "#370e00",
+                        "primary-fixed": "#dae2fd",
+                        "secondary-fixed": "#ffdbce",
+                        "outline": "#76777d",
+                        "secondary": "#a73a00",
+                        "surface-tint": "#565e74",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-tertiary-container": "#75859d",
+                        "primary-fixed-dim": "#bec6e0",
+                        "inverse-surface": "#303032",
+                        "inverse-on-surface": "#f3f0f2",
+                        "architectural-white": "#F8FAFC",
+                        "tertiary-container": "#0b1c30",
+                        "on-primary-fixed": "#131b2e",
+                        "safety-orange": "#EA580C",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#45464d",
+                        "surface-dim": "#dcd9db",
+                        "on-surface": "#1b1b1d",
+                        "on-secondary-container": "#571a00",
+                        "error": "#ba1a1a",
+                        "surface-container": "#f0edef",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "error-container": "#ffdad6",
+                        "on-background": "#1b1b1d",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "on-primary": "#ffffff",
+                        "bim-gray": "#64748B",
+                        "on-tertiary": "#ffffff",
+                        "industrial-navy": "#0F172A",
+                        "surface-container-low": "#f6f3f5",
+                        "background": "#fcf8fa",
+                        "surface-bright": "#fcf8fa",
+                        "surface-container-highest": "#e4e2e4",
+                        "primary-container": "#131b2e"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-desktop": "64px",
+                        "section-padding": "128px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "base-unit": "8px"
+                    },
+                    fontFamily: {
+                        "technical-data": ["JetBrains Mono"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Space Grotesk"],
+                        "nav-caps": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    fontSize: {
+                        "technical-data": ["14px", { lineHeight: "1.5", fontWeight: "500" }],
+                        "display-lg": ["72px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "nav-caps": ["14px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "700" }],
+                        "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .bento-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-architectural-white text-on-surface antialiased font-body-md selection:bg-safety-orange selection:text-white">
+<!-- TopNavBar -->
+<header class="bg-industrial-navy dark:bg-industrial-navy docked full-width top-0 sticky border-b border-outline-variant flat no shadows z-50">
+<div class="flex justify-between items-center h-16 w-full px-margin-desktop max-w-[1440px] mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-architectural-white">
+                RSM Systembau
+            </div>
+<nav class="hidden md:flex gap-8 items-center h-full">
+<a class="font-nav-caps text-nav-caps text-architectural-white hover:text-safety-orange transition-colors hover:opacity-80 transition-opacity flex items-center h-full" href="#">Expertise</a>
+<a class="font-nav-caps text-nav-caps text-architectural-white hover:text-safety-orange transition-colors hover:opacity-80 transition-opacity flex items-center h-full" href="#">Subsidiaries</a>
+<a class="font-nav-caps text-nav-caps text-architectural-white hover:text-safety-orange transition-colors hover:opacity-80 transition-opacity flex items-center h-full" href="#">Workflow</a>
+<a class="font-nav-caps text-nav-caps text-safety-orange border-b-2 border-safety-orange pb-1 flex items-center h-full Active: scale-95 duration-100" href="#">Careers</a>
+</nav>
+<div class="hidden md:block">
+<a class="bg-safety-orange text-white font-nav-caps text-nav-caps px-6 py-3 rounded-DEFAULT hover:opacity-80 transition-opacity" href="#apply">Apply Now</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center justify-center pt-16 overflow-hidden bg-industrial-navy">
+<div class="absolute inset-0 opacity-40 mix-blend-overlay">
+<div class="bg-cover bg-center w-full h-full" data-alt="High-tech blueprint style rendering of complex HVAC and electrical infrastructure. Dark slate background with bright orange and white glowing lines showing data flow and technical specifications. Clean, precise, industrial premium aesthetic, wide angle view." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCt313qM63Uuuta_HwluwbnDOA-EXhEkcxhJmSjZtulwdRQGzHP0KmDPbDqpql-sBuztMSkR_W8cypY_XMDdnqdTb3UmfEkx3R3hSq_pfMKjP8TBbqILAVHWMc8inWkE9Psew3Gg6U_AtWjf36ZXadj1nLfDEw7ZeUM6eGKrzRdd_mFZAzY0-U_XIqagFkaeN_4A8BGudYwe35-cTkVNBceFWz-9l4jcEA2hQMfsGbfbI0ghQmQBdovFeREJY18kLeD0POGhV9KmLip')"></div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-industrial-navy/90"></div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-5xl mx-auto flex flex-col items-center">
+<div class="font-technical-data text-technical-data text-safety-orange mb-6 tracking-widest border border-safety-orange/30 px-4 py-2 rounded-sm inline-block bg-industrial-navy/50 backdrop-blur-sm">
+                    STATUS: RECRUITING_ACTIVE_TGA
+                </div>
+<h1 class="font-display-lg text-display-lg text-architectural-white mb-8 uppercase text-balance leading-tight">
+                    PRECISION IN <br/>INFRASTRUCTURE.
+                </h1>
+<p class="font-body-lg text-body-lg text-inverse-on-surface mb-12 max-w-3xl text-balance opacity-90 border-l-2 border-safety-orange pl-6 text-left">
+                    Engineering the technical pulse of 7-figure enterprise projects. Join our TGA elite and architect the invisible systems that power industrial innovation.
+                </p>
+<div class="flex gap-4">
+<a class="bg-safety-orange text-white font-nav-caps text-nav-caps px-8 py-4 rounded-sm hover:opacity-80 transition-all shadow-[0_0_15px_rgba(234,88,12,0.3)] hover:shadow-[0_0_25px_rgba(234,88,12,0.5)] flex items-center gap-2" href="#apply">
+<span>VIEW OPEN POSITIONS</span>
+<span class="material-symbols-outlined text-sm">arrow_downward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Technical USP Bar -->
+<section class="border-y border-outline-variant bg-surface-container-lowest">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-outline-variant">
+<div class="flex items-center gap-4 pt-4 md:pt-0">
+<span class="material-symbols-outlined text-safety-orange text-3xl" style="font-variation-settings: 'FILL' 1;">architecture</span>
+<div>
+<div class="font-technical-data text-technical-data text-bim-gray">SPEC_01</div>
+<div class="font-headline-md text-body-lg font-bold">BIM-Integrated Design</div>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4 md:pt-0 md:pl-8">
+<span class="material-symbols-outlined text-safety-orange text-3xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+<div>
+<div class="font-technical-data text-technical-data text-bim-gray">SPEC_02</div>
+<div class="font-headline-md text-body-lg font-bold">Smart Building Focus</div>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-4 md:pt-0 md:pl-8">
+<span class="material-symbols-outlined text-safety-orange text-3xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div>
+<div class="font-technical-data text-technical-data text-bim-gray">SPEC_03</div>
+<div class="font-headline-md text-body-lg font-bold">VDI/DIN Certified</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The TGA Ecosystem (Bento Grid) -->
+<section class="py-section-padding bg-architectural-white px-margin-mobile md:px-margin-desktop">
+<div class="max-w-[1440px] mx-auto">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-industrial-navy uppercase mb-4">The TGA Ecosystem</h2>
+<div class="w-24 h-1 bg-safety-orange mb-6"></div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                        Our specialized in-house power forms an integrated network of engineering excellence. We control the entire technical lifecycle.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[280px]">
+<!-- Planwerk GmbH -->
+<div class="bento-card md:col-span-8 bg-surface-container-lowest border border-outline-variant p-8 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[120px]">account_tree</span>
+</div>
+<div>
+<div class="font-technical-data text-technical-data text-bim-gray mb-2">SUBSIDIARY_01</div>
+<h3 class="font-headline-md text-headline-md text-industrial-navy mb-4">Planwerk GmbH</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                                Strategic planning and design. The architectural foundation where mechanical and electrical systems are conceptually integrated before a single component is drafted.
+                            </p>
+</div>
+<div class="font-technical-data text-technical-data text-safety-orange flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">arrow_forward</span> EXPLORE_ROLES
+                        </div>
+</div>
+<!-- KBV -->
+<div class="bento-card md:col-span-4 bg-industrial-navy text-architectural-white border border-industrial-navy p-8 flex flex-col justify-between">
+<div>
+<div class="font-technical-data text-technical-data text-safety-orange mb-2">SUBSIDIARY_02</div>
+<h3 class="font-headline-md text-headline-md mb-4">KBV <span class="text-lg font-normal opacity-70">(Klima-Bau Volk)</span></h3>
+<p class="font-body-md text-body-md opacity-80">
+                                Climate and ventilation masters. Engineering precision airflow and thermal regulation for massive industrial volumes.
+                            </p>
+</div>
+<span class="material-symbols-outlined text-safety-orange text-4xl">air</span>
+</div>
+<!-- SprING -->
+<div class="bento-card md:col-span-5 bg-surface-container-lowest border border-outline-variant p-8 flex flex-col justify-between">
+<div>
+<div class="font-technical-data text-technical-data text-bim-gray mb-2">SUBSIDIARY_03</div>
+<h3 class="font-headline-md text-headline-md text-industrial-navy mb-4">SprING</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Advanced sprinkler and fire safety systems. Zero-risk engineering for critical infrastructure protection.
+                            </p>
+</div>
+<span class="material-symbols-outlined text-safety-orange text-4xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<!-- Stats / Generic -->
+<div class="bento-card md:col-span-7 bg-surface-container-lowest border border-outline-variant p-8 flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity" data-alt="Close up rendering of a highly detailed mechanical ventilation duct system, showing polished metal, precise joints, and industrial orange warning labels. Bright, high-key studio lighting emphasizing engineering precision and material textures." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBj79kNIoHwS9wj2Fc-TFAgvspNUfd-tAsy7Jtlzc59cSN8ilRJnt1h7xDMlnIphvDXzVuauWeFGvWBt6ix1qnRZFL4j4pmF-ZkUjQDga_qL4dCF1mxJNfoOBmNP2t25nH7xwwJoTfeh4i-bSsDWcYDOum_yuLSYcdQU8PK6EupCv9NuFkJYWmKU3SXwRzIY8lMoZL655j4Kk9x9dW_IobKPROyVS8ptwfh_6nAOJ1EMkKAU5ti5j01WP-Wg8QVLTbbisqM3kX14DOy')"></div>
+<div class="relative z-10 text-center">
+<div class="font-display-lg text-display-lg text-industrial-navy font-bold">100%</div>
+<div class="font-technical-data text-technical-data text-safety-orange tracking-wider mt-2">IN-HOUSE TGA INTEGRATION</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-industrial-navy dark:bg-industrial-navy border-t border-industrial-navy flat no shadows w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-padding w-full max-w-[1440px] mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-lg text-headline-lg text-architectural-white mb-6">RSM Systembau</div>
+<div class="font-body-md text-body-md text-architectural-white opacity-80">
+                    © 2024 RSM Systembau GmbH. Engineering Excellence.
+                </div>
+</div>
+<div class="md:col-span-3 flex justify-end gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="font-technical-data text-technical-data text-safety-orange uppercase tracking-wider mb-2">Legal</h4>
+<a class="font-body-md text-body-md text-bim-gray hover:text-architectural-white transition-colors focus:ring-2 focus:ring-safety-orange outline-none" href="#">Imprint</a>
+<a class="font-body-md text-body-md text-bim-gray hover:text-architectural-white transition-colors focus:ring-2 focus:ring-safety-orange outline-none" href="#">Data Privacy</a>
+<a class="font-body-md text-body-md text-bim-gray hover:text-architectural-white transition-colors focus:ring-2 focus:ring-safety-orange outline-none" href="#">Compliance</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-technical-data text-technical-data text-safety-orange uppercase tracking-wider mb-2">Connect</h4>
+<a class="font-body-md text-body-md text-bim-gray hover:text-architectural-white transition-colors focus:ring-2 focus:ring-safety-orange outline-none" href="#">Contact</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

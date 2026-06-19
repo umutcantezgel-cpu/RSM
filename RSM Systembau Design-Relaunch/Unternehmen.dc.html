@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  @font-face{font-family:'Inter';src:url('fonts/inter-variable-latin.woff2') format('woff2');font-weight:100 900;font-display:swap}
+  @font-face{font-family:'Inter';src:url('fonts/inter-variable-latin-ext.woff2') format('woff2');font-weight:100 900;font-display:swap;unicode-range:U+0100-024F,U+1E00-1EFF}
+  @font-face{font-family:'Outfit';src:url('fonts/outfit-variable-latin.woff2') format('woff2');font-weight:100 900;font-display:swap}
+  *{box-sizing:border-box}
+  body{margin:0}
+  ::selection{background:#3f73a3;color:#fff}
+  html{scroll-behavior:smooth}
+  @keyframes rsmRise{from{transform:translateY(26px);opacity:.001}to{transform:translateY(0);opacity:1}}
+  [data-r]{animation:rsmRise .8s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 20%}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</helmet>
+<div style="font-family:'Inter',sans-serif;background:#fafafa;color:#52525b;min-height:100vh">
+  <header style="position:sticky;top:0;z-index:50;background:rgba(250,250,250,.82);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid #e4e4e7">
+    <dc-import name="Nav" active="unternehmen" hint-size="100%,78px"></dc-import>
+  </header>
+
+  <main>
+    <!-- PAGE HEAD -->
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,84px) clamp(16px,4vw,40px) 48px">
+      <div data-r style="max-width:46rem">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px"><span style="width:34px;height:1.5px;background:#3f73a3"></span><span style="font-family:'Outfit';font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#3f73a3">Unternehmen · Corporate Nexus</span></div>
+        <h1 style="font-family:'Outfit';font-weight:900;font-size:clamp(2.3rem,4.4vw,3.8rem);line-height:1.04;letter-spacing:-.04em;text-transform:uppercase;color:#18181b;margin:0">Die Symbiose der Giganten.</h1>
+        <p style="font-size:18px;line-height:1.75;color:#52525b;margin:26px 0 0;max-width:42rem">Hinter jedem RSM-Projekt steht ein präzise orchestrierter Unternehmensverbund. Vier spezialisierte Einheiten greifen ineinander wie die Komponenten eines Tragwerks — kapitalstark gesteuert, handwerklich tief verwurzelt und digital vernetzt. Diese vertikale Integration ist kein Zufall, sondern strategisches Fundament.</p>
+      </div>
+    </section>
+
+    <!-- NEXUS TABS -->
+    <section style="background:#fff;border-top:1px solid #e4e4e7;border-bottom:1px solid #e4e4e7">
+      <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(16px,4vw,40px);display:grid;grid-template-columns:.82fr 1.18fr;gap:34px;align-items:start">
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <sc-for list="{{ nexus }}" as="n" hint-placeholder-count="4">
+            <button onClick="{{ n.onClick }}" style="{{ n.tabStyle }}">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+                <span style="{{ n.tagStyle }}">{{ n.tag }}</span>
+                <span style="font-family:'Outfit';font-size:11px;font-weight:700;color:{{ n.numColor }}">{{ n.num }}</span>
+              </div>
+              <div style="{{ n.nameStyle }}">{{ n.name }}</div>
+            </button>
+          </sc-for>
+        </div>
+
+        <div style="border:1px solid #e4e4e7;border-radius:24px;padding:clamp(28px,3.5vw,44px);background:#fafafa;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;right:0;width:140px;height:140px;background-image:linear-gradient(#e4e4e7 1px,transparent 1px),linear-gradient(90deg,#e4e4e7 1px,transparent 1px);background-size:24px 24px;opacity:.6;mask-image:radial-gradient(100% 100% at 100% 0%,#000,transparent)"></div>
+          <div style="position:relative">
+            <div style="font-family:'Outfit';font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#3f73a3">{{ activeNexus.role }}</div>
+            <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(1.7rem,2.6vw,2.4rem);letter-spacing:-.025em;color:#18181b;margin:8px 0 0">{{ activeNexus.name }}</h2>
+            <p style="font-size:16.5px;line-height:1.8;color:#52525b;margin:18px 0 0;max-width:40rem">{{ activeNexus.body }}</p>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:30px;border-top:1px solid #e4e4e7">
+              <sc-for list="{{ activeNexus.stats }}" as="st" hint-placeholder-count="3">
+                <div style="padding:20px 16px 0 0;border-right:1px solid #e4e4e7">
+                  <div style="font-family:'Outfit';font-weight:800;font-size:19px;color:#3f73a3;letter-spacing:-.02em">{{ st.v }}</div>
+                  <div style="font-size:12px;color:#71717a;margin-top:4px;line-height:1.4">{{ st.l }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(16px,4vw,40px)">
+      <div data-r style="margin-bottom:40px;max-width:40rem">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px"><span style="font-family:'Outfit';font-size:12px;font-weight:700;color:#a1a1aa;letter-spacing:.1em">—</span><span style="width:24px;height:1px;background:#d4d4d8"></span><span style="font-family:'Outfit';font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#3f73a3">Leitprinzipien</span></div>
+        <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.08;letter-spacing:-.03em;color:#18181b;margin:0">Worauf wir bauen.</h2>
+      </div>
+      <div data-r style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <sc-for list="{{ values }}" as="v" hint-placeholder-count="3">
+          <div style="background:#fff;border:1px solid #e4e4e7;border-radius:24px;padding:30px">
+            <span style="display:grid;place-items:center;width:46px;height:46px;border-radius:11px;background:#eef4fb;color:#3f73a3;margin-bottom:18px" innerHTML="{{ v.icon }}"></span>
+            <div style="font-family:'Outfit';font-weight:700;font-size:19px;color:#18181b;letter-spacing:-.01em">{{ v.t }}</div>
+            <p style="font-size:14.5px;line-height:1.7;color:#52525b;margin:12px 0 0">{{ v.d }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,4vw,40px) clamp(64px,8vw,110px)">
+      <div data-r style="background:#18181b;border-radius:24px;padding:clamp(36px,5vw,60px);display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap">
+        <div>
+          <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(1.6rem,2.6vw,2.2rem);letter-spacing:-.025em;color:#fafafa;margin:0">Lernen Sie den Verbund kennen.</h2>
+          <p style="font-size:15.5px;color:#a1a1aa;margin:12px 0 0;max-width:34rem">Vier Unternehmen, eine Philosophie — und ein Ansprechpartner für Ihr Vorhaben.</p>
+        </div>
+        <a href="Portal.dc.html" style="display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:16px;text-decoration:none;font-family:'Outfit';font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:#18181b;background:#fafafa;flex-shrink:0;transition:transform .25s" style-hover="transform:translateY(-2px)">Kontakt aufnehmen<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <dc-import name="Footer" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { nexus: 0 };
+  renderVals() {
+    const S = this.state;
+    const raw = [
+      { tag: 'Generalunternehmer', num: '01', name: 'RSM Systembau GmbH', role: 'Die ausführende Kraft',
+        body: 'Als Generalunternehmer ist die RSM Systembau GmbH der zentrale Knotenpunkt jedes Bauvorhabens. Sie übernimmt die schlüsselfertige Realisierung siebenstelliger Projekte und bündelt sämtliche Gewerke in einer einzigen, vertraglich verbindlichen Verantwortung — vom ersten Spatenstich bis zur protokollierten Übergabe.',
+        stats: [{v:'SPOC',l:'Single Point of Contact'},{v:'100%',l:'Termin- & Kostengarantie'},{v:'DIN',l:'ISO 9001 Prozesse'}] },
+      { tag: 'Holding', num: '02', name: 'RT Holding', role: 'Das strategische Fundament',
+        body: 'Die RT Holding bildet die kapital- und steuerungsseitige Dachstruktur des Verbunds. Sie sichert finanzielle Solidität, allokiert Investitionen und verantwortet die strategische Ausrichtung der Beteiligungen. Für Auftraggeber bedeutet das einen bonitätsstarken Partner mit langfristigem Planungshorizont.',
+        stats: [{v:'Bonität',l:'Geprüfte Stabilität'},{v:'Multi',l:'Beteiligungsstruktur'},{v:'Langfrist',l:'Investitionshorizont'}] },
+      { tag: 'Ausbau-Power', num: '03', name: 'Team Simon GmbH', role: 'Die handwerkliche Tiefe',
+        body: 'Mit über 90 Fachkräften liefert die Team Simon GmbH die operative Schlagkraft im Roh- und Innenausbau. Die Spezialisierung auf großformatige Fliesen- und Natursteinarbeiten verleiht dem Verbund eine Ausführungsqualität, die im Generalunternehmer-Markt selten vertikal integriert verfügbar ist.',
+        stats: [{v:'90+',l:'Eigene Fachkräfte'},{v:'Premium',l:'Großformat & Mosaik'},{v:'In-House',l:'Keine Lücken'}] },
+      { tag: 'PropTech-Engine', num: '04', name: 'Werkules GmbH', role: 'Die digitale Intelligenz',
+        body: 'Die Werkules GmbH ist die PropTech-Engine des Verbunds. Ihre Softwareplattform digitalisiert Aufmaß, Disposition, Bautagebuch und Abrechnung in Echtzeit und überführt das Handwerk in das Zeitalter datengetriebener Steuerung — Handwerk 4.0 als realer Wettbewerbsvorteil.',
+        stats: [{v:'Realtime',l:'Bautagebuch & Aufmaß'},{v:'4.0',l:'Handwerk digital'},{v:'API',l:'BIM-Schnittstellen'}] },
+    ];
+    const nexus = raw.map((n, i) => {
+      const on = i === S.nexus;
+      return { ...n, onClick: () => this.setState({ nexus: i }),
+        numColor: on ? '#3f73a3' : '#d4d4d8',
+        tabStyle: "cursor:pointer;text-align:left;width:100%;padding:18px 20px;border-radius:16px;background:" + (on ? '#fff' : 'transparent') + ";border:1px solid " + (on ? '#3f73a3' : '#e4e4e7') + ";transition:all .25s",
+        tagStyle: "font-family:'Outfit';font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:" + (on ? '#3f73a3' : '#a1a1aa'),
+        nameStyle: "font-family:'Outfit';font-weight:700;font-size:17px;margin-top:5px;color:" + (on ? '#18181b' : '#52525b') };
+    });
+    const ic = {
+      a: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+      b: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
+      c: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>',
+    };
+    const values = [
+      { t: 'Verbindlichkeit', icon: ic.a, d: 'Fixe Termine, garantierte Maximalpreise und eine lückenlose Gewährleistung aus einer Hand. Was wir zusagen, halten wir vertraglich.' },
+      { t: 'Geschwindigkeit', icon: ic.b, d: 'Industrielle Vorfertigung und digitale Steuerung verkürzen die Bauzeit drastisch — ohne Kompromiss bei der Ausführungsqualität.' },
+      { t: 'Tiefe', icon: ic.c, d: 'Über 90 eigene Fachkräfte statt anonymer Subunternehmer-Ketten. Verantwortung bleibt im Haus, Qualität bleibt kontrollierbar.' },
+    ];
+    return { nexus, activeNexus: nexus[S.nexus], values };
+  }
+}
+</script>
+</body>
+</html>

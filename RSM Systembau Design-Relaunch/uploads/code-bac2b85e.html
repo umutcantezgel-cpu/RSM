@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RSM Systembau | Sustainability &amp; ESG</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts based on Theme Config -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config injected from Style Guidance -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#fcf8fa",
+                      "tertiary-fixed-dim": "#b7c8e1",
+                      "surface-container-high": "#eae7e9",
+                      "primary-fixed-dim": "#bec6e0",
+                      "inverse-surface": "#303032",
+                      "secondary": "#a73a00",
+                      "outline-variant": "#c6c6cd",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "primary": "#000000",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-low": "#f6f3f5",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#565e74",
+                      "surface-variant": "#e4e2e4",
+                      "surface-container": "#f0edef",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed": "#0b1c30",
+                      "on-tertiary-fixed-variant": "#38485d",
+                      "secondary-container": "#fd651e",
+                      "tertiary-container": "#0b1c30",
+                      "safety-orange": "#EA580C",
+                      "surface-dim": "#dcd9db",
+                      "surface-container-highest": "#e4e2e4",
+                      "on-primary-container": "#7c839b",
+                      "primary-container": "#131b2e",
+                      "on-surface": "#1b1b1d",
+                      "surface": "#fcf8fa",
+                      "on-primary-fixed": "#131b2e",
+                      "on-secondary-container": "#571a00",
+                      "inverse-primary": "#bec6e0",
+                      "error-container": "#ffdad6",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#dae2fd",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#1b1b1d",
+                      "on-secondary-fixed": "#370e00",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#f3f0f2",
+                      "tertiary": "#000000",
+                      "industrial-navy": "#0F172A",
+                      "architectural-white": "#F8FAFC",
+                      "on-surface-variant": "#45464d",
+                      "on-tertiary-container": "#75859d",
+                      "secondary-fixed-dim": "#ffb599",
+                      "bim-gray": "#64748B",
+                      "secondary-fixed": "#ffdbce",
+                      "outline": "#76777d",
+                      "tertiary-fixed": "#d3e4fe",
+                      "surface-bright": "#fcf8fa",
+                      "on-secondary-fixed-variant": "#7f2b00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "base-unit": "8px",
+                      "section-padding": "128px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "nav-caps": ["Space Grotesk"],
+                      "headline-md": ["Space Grotesk"],
+                      "display-lg": ["Space Grotesk"],
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Space Grotesk"],
+                      "technical-data": ["JetBrains Mono"],
+                      "body-lg": ["Inter"],
+                      "label-sm": ["Inter"]
+              },
+              "fontSize": {
+                      "nav-caps": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "technical-data": ["14px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Base configuration adjustments for Brutalist aesthetics */
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="pt-16">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-16 bg-industrial-navy border-b border-on-surface-variant font-nav-caps text-nav-caps">
+<div class="font-headline-md text-headline-md font-bold text-architectural-white tracking-tighter">
+            RSM SYSTEMBAU
+        </div>
+<div class="hidden md:flex gap-8 items-center h-full">
+<a class="text-safety-orange border-b-2 border-safety-orange pb-1 flex items-center h-full mt-[2px]" href="#">Sustainability</a>
+<a class="text-architectural-white hover:text-safety-orange transition-colors flex items-center h-full hover:bg-primary-container transition-all duration-200 px-4" href="#">Construction</a>
+<a class="text-architectural-white hover:text-safety-orange transition-colors flex items-center h-full hover:bg-primary-container transition-all duration-200 px-4" href="#">PV Systems</a>
+<a class="text-architectural-white hover:text-safety-orange transition-colors flex items-center h-full hover:bg-primary-container transition-all duration-200 px-4" href="#">ESG Metrics</a>
+<a class="text-architectural-white hover:text-safety-orange transition-colors flex items-center h-full hover:bg-primary-container transition-all duration-200 px-4" href="#">Contact</a>
+</div>
+<div class="flex items-center">
+<button class="bg-safety-orange text-architectural-white px-6 py-2 hover:bg-primary-container transition-all duration-200 font-nav-caps text-nav-caps border border-safety-orange hover:border-architectural-white scale-95 duration-100">
+                GET AUDIT
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative w-full h-[870px] min-h-[700px] flex items-end pb-section-padding px-margin-desktop">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A striking architectural photograph of a vast, modern industrial hall constructed entirely from high-tech timber framing. The lighting is dramatic and high-contrast, emphasizing the precise geometry and structural integrity of the wooden beams. The mood is powerful, authoritative, and sustainable, blending industrial scale with organic materials under cool, technical lighting, embodying a sophisticated corporate modernism aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdyYkkK-2hCEiuwDODMGplnyez3MlXt5ytozKNJ2A2Dkc0hyWiFvuJwnYUlPInTkmJHXoaJyy2j179FfhpTAdIhRDt3WBlbtZ1fj6G5w3xtOyr69zvHjgv2HacdCB90IPNd3DJ23IIMqLX3mS4zcd23bjg73dY_BJRanxWBcJGK-VKkjAD4d0HIqjrIFXM5lUzQb_s5bb-ra6sJt4a2sMaKimw2tp0EK91ga9jZhfzEaiiKAnGtVe9ZvoYco3sCQXdD5HkiFLUUy4K')"></div>
+<div class="absolute inset-0 bg-industrial-navy/85 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-industrial-navy via-industrial-navy/60 to-transparent"></div>
+<div class="relative z-10 max-w-[1440px] mx-auto w-full">
+<div class="max-w-4xl border-l-4 border-safety-orange pl-8">
+<h1 class="font-display-lg text-display-lg mb-8 uppercase text-architectural-white tracking-tighter leading-none">
+                    SYMBIOSE AUS PRÄZISION &amp; PLANET.
+                </h1>
+<p class="font-body-lg text-body-lg max-w-2xl text-surface-container-high leading-relaxed">
+                    Wir definieren den industriellen Standard neu: Durch CO2-optimierten Holz-Systembau und integrierte PV-Lösungen schaffen wir zukunftssichere Assets für die nächste Generation.
+                </p>
+</div>
+</div>
+</section>
+<!-- ESG Metrics Bar (Data Terminal Aesthetic) -->
+<div class="w-full bg-industrial-navy border-b border-outline-variant flex flex-wrap justify-center md:justify-between items-center px-margin-desktop py-4 font-technical-data text-technical-data text-surface-container-high overflow-x-auto gap-8 shadow-sm">
+<span class="flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined text-safety-orange text-lg">co2</span> 
+            CO2_SAVINGS: 40%
+        </span>
+<span class="flex items-center gap-2 whitespace-nowrap text-bim-gray">|</span>
+<span class="flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined text-safety-orange text-lg">forest</span> 
+            TIMBER_RATIO: 65%
+        </span>
+<span class="flex items-center gap-2 whitespace-nowrap text-bim-gray">|</span>
+<span class="flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined text-safety-orange text-lg">solar_power</span> 
+            RENEWABLE_ENERGY: 100%
+        </span>
+<span class="flex items-center gap-2 whitespace-nowrap text-bim-gray">|</span>
+<span class="flex items-center gap-2 whitespace-nowrap">
+<span class="material-symbols-outlined text-safety-orange text-lg">verified</span> 
+            BREEAM_CERTIFIED: YES
+        </span>
+</div>
+<!-- Section 1: Holz-Systembau (Asymmetric Bento) -->
+<section class="py-section-padding px-margin-desktop bg-architectural-white border-b border-outline-variant">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-base-unit">
+<div class="lg:col-span-5 p-12 border border-outline-variant bg-surface-container-lowest flex flex-col justify-between">
+<div>
+<div class="inline-block bg-industrial-navy text-architectural-white font-technical-data text-technical-data px-3 py-1 mb-8 tracking-widest border border-industrial-navy">
+                        STRUCTURAL_CORE
+                    </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase mb-6 leading-tight tracking-tight">
+                        DIE HOLZ-REVOLUTION IM INDUSTRIEBAU
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Holz ist nicht nur ein Baustoff, sondern ein technologisches Upgrade. Unsere hochpräzisen Holz-Systemhallen bieten überlegene thermische Effizienz, radikal verkürzte Montagezeiten und einen negativen Carbon Footprint, der den Wert Ihrer Immobilie nachhaltig sichert.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant pt-8">
+<div>
+<div class="font-headline-md text-headline-md text-industrial-navy">U-Wert</div>
+<div class="font-technical-data text-technical-data text-bim-gray">OPTIMIERT &lt; 0.20</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-industrial-navy">-30%</div>
+<div class="font-technical-data text-technical-data text-bim-gray">MONTAGEZEIT</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 h-[600px] relative border border-outline-variant group overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A meticulously detailed technical close-up photograph of a heavy timber structural joint in an industrial setting. The image showcases engineering precision, with massive wooden glulam beams connected by sleek, dark steel brackets and heavy bolts. The lighting is sharp, bright, and analytical, emphasizing the intersection of natural wood textures and cold, calculated metal hardware within a bright architectural white environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC80UH3Vnz7P1tf3MewYqXF2hepN7Y0blQMQ1kZA-fVEW9GnA109xWqVQcurLvwwGwu5uy9ycgErHnmk7O-7PK6bePYSaphi3j3oD68hgW_HX1bF2BV1ZZs2nImNsPLeBZgF5JUuWP_jID4VgJXdtPp8Q5_ApYfegOzTenCOgNC5IhurAHV3hZfMcHJE-YZK0PBT3GqC3N0B2-Pl7AJFfVKpbLyVxFtL_OFiiKdY6LpZ-DlYpKFK3F27ClZNa-XyVBY4EDBpGQwlVS1')"></div>
+<div class="absolute bottom-4 left-4 bg-architectural-white/90 backdrop-blur-sm px-4 py-2 font-technical-data text-technical-data text-industrial-navy border border-outline-variant">
+                    FIG 1.1: GLULAM_STRUCTURAL_NODE
+                </div>
+</div>
+</div>
+</section>
+<!-- Section 2: PV & Energie-Autarkie -->
+<section class="py-section-padding px-margin-desktop bg-surface-container-low border-b border-outline-variant relative overflow-hidden">
+<!-- Abstract Tech Background Element -->
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none" style="background-image: radial-gradient(circle, theme('colors.industrial-navy') 1px, transparent 1px); background-size: 24px 24px;"></div>
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center relative z-10">
+<div class="lg:col-span-6 order-2 lg:order-1 h-[700px] relative border border-outline-variant">
+<div class="absolute inset-0 bg-cover bg-center grayscale contrast-125 hover:grayscale-0 transition-all duration-700" data-alt="An expansive, high-angle aerial view of a massive flat industrial roof completely covered in high-efficiency solar panels. The scene is shot during bright daylight, reflecting crisp, clean sunlight off the dark blue photovoltaic cells. The surrounding environment is sparse and industrial, highlighting the scale and sheer power-generation capability of the facility. The aesthetic is extremely clean, structured, and strictly adheres to corporate engineering precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBBDN_o4AHChTGjYAzHvaI5SSaJmBfNQ9Rrmjophk4rsSQDh83bigFsQWRooiuk_mYIHgsQBunOJkvY2iiVGHou-7kbcGykPqowfCZvJkTgl8YnlWuho3kLO6X4fS6O0vSYQvHzakmnYVt0_-rDE67dFDVSTGNP8ZSYLqNCIFriezMqmqNPPEM8RPSw6UeskWeZZkLwSCzhIAWupOSaDOK713zhO-9Tqxj2cV7exX8JNHiIPhYFzOjnSPkdyYGgarJDO8kmbTGwkfwj')"></div>
+<div class="absolute inset-0 border-[8px] border-industrial-navy/10 pointer-events-none"></div>
+</div>
+<div class="lg:col-span-6 order-1 lg:order-2 lg:pl-16">
+<span class="font-technical-data text-technical-data text-safety-orange mb-4 block flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">bolt</span> ENERGY_MATRIX_INTEGRATION
+                </span>
+<h2 class="font-headline-lg text-headline-lg text-industrial-navy uppercase mb-8 tracking-tighter">
+                    DAS DACH ALS KRAFTWERK
+                </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                    Jede RSM Halle wird als dezentrales Kraftwerk konzipiert. Die Integration von Hochleistungs-PV-Anlagen als Standard-Feature transformiert passiven Raum in ein aktives, renditestarkes Asset. Maximieren Sie Ihren ROI durch garantierte Energieunabhängigkeit und verlässliche, planbare Betriebskosten für die nächsten Jahrzehnte.
+                </p>
+<div class="bg-architectural-white border border-outline-variant p-8 mb-8">
+<h3 class="font-technical-data text-technical-data text-industrial-navy mb-4 border-b border-outline-variant pb-2">ROI_PROJECTION</h3>
+<div class="flex justify-between items-end">
+<div>
+<div class="font-headline-md text-headline-md text-industrial-navy">100%</div>
+<div class="font-technical-data text-technical-data text-bim-gray mt-1">AUTARKIE_POTENZIAL</div>
+</div>
+<div class="text-right">
+<div class="font-headline-md text-headline-md text-industrial-navy">&lt; 5 YR</div>
+<div class="font-technical-data text-technical-data text-bim-gray mt-1">AMORTISATION_AVG</div>
+</div>
+</div>
+</div>
+<button class="bg-industrial-navy text-architectural-white font-nav-caps text-nav-caps px-8 py-4 border border-industrial-navy hover:bg-safety-orange hover:border-safety-orange transition-colors duration-300 w-full sm:w-auto text-center flex justify-center items-center gap-2">
+                    CALCULATE_ROI <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 3: Circular Economy (Grid) -->
+<section class="py-section-padding px-margin-desktop bg-architectural-white">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-outline-variant pb-8">
+<div>
+<p class="font-technical-data text-technical-data text-safety-orange mb-2">CRADLE_TO_CRADLE_PROTOCOL</p>
+<h2 class="font-headline-lg text-headline-lg text-industrial-navy uppercase tracking-tighter">MATERIAL-ZIRKULARITÄT</h2>
+</div>
+<div class="mt-6 md:mt-0 max-w-lg">
+<p class="font-body-md text-body-md text-on-surface-variant text-right">
+                        Absolute Transparenz und sortenreine Trennung. Wir betrachten Gebäude als Materialbanken der Zukunft, konzipiert für vollständige Demontage.
+                    </p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-base-unit">
+<!-- Card 1 -->
+<div class="border border-outline-variant p-10 bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-300 group">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-industrial-navy text-5xl font-light group-hover:text-safety-orange transition-colors">cycle</span>
+<span class="font-technical-data text-technical-data text-bim-gray border border-outline-variant px-2 py-1">PHASE_01</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-industrial-navy mb-4 tracking-tight">DEKONSTRUKTION</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Unsere Hallen sind verschraubt, nicht verklebt. Das modulare Raster ermöglicht eine 100%ige sortenreine Trennung und Wiederverwendung aller Strukturbauteile am Ende des Lebenszyklus.
+                    </p>
+</div>
+<!-- Card 2 (Highlighted) -->
+<div class="border border-industrial-navy p-10 bg-industrial-navy text-architectural-white relative overflow-hidden group">
+<div class="absolute inset-0 bg-safety-orange/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-safety-orange text-5xl font-light">architecture</span>
+<span class="font-technical-data text-technical-data text-surface-container-high border border-surface-container-high px-2 py-1">PHASE_02</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-architectural-white mb-4 tracking-tight">MATERIALPÄSSE</h3>
+<p class="font-body-md text-body-md text-surface-container-low">
+                            Jedes verbaute Element ist per RFID und BIM-Datenbank in unserem digitalen Gebäudezwilling erfasst, was zukünftiges Urban Mining hochgradig effizient und rentabel macht.
+                        </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="border border-outline-variant p-10 bg-surface-container-lowest hover:bg-surface-container-low transition-colors duration-300 group">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-industrial-navy text-5xl font-light group-hover:text-safety-orange transition-colors">eco</span>
+<span class="font-technical-data text-technical-data text-bim-gray border border-outline-variant px-2 py-1">PHASE_03</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-industrial-navy mb-4 tracking-tight">REGIONALER BEZUG</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Wir beziehen unser FSC-zertifiziertes Konstruktionsvollholz ausschließlich aus regionalen, nachhaltig bewirtschafteten Wäldern im Umkreis von maximal 150km um unsere Produktionsstätten.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-section-padding px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter bg-industrial-navy border-t border-bim-gray font-body-md text-body-md text-architectural-white">
+<div class="md:col-span-1 flex flex-col justify-between">
+<div class="font-headline-lg text-headline-lg text-architectural-white mb-8">
+                RSM SYSTEMBAU
+            </div>
+<div class="text-bim-gray text-sm font-technical-data">
+                © 2024 RSM SYSTEMBAU GMBH. INDUSTRIAL PRECISION &amp; SUSTAINABILITY.
+            </div>
+</div>
+<div class="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md text-architectural-white text-sm tracking-widest uppercase mb-4 opacity-50">Legal</div>
+<a class="text-bim-gray hover:text-safety-orange transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-bim-gray hover:text-safety-orange transition-colors opacity-80 hover:opacity-100" href="#">Imprint</a>
+</div>
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md text-architectural-white text-sm tracking-widest uppercase mb-4 opacity-50">Technical</div>
+<a class="text-bim-gray hover:text-safety-orange transition-colors opacity-80 hover:opacity-100" href="#">Technical Specs</a>
+<a class="text-bim-gray hover:text-safety-orange transition-colors opacity-80 hover:opacity-100" href="#">Material Science</a>
+</div>
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md text-architectural-white text-sm tracking-widest uppercase mb-4 opacity-50">Sustainability</div>
+<a class="text-safety-orange opacity-80 hover:opacity-100 transition-colors" href="#">ESG Framework</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Karriere: Bauleiter / Ingenieure | RSM Systembau</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e4e2e4",
+                        "inverse-surface": "#303032",
+                        "on-secondary-container": "#571a00",
+                        "surface-container-low": "#f6f3f5",
+                        "industrial-navy": "#0F172A",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "on-surface-variant": "#45464d",
+                        "on-surface": "#1b1b1d",
+                        "primary-container": "#131b2e",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#000000",
+                        "on-secondary-fixed": "#370e00",
+                        "surface-container-high": "#eae7e9",
+                        "outline-variant": "#c6c6cd",
+                        "surface-variant": "#e4e2e4",
+                        "outline": "#76777d",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f3f0f2",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#d3e4fe",
+                        "surface-tint": "#565e74",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "surface-dim": "#dcd9db",
+                        "surface-bright": "#fcf8fa",
+                        "background": "#fcf8fa",
+                        "surface-container": "#f0edef",
+                        "bim-gray": "#64748B",
+                        "on-primary-fixed": "#131b2e",
+                        "safety-orange": "#EA580C",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdbce",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#000000",
+                        "secondary-fixed-dim": "#ffb599",
+                        "surface": "#fcf8fa",
+                        "secondary-container": "#fd651e",
+                        "primary-fixed-dim": "#bec6e0",
+                        "tertiary-container": "#0b1c30",
+                        "on-background": "#1b1b1d",
+                        "inverse-primary": "#bec6e0",
+                        "secondary": "#a73a00",
+                        "architectural-white": "#F8FAFC",
+                        "on-primary-container": "#7c839b",
+                        "primary-fixed": "#dae2fd",
+                        "on-tertiary-container": "#75859d",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#7f2b00",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-padding": "128px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "base-unit": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "nav-caps": ["Space Grotesk"],
+                        "technical-data": ["JetBrains Mono"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "nav-caps": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "technical-data": ["14px", { "lineHeight": "1.5", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .bento-item-large { grid-column: span 12; }
+        .bento-item-medium { grid-column: span 12; }
+        .bento-item-small { grid-column: span 12; }
+        @media (min-width: 768px) {
+            .bento-item-large { grid-column: span 8; }
+            .bento-item-medium { grid-column: span 4; }
+            .bento-item-small { grid-column: span 4; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
+<!-- TopNavBar -->
+<nav class="bg-industrial-navy dark:bg-industrial-navy text-on-primary dark:text-on-primary border-b border-on-primary-container flex justify-between items-center px-margin-desktop w-full h-16 sticky top-0 z-50">
+<div class="text-nav-caps font-nav-caps text-architectural-white tracking-tighter">
+            RSM Systembau
+        </div>
+<div class="hidden md:flex space-x-8">
+<a class="font-nav-caps text-nav-caps text-architectural-white hover:text-safety-orange transition-colors" href="#">Projects</a>
+<a class="font-nav-caps text-nav-caps text-safety-orange border-b-2 border-safety-orange pb-1 scale-95 transition-transform duration-150" href="#">Growth</a>
+<a class="font-nav-caps text-nav-caps text-architectural-white hover:text-safety-orange transition-colors" href="#">Workflow</a>
+<a class="font-nav-caps text-nav-caps text-architectural-white hover:text-safety-orange transition-colors" href="#">Team</a>
+</div>
+<button class="bg-safety-orange text-on-primary font-nav-caps text-nav-caps px-6 py-2 rounded-none hover:bg-opacity-90 transition-all duration-200">
+            Apply Now
+        </button>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[819px] flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-section-padding bg-industrial-navy text-architectural-white overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="bg-cover bg-center w-full h-full" data-alt="A dramatic, high-contrast black and white architectural photograph of an industrial construction site under a clear sky. Massive steel girders cross frame the shot, creating a striking geometric composition. A solitary, bright safety orange construction crane arm cuts diagonally across the frame, providing the only pop of color. The lighting is harsh midday sun, casting deep, sharp shadows that emphasize structural precision and monumental scale." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtwNqluHZJAWp1BMRNUvLoM6qsFxKnCSelXAaN2xgFvfedZnB4YheYmKm9bZmu4sfXuPPqN-QG3Rk0FkFlB8RM6Mlc0FUhdOHlFhNGnKvjYZPL-7meXSrb0-YWz80orJ-uCpICbZIAS93zc7pHb8uuUovO0cKJdn5yQ0An71AUxwdAY_BeZ0yHWM0OemTT7BMC5sWqiK7EXQXUcnkhbwBf1lGz42Ie5y_Y3yXruUzz_8v-l52rPt8ill8SbT6qhS8teQctKkcvf8N0')"></div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-industrial-navy/90 to-industrial-navy/30 z-10"></div>
+<div class="relative z-20 max-w-5xl">
+<div class="mb-6 font-technical-data text-technical-data text-safety-orange uppercase tracking-widest">
+                    [REQ_ROLE]: SITE_MANAGER / PROJECT_ENGINEER
+                </div>
+<h1 class="font-display-lg text-display-lg mb-8 uppercase">
+                    LEAD THE ARCHITECTURAL REVOLUTION.
+                </h1>
+<p class="font-body-lg text-body-lg text-tertiary-fixed-dim max-w-2xl mb-10 border-l-2 border-safety-orange pl-6">
+                    Assume control of 7-figure structural projects. Demand precision. Execute with BIM-integrated site management protocols. We build the infrastructure of tomorrow, today.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-safety-orange text-on-primary font-nav-caps text-nav-caps px-8 py-4 rounded-none hover:bg-opacity-90 transition-all uppercase inline-flex items-center justify-center border border-safety-orange">
+                        Init Application <span class="material-symbols-outlined ml-2 text-[18px]">arrow_forward</span>
+</button>
+<button class="bg-transparent text-architectural-white font-nav-caps text-nav-caps px-8 py-4 rounded-none hover:bg-surface-tint/20 transition-all uppercase border border-outline inline-flex items-center justify-center">
+                        View Protocol <span class="material-symbols-outlined ml-2 text-[18px]">terminal</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Mission Dashboard (Bento) -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-padding bg-surface">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-industrial-navy mb-4">MISSION DASHBOARD</h2>
+<div class="w-16 h-1 bg-safety-orange"></div>
+</div>
+<div class="bento-grid">
+<!-- Project Governance -->
+<div class="bento-item-large bg-architectural-white border border-outline-variant p-8 flex flex-col justify-between group hover:border-bim-gray transition-colors">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-[40px] text-industrial-navy">account_balance</span>
+<div class="font-technical-data text-technical-data text-bim-gray bg-surface-container px-3 py-1">SYS_01</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-industrial-navy mb-4 uppercase">PROJECT GOVERNANCE</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Absolute authority over budget allocation and timeline precision. You are the final node in ensuring high-yield structural execution within rigid financial parameters.
+                        </p>
+<div class="flex gap-4">
+<span class="font-technical-data text-technical-data text-safety-orange bg-safety-orange/10 px-2 py-1 uppercase text-xs border border-safety-orange/20">CAPEX_CONTROL</span>
+<span class="font-technical-data text-technical-data text-safety-orange bg-safety-orange/10 px-2 py-1 uppercase text-xs border border-safety-orange/20">TIMELINE_SYNC</span>
+</div>
+</div>
+</div>
+<!-- Digital Twin -->
+<div class="bento-item-medium bg-industrial-navy border border-industrial-navy p-8 flex flex-col justify-between text-architectural-white relative overflow-hidden group">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="20" id="grid" patternunits="userSpaceOnUse" width="20">
+<path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10 flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-[40px] text-safety-orange">schema</span>
+<div class="font-technical-data text-technical-data text-safety-orange border border-safety-orange px-3 py-1">SYS_02</div>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">DIGITAL TWIN INTEGRATION</h3>
+<p class="font-body-md text-body-md text-tertiary-fixed-dim">
+                            Execute real-time site coordination utilizing advanced BIM methodologies. Align physical construction directly with structural digital twins.
+                        </p>
+</div>
+</div>
+<!-- Industrial Leadership -->
+<div class="bento-item-medium bg-architectural-white border border-outline-variant p-8 flex flex-col justify-between group hover:border-bim-gray transition-colors">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-[40px] text-industrial-navy">group_work</span>
+<div class="font-technical-data text-technical-data text-bim-gray bg-surface-container px-3 py-1">SYS_03</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-industrial-navy mb-4 uppercase leading-tight">INDUSTRIAL LEADERSHIP</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Command elite multi-disciplinary teams on-site. Enforce protocol, ensure safety compliance, and drive operational velocity.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- The RSM Edge / Tech Stack -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-padding bg-surface-container-low border-t border-b border-outline-variant">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-industrial-navy mb-6 uppercase">THE RSM EDGE</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        We don't just build; we engineer systemic solutions. Our site managers are armed with proprietary digital tools and a technology stack designed to eliminate friction and maximize on-site intelligence.
+                    </p>
+<a class="font-nav-caps text-nav-caps text-safety-orange uppercase inline-flex items-center hover:text-industrial-navy transition-colors" href="#">
+                        Explore Infrastructure <span class="material-symbols-outlined ml-2 text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="w-full md:w-1/2 bg-industrial-navy p-8 border border-industrial-navy text-architectural-white">
+<div class="font-technical-data text-technical-data text-bim-gray mb-6 flex items-center">
+<span class="material-symbols-outlined mr-2 text-[16px]">terminal</span> root@rsm-systembau:~/tech_stack
+                    </div>
+<ul class="space-y-4 font-technical-data text-technical-data">
+<li class="flex items-start border-b border-on-primary-container pb-4">
+<span class="text-safety-orange mr-4">01_</span>
+<div>
+<span class="text-architectural-white block mb-1">Werkules PropTech Integration</span>
+<span class="text-tertiary-fixed-dim text-xs">Proprietary logic mapping for site logistics.</span>
+</div>
+</li>
+<li class="flex items-start border-b border-on-primary-container pb-4">
+<span class="text-safety-orange mr-4">02_</span>
+<div>
+<span class="text-architectural-white block mb-1">Next.js Mobile Dashboard</span>
+<span class="text-tertiary-fixed-dim text-xs">Real-time data synchronization across all nodes.</span>
+</div>
+</li>
+<li class="flex items-start border-b border-on-primary-container pb-4">
+<span class="text-safety-orange mr-4">03_</span>
+<div>
+<span class="text-architectural-white block mb-1">Digital Construction Protocol (DCP)</span>
+<span class="text-tertiary-fixed-dim text-xs">Automated QA and compliance tracking pipeline.</span>
+</div>
+</li>
+<li class="flex items-start">
+<span class="text-safety-orange mr-4">04_</span>
+<div>
+<span class="text-architectural-white block mb-1">BIM Level 3 Coordination</span>
+<span class="text-tertiary-fixed-dim text-xs">Full lifecycle structural mapping.</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Direct Application CTA -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-padding bg-safety-orange text-on-primary flex flex-col items-center text-center">
+<h2 class="font-display-lg text-display-lg mb-6 uppercase max-w-4xl">
+                JOIN THE ELITE.
+            </h2>
+<p class="font-body-lg text-body-lg mb-12 max-w-2xl text-on-primary/90">
+                Seeking B.Eng and M.Eng professionals with a mandate for structural excellence. Submit your credentials to initiate the recruitment sequence.
+            </p>
+<form class="w-full max-w-xl bg-architectural-white text-industrial-navy p-8 border border-industrial-navy relative text-left shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
+<div class="absolute -top-3 -right-3 bg-industrial-navy text-architectural-white font-technical-data text-technical-data text-xs px-2 py-1">SECURE_NODE</div>
+<div class="space-y-6">
+<div>
+<label class="block font-label-sm text-label-sm uppercase mb-2">Identifier (Name)</label>
+<input class="w-full bg-surface-container-lowest border border-outline p-3 font-technical-data text-technical-data focus:border-safety-orange focus:ring-1 focus:ring-safety-orange focus:outline-none transition-all rounded-none" placeholder="Enter full name" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase mb-2">Comms Link (Email)</label>
+<input class="w-full bg-surface-container-lowest border border-outline p-3 font-technical-data text-technical-data focus:border-safety-orange focus:ring-1 focus:ring-safety-orange focus:outline-none transition-all rounded-none" placeholder="professional@domain.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase mb-2">Credential Degree</label>
+<select class="w-full bg-surface-container-lowest border border-outline p-3 font-technical-data text-technical-data focus:border-safety-orange focus:ring-1 focus:ring-safety-orange focus:outline-none transition-all rounded-none appearance-none">
+<option>B.Eng (Bachelor of Engineering)</option>
+<option>M.Eng (Master of Engineering)</option>
+<option>Dipl.-Ing. (Diplom-Ingenieur)</option>
+<option>Other Structural Qualification</option>
+</select>
+</div>
+<div class="pt-4">
+<button class="w-full bg-industrial-navy text-architectural-white font-nav-caps text-nav-caps px-8 py-4 uppercase hover:bg-industrial-navy/90 transition-all flex items-center justify-center group rounded-none" type="button">
+                            Transmit Credentials <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">send</span>
+</button>
+</div>
+</div>
+</form>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-industrial-navy dark:bg-industrial-navy text-on-primary dark:text-on-primary border-t border-on-primary-container w-full min-h-[400px]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-padding w-full h-full">
+<div class="col-span-1 flex flex-col justify-between">
+<div class="text-headline-md font-headline-md text-architectural-white mb-6">
+                    RSM Systembau
+                </div>
+<div class="font-body-md text-body-md text-bim-gray">
+                    © 2024 RSM Systembau GmbH. Engineering Excellence.
+                </div>
+</div>
+<div class="col-span-1 md:col-start-4 flex flex-col space-y-4">
+<div class="font-technical-data text-technical-data text-safety-orange mb-2 uppercase">System Index</div>
+<a class="font-label-sm text-label-sm text-bim-gray hover:text-architectural-white uppercase tracking-wider transition-colors" href="#">Imprint</a>
+<a class="font-label-sm text-label-sm text-bim-gray hover:text-architectural-white uppercase tracking-wider transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-bim-gray hover:text-architectural-white uppercase tracking-wider transition-colors" href="#">Project Governance</a>
+<a class="font-label-sm text-label-sm text-bim-gray hover:text-architectural-white uppercase tracking-wider transition-colors" href="#">Carrier Portal</a>
+</div>
+</div>
+</footer>
+</body></html>

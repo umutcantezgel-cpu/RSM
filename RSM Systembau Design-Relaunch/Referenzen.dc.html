@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  @font-face{font-family:'Inter';src:url('fonts/inter-variable-latin.woff2') format('woff2');font-weight:100 900;font-display:swap}
+  @font-face{font-family:'Inter';src:url('fonts/inter-variable-latin-ext.woff2') format('woff2');font-weight:100 900;font-display:swap;unicode-range:U+0100-024F,U+1E00-1EFF}
+  @font-face{font-family:'Outfit';src:url('fonts/outfit-variable-latin.woff2') format('woff2');font-weight:100 900;font-display:swap}
+  *{box-sizing:border-box}
+  body{margin:0}
+  ::selection{background:#3f73a3;color:#fff}
+  html{scroll-behavior:smooth}
+  @keyframes rsmRise{from{transform:translateY(26px);opacity:.001}to{transform:translateY(0);opacity:1}}
+  [data-r]{animation:rsmRise .8s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 20%}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</helmet>
+<div style="font-family:'Inter',sans-serif;background:#fafafa;color:#52525b;min-height:100vh">
+  <header style="position:sticky;top:0;z-index:50;background:rgba(250,250,250,.82);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid #e4e4e7">
+    <dc-import name="Nav" active="referenzen" hint-size="100%,78px"></dc-import>
+  </header>
+
+  <main>
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,84px) clamp(16px,4vw,40px) 40px">
+      <div data-r style="display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap">
+        <div style="max-width:46rem">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px"><span style="width:34px;height:1.5px;background:#3f73a3"></span><span style="font-family:'Outfit';font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#3f73a3">Referenzen · Prestige</span></div>
+          <h1 style="font-family:'Outfit';font-weight:900;font-size:clamp(2.3rem,4.4vw,3.8rem);line-height:1.04;letter-spacing:-.04em;text-transform:uppercase;color:#18181b;margin:0">Beweis statt Behauptung.</h1>
+          <p style="font-size:18px;line-height:1.75;color:#52525b;margin:26px 0 0;max-width:40rem">Ausgewählte Projekte aus Logistik, öffentlicher Hand, Hospitality und Industrie — jedes ein Beleg für die vertikale Tiefe des Verbunds.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,4vw,40px) clamp(64px,8vw,110px)">
+      <div data-r style="display:flex;flex-wrap:wrap;gap:10px;padding-bottom:32px;border-bottom:1px solid #e4e4e7;margin-bottom:32px">
+        <sc-for list="{{ chips }}" as="c" hint-placeholder-count="6">
+          <button onClick="{{ c.onClick }}" style="{{ c.style }}">{{ c.name }}</button>
+        </sc-for>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <sc-for list="{{ visible }}" as="r" hint-placeholder-count="6">
+          <div style="background:#fff;border:1px solid #e4e4e7;border-radius:24px;overflow:hidden;transition:all .25s" style-hover="transform:translateY(-4px);box-shadow:0 10px 15px rgba(0,0,0,.08)">
+            <div style="aspect-ratio:4/2.7;background:#f4f4f5;background-image:linear-gradient(#e4e4e7 1px,transparent 1px),linear-gradient(90deg,#e4e4e7 1px,transparent 1px);background-size:30px 30px;display:grid;place-items:center;position:relative">
+              <span style="position:absolute;top:14px;left:14px;padding:5px 12px;border-radius:9999px;background:#fff;border:1px solid #e4e4e7;font-size:11px;font-weight:600;letter-spacing:.04em;color:#3f73a3">{{ r.cat }}</span>
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#a1a1aa" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+            </div>
+            <div style="padding:26px 24px">
+              <div style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#3f73a3">{{ r.kpi }}</div>
+              <div style="font-family:'Outfit';font-weight:700;font-size:20px;color:#18181b;margin-top:6px;letter-spacing:-.01em">{{ r.name }}</div>
+              <div style="font-size:13px;color:#71717a;margin-top:4px;font-weight:500">{{ r.meta }}</div>
+              <p style="font-size:14px;line-height:1.7;color:#52525b;margin:14px 0 0">{{ r.body }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="background:#18181b;color:#fafafa">
+      <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(16px,4vw,40px);display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+        <sc-for list="{{ stats }}" as="b" hint-placeholder-count="4">
+          <div style="padding-left:20px;border-left:1px solid #3f3f46">
+            <div style="font-family:'Outfit';font-weight:800;font-size:clamp(2rem,3vw,2.8rem);letter-spacing:-.03em;color:#fafafa">{{ b.v }}</div>
+            <div style="font-size:13px;color:#a1a1aa;margin-top:8px;line-height:1.5">{{ b.l }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(16px,4vw,40px) clamp(64px,8vw,110px)">
+      <div data-r style="border:1px solid #e4e4e7;border-radius:24px;background:#fff;padding:clamp(36px,5vw,60px);display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap">
+        <div>
+          <h2 style="font-family:'Outfit';font-weight:800;font-size:clamp(1.6rem,2.6vw,2.2rem);letter-spacing:-.025em;color:#18181b;margin:0">Wird Ihr Projekt das nächste?</h2>
+          <p style="font-size:15.5px;color:#52525b;margin:12px 0 0;max-width:34rem">Erzählen Sie uns davon — wir zeigen Ihnen, wie wir es realisieren würden.</p>
+        </div>
+        <a href="Portal.dc.html" style="display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:16px;text-decoration:none;font-family:'Outfit';font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:#fafafa;background:#18181b;flex-shrink:0;transition:transform .25s" style-hover="transform:translateY(-2px)">Projekt anfragen<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <dc-import name="Footer" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { filter: 'Alle' };
+  renderVals() {
+    const S = this.state;
+    const refs = [
+      { name: 'EWS Frankfurt', cat: 'Logistik', meta: '1.200 m² Großformatfliesen', kpi: 'Logistik-Masterclass', body: 'Verlegung von 1.200 m² maßhaltiger Großformatfliesen unter laufendem Logistikbetrieb — eine Präzisionsleistung unter Zeitdruck, die Ebenheitstoleranzen im Submillimeterbereich einhielt.' },
+      { name: 'Unterkunft Allendorf', cat: 'Öffentliche Hand', meta: '€ 2,8 Mio · Holzrahmenbau', kpi: 'Öffentlicher Auftraggeber', body: 'Schlüsselfertige Errichtung in nachhaltiger Holzrahmenbauweise. Vergaberechtskonform realisiert, termingerecht übergeben und ein Referenzbeispiel für sozial verantwortliches, serielles Bauen.' },
+      { name: 'Villa Raab', cat: 'Hospitality', meta: 'Premium-Mosaikarbeiten', kpi: 'Hospitality-Exzellenz', body: 'Hochwertige Mosaik- und Natursteinarbeiten für ein anspruchsvolles Hospitality-Objekt. Handwerkliche Detailtiefe trifft auf die logistische Disziplin eines Generalunternehmers.' },
+      { name: 'Industriepark Mittelhessen', cat: 'Industrie', meta: 'Modulare Produktionshalle', kpi: 'Just-in-Time Montage', body: 'Modular vorgefertigte Produktionshalle, just-in-time montiert bei minimaler Störung des angrenzenden Werkbetriebs. Erweiterbar konzipiert für zukünftige Skalierung.' },
+      { name: 'Gewerbecampus Gießen', cat: 'Gewerbe', meta: 'TGA & Brandschutz integral', kpi: 'BIM-koordiniert', body: 'Integrale TGA- und Brandschutzplanung über alle Gewerke, kollisionsfrei im BIM-Modell koordiniert und sachverständig abgenommen.' },
+      { name: 'Logistikzentrum RheinMain', cat: 'Logistik', meta: 'Hochregal-Bodenplatte', kpi: 'Submillimeter-Ebenheit', body: 'Großflächige Industriebodenplatte für ein automatisiertes Hochregallager mit höchsten Anforderungen an Ebenheit und Belastbarkeit.' },
+    ];
+    const filters = ['Alle', 'Logistik', 'Öffentliche Hand', 'Hospitality', 'Industrie', 'Gewerbe'];
+    const chips = filters.map(f => {
+      const on = f === S.filter;
+      return { name: f, onClick: () => this.setState({ filter: f }),
+        style: "cursor:pointer;padding:10px 18px;border-radius:9999px;font-family:'Outfit';font-size:13px;font-weight:600;letter-spacing:.02em;background:" + (on ? '#18181b' : '#fff') + ";color:" + (on ? '#fafafa' : '#52525b') + ";border:1px solid " + (on ? '#18181b' : '#e4e4e7') + ";transition:all .2s" };
+    });
+    const visible = refs.filter(r => S.filter === 'Alle' || r.cat === S.filter);
+    const stats = [
+      { v: '€\u20092,8 M', l: 'Größtes öffentliches Projektvolumen' },
+      { v: '1.200 m²', l: 'Großformatfliesen in einem Projekt' },
+      { v: '6+', l: 'Branchen-Sektoren abgedeckt' },
+      { v: '100%', l: 'Termingerechte Übergaben' },
+    ];
+    return { chips, visible, stats };
+  }
+}
+</script>
+</body>
+</html>

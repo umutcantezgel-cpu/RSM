@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Generalunternehmer - RSM SYSTEMBAU</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e4e2e4",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#f0edef",
+                        "primary": "#000000",
+                        "architectural-white": "#F8FAFC",
+                        "secondary-fixed-dim": "#ffb599",
+                        "on-secondary-container": "#571a00",
+                        "background": "#fcf8fa",
+                        "on-surface": "#1b1b1d",
+                        "primary-fixed-dim": "#bec6e0",
+                        "surface-container-high": "#eae7e9",
+                        "bim-gray": "#64748B",
+                        "secondary": "#a73a00",
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-fixed": "#131b2e",
+                        "on-primary-container": "#7c839b",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "surface-tint": "#565e74",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "industrial-navy": "#0F172A",
+                        "on-primary": "#ffffff",
+                        "surface": "#fcf8fa",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed": "#370e00",
+                        "on-secondary-fixed-variant": "#7f2b00",
+                        "safety-orange": "#EA580C",
+                        "on-surface-variant": "#45464d",
+                        "secondary-container": "#fd651e",
+                        "primary-fixed": "#dae2fd",
+                        "surface-container-low": "#f6f3f5",
+                        "outline": "#76777d",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#d3e4fe",
+                        "inverse-primary": "#bec6e0",
+                        "on-tertiary-container": "#75859d",
+                        "inverse-surface": "#303032",
+                        "secondary-fixed": "#ffdbce",
+                        "inverse-on-surface": "#f3f0f2",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fcf8fa",
+                        "surface-dim": "#dcd9db",
+                        "tertiary-container": "#0b1c30",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e4e2e4",
+                        "primary-container": "#131b2e",
+                        "on-background": "#1b1b1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "128px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "base-unit": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "technical-data": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "nav-caps": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "technical-data": ["14px", { "lineHeight": "1.5", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "nav-caps": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-architectural-white text-on-surface font-body-md antialiased selection:bg-safety-orange selection:text-white">
+<!-- TopNavBar -->
+<nav class="bg-industrial-navy text-on-primary font-nav-caps text-nav-caps full-width top-0 sticky border-b border-bim-gray z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-[1440px] mx-auto">
+<a class="font-headline-md text-headline-md font-bold tracking-tight text-on-primary" href="#">RSM SYSTEMBAU</a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-safety-orange border-b-2 border-safety-orange pb-1 hover:text-safety-orange transition-colors duration-200" href="#">SOLUTIONS</a>
+<a class="text-on-primary hover:text-safety-orange transition-colors duration-200" href="#">PROJECTS</a>
+<a class="text-on-primary hover:text-safety-orange transition-colors duration-200" href="#">ENGINEERING</a>
+<a class="text-on-primary hover:text-safety-orange transition-colors duration-200" href="#">COMPANY</a>
+<a class="text-on-primary hover:text-safety-orange transition-colors duration-200" href="#">CONTACT</a>
+</div>
+<a class="hidden md:inline-flex bg-safety-orange text-white px-6 py-3 hover:bg-opacity-90 transition-opacity uppercase tracking-wider font-nav-caps text-nav-caps items-center gap-2" href="#">
+                REQUEST QUOTE <span class="material-symbols-outlined" data-icon="arrow_forward" style="font-size: 16px;">arrow_forward</span>
+</a>
+<button class="md:hidden text-on-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-industrial-navy text-white min-h-[819px] flex items-center border-b border-bim-gray overflow-hidden">
+<div class="absolute inset-0 opacity-40 mix-blend-overlay">
+<img class="w-full h-full object-cover grayscale" data-alt="A dark, dramatic architectural photograph of a massive industrial steel structure under construction. High contrast, precise engineering details, moody lighting with deep shadows and sharp highlights. The visual style embodies Corporate Modernism and Technical Brutalism, projecting absolute authority and structural integrity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0WppsNzwABWIEvZ5q78NLCtd801-JUYkvzasv7TCRsLGFwySJoXwtcP8nhQ0bJDTYKJvMfO8XNLxfvqsAXcs5klmAskIMI6ybiQSQH5aTJxwnrUSQSOts5Y6vF0TxhyZlzb2AYkaa3OusKRBxe8hahTQeQ2PheyhQbsLewjnFWI8zqQ91OHsImZ9zGoJfScFvmE5HO6nTRIvi5eheHYkLhpZ8cIFFU_PHKC_qqyzCUttP6c8NxAfM4n5WdkLY4iRQGj6P_r9Ep60s"/>
+</div>
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-section-padding">
+<div class="max-w-4xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-tint/30 border border-bim-gray/50 mb-8 backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-safety-orange"></span>
+<span class="font-technical-data text-technical-data text-inverse-primary uppercase">Ihr Generalunternehmer - Einziger Ansprechpartner für 7-stellige Projekte</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-white mb-8">SINGLE POINT OF CONTACT</h1>
+<p class="font-body-lg text-body-lg text-inverse-primary mb-12 max-w-2xl">
+                        Wir übernehmen die absolute Gesamtverantwortung für Ihr Bauvorhaben. Von der hochpräzisen Engineering-Planung über die stringente Compliance-Zertifizierung bis hin zur schlüsselfertigen Ausführung. Null Schnittstellenverluste. Hundert Prozent Termin- und Kostensicherheit.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="inline-flex items-center justify-center bg-safety-orange text-white px-8 py-4 font-nav-caps text-nav-caps hover:bg-opacity-90 transition-colors" href="#">
+                            PROJEKT ANFRAGEN
+                        </a>
+<a class="inline-flex items-center justify-center border border-bim-gray text-white px-8 py-4 font-nav-caps text-nav-caps hover:border-white transition-colors" href="#process">
+                            PROZESS ERKUNDEN
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Zero-Risk Process Section -->
+<section class="py-section-padding bg-architectural-white border-b border-outline-variant" id="process">
+<div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-industrial-navy mb-4">THE 'ZERO-RISK' PROCESS</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Ein stringentes, dreistufiges Verfahren, das Projektrisiken systematisch eliminiert und vertraglich garantierte Resultate liefert.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-outline-variant bg-white">
+<!-- Step 1 -->
+<div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-outline-variant relative group">
+<div class="absolute top-0 right-0 p-4 font-technical-data text-technical-data text-bim-gray opacity-50 group-hover:text-safety-orange transition-colors">SEQ_01</div>
+<div class="w-16 h-16 bg-surface-container flex items-center justify-center mb-8 border border-outline-variant">
+<span class="material-symbols-outlined text-industrial-navy" data-icon="troubleshoot" style="font-size: 32px;">troubleshoot</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-industrial-navy mb-4">Initial Analysis</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Tiefgreifende technische und wirtschaftliche Machbarkeitsstudie. Identifikation kritischer Pfade vor Vertragsabschluss.</p>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-safety-orange mt-1" data-icon="check" style="font-size: 16px;">check</span>
+<span class="font-technical-data text-technical-data text-industrial-navy">Risiko-Mapping Matrix</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-safety-orange mt-1" data-icon="check" style="font-size: 16px;">check</span>
+<span class="font-technical-data text-technical-data text-industrial-navy">Budget-Korridor Def.</span>
+</li>
+</ul>
+</div>
+<!-- Step 2 -->
+<div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-outline-variant relative group">
+<div class="absolute top-0 right-0 p-4 font-technical-data text-technical-data text-bim-gray opacity-50 group-hover:text-safety-orange transition-colors">SEQ_02</div>
+<div class="w-16 h-16 bg-surface-container flex items-center justify-center mb-8 border border-outline-variant">
+<span class="material-symbols-outlined text-industrial-navy" data-icon="gavel" style="font-size: 32px;">gavel</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-industrial-navy mb-4">Compliance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Lückenlose Sicherstellung aller baurechtlichen, brandschutztechnischen und ESG-relevanten Vorgaben durch In-House Experten.</p>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-safety-orange mt-1" data-icon="check" style="font-size: 16px;">check</span>
+<span class="font-technical-data text-technical-data text-industrial-navy">ESG Certification Prep</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-safety-orange mt-1" data-icon="check" style="font-size: 16px;">check</span>
+<span class="font-technical-data text-technical-data text-industrial-navy">Brandschutz-Audit (TGA)</span>
+</li>
+</ul>
+</div>
+<!-- Step 3 -->
+<div class="p-8 md:p-12 relative group bg-industrial-navy text-white">
+<div class="absolute top-0 right-0 p-4 font-technical-data text-technical-data text-inverse-primary opacity-50">SEQ_03</div>
+<div class="w-16 h-16 bg-white/10 flex items-center justify-center mb-8 border border-white/20">
+<span class="material-symbols-outlined text-safety-orange" data-icon="domain" style="font-size: 32px;">domain</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Turnkey Execution</h3>
+<p class="font-body-md text-body-md text-inverse-primary mb-6">Nahtlose Bauausführung unter Führung unserer Projektsteuerer. Garantierter Festpreis und definierter Übergabetermin.</p>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-safety-orange mt-1" data-icon="check" style="font-size: 16px;">check</span>
+<span class="font-technical-data text-technical-data text-inverse-primary">Fixed-Price Guarantee</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-safety-orange mt-1" data-icon="check" style="font-size: 16px;">check</span>
+<span class="font-technical-data text-technical-data text-inverse-primary">Schlüsselfertige Übergabe</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- In-House Synergy & Metrics (Bento Grid) -->
+<section class="py-section-padding bg-surface-container-low border-b border-outline-variant">
+<div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-min">
+<!-- Synergy Block (Spans 8 cols) -->
+<div class="md:col-span-8 bg-white border border-outline-variant p-8 md:p-12 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-variant border border-outline-variant mb-6 self-start">
+<span class="material-symbols-outlined text-industrial-navy" data-icon="hub" style="font-size: 14px;">hub</span>
+<span class="font-technical-data text-technical-data text-industrial-navy uppercase">In-House Synergy Ecosystem</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-industrial-navy mb-6">Eliminating Interface Friction.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-3xl">
+                            Als Generalunternehmer steuern wir nicht nur externe Gewerke, wir orchestrieren unser eigenes Unternehmensnetzwerk. Durch die tiefe Integration von TGA, Brandschutz und Rohbau (via RT Holding und Team Simon) schließen wir Schnittstellenrisiken systemisch aus.
+                        </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-outline-variant pt-8">
+<div>
+<h4 class="font-technical-data text-technical-data text-industrial-navy mb-2 border-b border-safety-orange pb-2 inline-block">01. TGA</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Vollintegrierte Technische Gebäudeausrüstung für maximale Energieeffizienz.</p>
+</div>
+<div>
+<h4 class="font-technical-data text-technical-data text-industrial-navy mb-2 border-b border-safety-orange pb-2 inline-block">02. FIRE SAFETY</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Präventive Brandschutzkonzepte, In-House zertifiziert und abgenommen.</p>
+</div>
+<div>
+<h4 class="font-technical-data text-technical-data text-industrial-navy mb-2 border-b border-safety-orange pb-2 inline-block">03. SHELL CONST.</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Massiv- und Stahlbaukompetenz direkt aus dem Konzernverbund.</p>
+</div>
+</div>
+</div>
+<!-- Metrics Blocks (Span 4 cols) -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="bg-industrial-navy border border-industrial-navy p-8 flex-1 flex flex-col justify-center">
+<div class="font-display-lg text-display-lg text-white mb-2">90<span class="text-safety-orange">+</span></div>
+<div class="font-technical-data text-technical-data text-inverse-primary uppercase">In-House Professionals</div>
+<div class="mt-4 text-inverse-primary/70 font-body-md">Ingenieure, Architekten &amp; Projektsteuerer.</div>
+</div>
+<div class="bg-white border border-outline-variant p-8 flex-1 flex flex-col justify-center relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 text-surface-variant opacity-20">
+<span class="material-symbols-outlined" data-icon="euro" style="font-size: 120px;">euro</span>
+</div>
+<div class="relative z-10">
+<div class="font-display-lg text-display-lg text-industrial-navy mb-2">100<span class="text-safety-orange">%</span></div>
+<div class="font-technical-data text-technical-data text-bim-gray uppercase">ESG Compliance Rate</div>
+<div class="mt-4 text-on-surface-variant font-body-md">Sicherstellung zukunftsfähiger Asset-Klassen.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Study Teaser -->
+<section class="py-section-padding bg-architectural-white">
+<div class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="border border-outline-variant bg-white flex flex-col md:flex-row h-full md:h-[600px]">
+<!-- Image Area -->
+<div class="md:w-1/2 relative bg-surface-variant h-[300px] md:h-full">
+<img class="w-full h-full object-cover grayscale opacity-90" data-alt="A striking architectural photograph of the 'EWS Frankfurt' building complex. The image highlights a modern, massive industrial facade with pristine white elements contrasting against deep industrial navy tones. The lighting is high-key and soft, creating a bright, authoritative light-mode aesthetic. The scene conveys precision engineering and immense scale, devoid of any organic clutter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzpP6h3ajz2bfYrIpArqdqfwGlZ6UwoqpRgjA3kPZAxUYmyNiLGIQmXxABTRxHLj8yn0DqFC4a8-yIF2lq2K30y2xp5AilBpPVj00BEU_S9o_CTHCGgcEaQH7D-2bO-QU3rZEt2VEzYRBb50QbfgBXXO5fFUfi0oHFmzzM0IyoxvFbUn6YcSBDm374OZurTEwBkNK7hxfkYxaasEasyf9snY-t8O6IwURO1j03UYbjEpUx5qLFpbBnvbIVgQkebyf36AJdwgVuT0Na"/>
+<div class="absolute top-6 left-6 bg-industrial-navy text-white px-4 py-2 font-technical-data text-technical-data border border-white/20">
+                            CASE_STUDY: EWS FFM
+                         </div>
+</div>
+<!-- Content Area -->
+<div class="md:w-1/2 p-8 md:p-16 flex flex-col justify-center">
+<div class="font-technical-data text-technical-data text-safety-orange mb-4 tracking-wider uppercase">Reference Project</div>
+<h2 class="font-headline-lg text-headline-lg text-industrial-navy mb-6">EWS Frankfurt. A 1,200sqm Masterclass in Precision.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                            Als verantwortlicher Generalunternehmer realisierte RSM Systembau den hochkomplexen EWS Campus in Frankfurt. Durch das strikte 'Single Point of Contact'-Modell wurde das Budget-Target unterboten und der Terminplan um 3 Wochen geschlagen.
+                        </p>
+<div class="grid grid-cols-2 gap-8 mb-10">
+<div>
+<div class="font-technical-data text-technical-data text-bim-gray uppercase mb-1">Volume</div>
+<div class="font-headline-md text-headline-md text-industrial-navy">1.200 m²</div>
+</div>
+<div>
+<div class="font-technical-data text-technical-data text-bim-gray uppercase mb-1">Status</div>
+<div class="font-headline-md text-headline-md text-industrial-navy flex items-center gap-2">
+<span class="w-3 h-3 bg-safety-orange rounded-full"></span> Completed
+                                </div>
+</div>
+</div>
+<div>
+<a class="inline-flex items-center gap-2 font-nav-caps text-nav-caps text-industrial-navy hover:text-safety-orange transition-colors border-b border-industrial-navy hover:border-safety-orange pb-1" href="#">
+                                VIEW FULL REPORT <span class="material-symbols-outlined" data-icon="arrow_forward" style="font-size: 16px;">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-industrial-navy text-on-primary border-t border-bim-gray full-width">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-padding w-full max-w-[1440px] mx-auto">
+<div class="col-span-1 md:col-span-2 pr-0 md:pr-12 mb-12 md:mb-0">
+<div class="font-headline-lg text-headline-lg font-bold text-on-primary mb-6">RSM SYSTEMBAU</div>
+<p class="font-body-md text-body-md text-on-primary-container max-w-md mb-8">
+                    INDUSTRIAL PRECISION GUARANTEED. Wir bauen nicht nur Strukturen, wir konstruieren Verlässlichkeit für institutionelle und industrielle Bauherren.
+                </p>
+<div class="font-label-sm text-label-sm text-on-primary-container">
+                    © 2024 RSM SYSTEMBAU GMBH. INDUSTRIAL PRECISION GUARANTEED. ALL RIGHTS RESERVED.
+                </div>
+</div>
+<div class="col-span-1">
+<h4 class="font-technical-data text-technical-data text-safety-orange mb-6 uppercase tracking-wider">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="font-label-sm text-label-sm text-on-primary-container hover:text-safety-orange transition-colors duration-200" href="#">SOLUTIONS</a></li>
+<li><a class="font-label-sm text-label-sm text-on-primary-container hover:text-safety-orange transition-colors duration-200" href="#">PROJECTS</a></li>
+<li><a class="font-label-sm text-label-sm text-on-primary-container hover:text-safety-orange transition-colors duration-200" href="#">ENGINEERING</a></li>
+<li><a class="font-label-sm text-label-sm text-on-primary-container hover:text-safety-orange transition-colors duration-200" href="#">COMPANY</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-technical-data text-technical-data text-safety-orange mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-label-sm text-label-sm text-on-primary-container hover:text-safety-orange transition-colors duration-200" href="#">IMPRINT</a></li>
+<li><a class="font-label-sm text-label-sm text-on-primary-container hover:text-safety-orange transition-colors duration-200" href="#">PRIVACY POLICY</a></li>
+<li><a class="font-label-sm text-label-sm text-on-primary-container hover:text-safety-orange transition-colors duration-200" href="#">TERMS OF SERVICE</a></li>
+<li><a class="font-label-sm text-label-sm text-on-primary-container hover:text-safety-orange transition-colors duration-200" href="#">COMPLIANCE</a></li>
+<li><a class="font-label-sm text-label-sm text-on-primary-container hover:text-safety-orange transition-colors duration-200" href="#">CERTIFICATIONS</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

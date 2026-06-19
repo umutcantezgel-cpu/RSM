@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="light" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mitarbeiter-Portal - RSM Systembau GmbH</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#fcf8fa",
+                      "on-secondary-container": "#571a00",
+                      "primary-container": "#131b2e",
+                      "outline": "#76777d",
+                      "surface-container": "#f0edef",
+                      "industrial-navy": "#0F172A",
+                      "on-primary-fixed": "#131b2e",
+                      "tertiary": "#000000",
+                      "on-surface": "#1b1b1d",
+                      "surface-container-highest": "#e4e2e4",
+                      "tertiary-fixed": "#d3e4fe",
+                      "background": "#fcf8fa",
+                      "tertiary-container": "#0b1c30",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed-dim": "#ffb599",
+                      "secondary-container": "#fd651e",
+                      "surface-variant": "#e4e2e4",
+                      "surface": "#fcf8fa",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "secondary": "#a73a00",
+                      "on-secondary-fixed": "#370e00",
+                      "primary-fixed-dim": "#bec6e0",
+                      "secondary-fixed": "#ffdbce",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#303032",
+                      "primary": "#000000",
+                      "on-background": "#1b1b1d",
+                      "on-secondary-fixed-variant": "#7f2b00",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "bim-gray": "#64748B",
+                      "error": "#ba1a1a",
+                      "on-surface-variant": "#45464d",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#38485d",
+                      "tertiary-fixed-dim": "#b7c8e1",
+                      "surface-dim": "#dcd9db",
+                      "outline-variant": "#c6c6cd",
+                      "inverse-on-surface": "#f3f0f2",
+                      "primary-fixed": "#dae2fd",
+                      "surface-tint": "#565e74",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#0b1c30",
+                      "surface-container-high": "#eae7e9",
+                      "inverse-primary": "#bec6e0",
+                      "safety-orange": "#EA580C",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-container": "#7c839b",
+                      "on-tertiary-container": "#75859d",
+                      "surface-container-low": "#f6f3f5",
+                      "architectural-white": "#F8FAFC"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "base-unit": "8px",
+                      "gutter": "24px",
+                      "section-padding": "128px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "technical-data": [
+                              "JetBrains Mono"
+                      ],
+                      "nav-caps": [
+                              "Space Grotesk"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Space Grotesk"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "technical-data": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "nav-caps": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-industrial-navy dark:bg-industrial-navy w-full top-0 sticky z-50 border-b border-outline dark:border-outline shadow-none">
+<div class="flex justify-between items-center h-16 w-full px-margin-desktop max-w-[1440px] mx-auto max-md:px-margin-mobile">
+<div class="font-headline-md text-headline-md font-bold text-on-primary tracking-tighter">
+                RSM Systembau GmbH
+            </div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-primary hover:text-safety-orange transition-colors font-nav-caps text-nav-caps hover:opacity-80 transition-opacity" href="#">Projects</a>
+<a class="text-on-primary hover:text-safety-orange transition-colors font-nav-caps text-nav-caps hover:opacity-80 transition-opacity" href="#">Services</a>
+<a class="text-on-primary hover:text-safety-orange transition-colors font-nav-caps text-nav-caps hover:opacity-80 transition-opacity" href="#">Safety</a>
+<a class="text-on-primary hover:text-safety-orange transition-colors font-nav-caps text-nav-caps hover:opacity-80 transition-opacity" href="#">About</a>
+</nav>
+<button class="bg-safety-orange text-on-primary px-6 py-2 font-nav-caps text-nav-caps rounded-none hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform">
+                Client Portal
+            </button>
+</div>
+</header>
+<!-- Main Content: Login Area -->
+<main class="flex-grow flex items-center justify-center relative w-full overflow-hidden min-h-[800px] py-section-padding px-margin-mobile md:px-margin-desktop">
+<!-- Background architectural image with overlay -->
+<div class="absolute inset-0 z-0 bg-cover bg-center" data-alt="A highly detailed, professional architectural photograph of a modern industrial construction site at dusk. The structural steel framework is visible against the sky, conveying engineering precision and massive scale. The scene is illuminated by harsh, bright work lights casting sharp geometric shadows. The overall color palette is dominated by deep industrial navy blues, dark slates, and contrasting bright safety orange accents on equipment. The mood is highly technical, authoritative, and strictly professional." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAf2idDBDRby6IQGvTbRznZhzBCErMmidHnX852x2fp5P4SNxCOHhZA2uCPdTRNhgPeT-yd859KIC1KjO_8wx1gqkj-elWNVy-8QL3sJpoz0worCu5DBVfYs_FlOZhxQbj1k5AZ9WJI4jCTu9w6ze42NiD7S-Fekpfh6PuYhzEbg9TCne-T9RwxKxEKoBQjT-LyCuk1ozxNvD_KUZ3qOk-2a6OMcgkk8_x6O2UoL_nqHBikQxhWxJ44hkzI9C020pru8xrUIDximzZ0')"></div>
+<div class="absolute inset-0 z-0 bg-industrial-navy/85 mix-blend-multiply"></div>
+<!-- Login Card -->
+<div class="relative z-10 w-full max-w-[480px] bg-architectural-white border border-bim-gray shadow-none p-8 md:p-12 rounded-none flex flex-col">
+<!-- Security Protocol Header -->
+<div class="flex items-center gap-2 mb-8 border-b border-outline-variant pb-4">
+<span class="material-symbols-outlined text-safety-orange" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-technical-data text-technical-data text-industrial-navy uppercase tracking-widest">Protocol: AES-256 Encrypted</span>
+</div>
+<!-- Titles -->
+<h1 class="font-headline-md text-headline-md text-industrial-navy mb-2">Mitarbeiter-Portal</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Sicherer Zugang für RSM-Systembau Experten. Access Logged via Zero-Trust Protocol.</p>
+<!-- Form -->
+<form action="#" class="flex flex-col gap-6" method="POST">
+<!-- Employee ID -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-industrial-navy uppercase tracking-wider" for="employee-id">Personalnummer</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">badge</span>
+<input class="w-full bg-surface-container-lowest border border-outline text-industrial-navy font-technical-data text-technical-data px-4 py-3 pl-10 focus:border-safety-orange focus:ring-1 focus:ring-safety-orange outline-none transition-colors rounded-none placeholder:text-outline-variant" id="employee-id" name="employee-id" placeholder="z.B. RSM-8492" required="" type="text"/>
+</div>
+</div>
+<!-- Password -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-industrial-navy uppercase tracking-wider" for="password">Passwort</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">key</span>
+<input class="w-full bg-surface-container-lowest border border-outline text-industrial-navy font-technical-data text-technical-data px-4 py-3 pl-10 focus:border-safety-orange focus:ring-1 focus:ring-safety-orange outline-none transition-colors rounded-none placeholder:text-outline-variant" id="password" name="password" placeholder="Enterprise Password" required="" type="password"/>
+</div>
+</div>
+<!-- Submit Action -->
+<button class="w-full bg-safety-orange text-on-primary font-nav-caps text-nav-caps py-4 mt-4 hover:opacity-90 active:scale-[0.98] transition-all rounded-none uppercase flex items-center justify-center gap-2" type="submit">
+                    Zugriff authentifizieren
+                    <span class="material-symbols-outlined">login</span>
+</button>
+</form>
+<!-- Secondary Actions -->
+<div class="mt-8 flex flex-col gap-3 pt-6 border-t border-outline-variant">
+<a class="font-technical-data text-technical-data text-bim-gray hover:text-safety-orange transition-colors flex items-center gap-2 text-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+                    Reset Password (Secure Protocol)
+                </a>
+<a class="font-technical-data text-technical-data text-bim-gray hover:text-safety-orange transition-colors flex items-center gap-2 text-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+                    Internal IT Support
+                </a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-industrial-navy dark:bg-industrial-navy w-full border-t border-outline dark:border-outline shadow-none">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-section-padding px-margin-desktop w-full mx-auto max-w-[1440px] max-md:px-margin-mobile max-md:py-[64px]">
+<div class="flex flex-col gap-4">
+<div class="font-headline-lg text-headline-lg font-bold text-on-primary mb-4">RSM Systembau GmbH</div>
+<p class="font-technical-data text-technical-data text-on-primary-container">Engineering Excellence.</p>
+<p class="font-body-md text-body-md text-on-primary-container mt-4">© 2024 RSM Systembau GmbH. Engineering Excellence.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm text-on-primary uppercase tracking-wider mb-2">Corporate</h4>
+<a class="font-body-md text-body-md text-on-primary-container font-medium hover:text-safety-orange transition-colors opacity-100 hover:opacity-80 transition-all" href="#">Legal Notice</a>
+<a class="font-body-md text-body-md text-on-primary-container font-medium hover:text-safety-orange transition-colors opacity-100 hover:opacity-80 transition-all" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm text-on-primary uppercase tracking-wider mb-2">Security</h4>
+<a class="font-body-md text-body-md text-on-primary-container font-medium hover:text-safety-orange transition-colors opacity-100 hover:opacity-80 transition-all" href="#">Compliance</a>
+<a class="font-body-md text-body-md text-on-primary-container font-medium hover:text-safety-orange transition-colors opacity-100 hover:opacity-80 transition-all" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm text-on-primary uppercase tracking-wider mb-2">Standards</h4>
+<a class="font-body-md text-body-md text-on-primary-container font-medium hover:text-safety-orange transition-colors opacity-100 hover:opacity-80 transition-all" href="#">ISO Certifications</a>
+</div>
+</div>
+</footer>
+</body></html>
