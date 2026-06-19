@@ -51,14 +51,14 @@ export function BrickTransition() {
   useEffect(() => {
     if ((phase === 'cover' || phase === 'hold') && pathname !== prevPathRef.current) {
       prevPathRef.current = pathname;
-      // New page loaded while covered — make it visible behind the bricks, then reveal
-      setPageVisible(true);
+      // DO NOT REVEAL PAGE YET! Wait for bricks to disappear.
       
       addTimeout(() => {
         setPhase('reveal');
         addTimeout(() => {
           setPhase('idle');
           pendingHrefRef.current = null;
+          setPageVisible(true); // SHOW PAGE ONLY AFTER ANIMATION IS COMPLETELY FINISHED
         }, REVEAL_DURATION * 1000 + 150);
       }, HOLD_DURATION);
     } else if (phase === 'idle') {
@@ -124,7 +124,8 @@ export function BrickTransition() {
     return () => clearAllTimeouts();
   }, [clearAllTimeouts]);
 
-  if (phase === 'idle') return null;
+  // Remove the early return so the backdrop can fade out smoothly during 'idle'
+  // if (phase === 'idle') return null;
 
   return (
     <div 
@@ -141,11 +142,10 @@ export function BrickTransition() {
         className="absolute inset-0 z-0"
         style={{ backgroundColor: '#0b1120' }}
         initial={{ opacity: 0 }}
-        animate={{ opacity: phase === 'reveal' ? 0 : 1 }}
+        animate={{ opacity: phase === 'idle' ? 0 : 1 }}
         transition={{
-          // Fade in instantly (0s) to hide old page, fade out smoothly on reveal
-          duration: phase === 'cover' ? 0 : REVEAL_DURATION * 0.9,
-          delay: phase === 'reveal' ? REVEAL_DURATION * 0.4 : 0,
+          // Fade in instantly (0s) to hide old page, fade out over 300ms when idle
+          duration: phase === 'idle' ? 0.3 : 0,
           ease: 'easeInOut',
         }}
       />
